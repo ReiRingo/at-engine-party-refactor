@@ -31,6 +31,7 @@
     {"name":"o_solidparent","order":1,"path":"objects/o_solidparent/o_solidparent.yy",},
     {"name":"o_ui_save","order":1,"path":"objects/o_ui_save/o_ui_save.yy",},
     {"name":"room_init","order":1,"path":"rooms/room_init/room_init.yy",},
+    {"name":"engine_info","order":1,"path":"scripts/engine_info/engine_info.yy",},
     {"name":"inputs","order":3,"path":"scripts/inputs/inputs.yy",},
     {"name":"loc","order":2,"path":"scripts/loc/loc.yy",},
     {"name":"macro_depth","order":1,"path":"scripts/macro_depth/macro_depth.yy",},
