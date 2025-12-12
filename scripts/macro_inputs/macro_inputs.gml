@@ -1,0 +1,8 @@
+enum INPUT{
+	UP,
+	LEFT,
+	DOWN,
+	RIGHT,
+	CONFIRM,
+	CANCEL
+}

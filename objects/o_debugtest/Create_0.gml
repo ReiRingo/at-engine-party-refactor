@@ -1,0 +1,1 @@
+alpha_dialog = 0.5;

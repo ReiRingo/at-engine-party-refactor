@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"inputs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"inputs",
+  "parent":{
+    "name":"engine",
+    "path":"folders/@engine/scripts/engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

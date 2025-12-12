@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"loc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"loc",
+  "parent":{
+    "name":"engine",
+    "path":"folders/@engine/scripts/engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
