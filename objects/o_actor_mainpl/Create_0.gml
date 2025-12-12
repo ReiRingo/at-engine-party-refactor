@@ -15,6 +15,7 @@ image_speed = 0;
 facing = global.facing;
 moving = 0;
 movement = 1;
+moveable = true;
 
 dsprite = spr_actor_mainpl_d;
 rsprite = spr_actor_mainpl_r;

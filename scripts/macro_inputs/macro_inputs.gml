@@ -4,5 +4,6 @@ enum INPUT{
 	DOWN,
 	RIGHT,
 	CONFIRM,
-	CANCEL
+	CANCEL,
+	SPECIAL
 }

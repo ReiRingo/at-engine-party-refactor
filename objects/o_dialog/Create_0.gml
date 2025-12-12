@@ -6,19 +6,13 @@ face = undefined;
 faceid = -1;
 voice = snd_text
 
-if global.lang="en"{
-	text = [
-		"{wavy(true)}* (Knowing the mouse{wavy(false)} might one{nl}day {shaky(true)}extract the cheese from{nl}the mys{shaky(false)}tical crystal...)",
-		"* It fills you with{nl}determination.)",
-	];
-}else{
-	text = [
-		"＊ タリラリラ～♪",
-	];
-}
+text = [
+	loc("* (Knowing the mouse might one{nl}day extract the cheese from{nl}the mystical crystal...)","＊ (いつかネズミは　あのフシギな{nl}クリスタルから　チーズを{nl}とりだすかもしれない…)"),
+	loc("* It fills you with{nl}determination.)","＊ (そうおもうと{nl}ケツイが　みなぎった)"),
+];
 
 line = 0;
 skip_enabled = true;
 t = noone;
 depth=DEPTH_UI.DIALOGUE_UI
-global.console = true;
+o_actor_mainpl.moveable = false;

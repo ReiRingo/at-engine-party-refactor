@@ -71,7 +71,7 @@ function process_line()
         raw = string_delete(raw, string_pos("{face(", raw), (send + 2) - string_pos("{face(", raw));
     }
 
-    raw = string_replace_all(raw, "{nl}", "\n  ");
+    raw = string_replace_all(raw, "{nl}", loc("\n  ","\n　 "));
 
     text_raw = raw;
     pos = 0;

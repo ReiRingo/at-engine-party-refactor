@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"engine_info",
   "parent":{
-    "name":"techo-engine-main-0.0.5",
-    "path":"techo-engine-main-0.0.5.yyp",
+    "name":"at-engine-main",
+    "path":"at-engine-main.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

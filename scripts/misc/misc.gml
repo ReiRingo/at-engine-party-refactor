@@ -1,3 +1,18 @@
+function instance_create(obj, xx = 0, yy = 0, dpth = 0, post_var_struct = {}) {
+    var inst = instance_create_depth(xx, yy, dpth, obj);
+
+    if (is_struct(post_var_struct)) {
+        var keys = variable_struct_get_names(post_var_struct);
+        var count = array_length(keys);
+        for (var i = 0; i < count; i++) {
+            var key = keys[i];
+            var val = variable_struct_get(post_var_struct, key);
+            variable_instance_set(inst, key, val);
+        }
+    }
+    return inst;
+}
+
 function get_run_color(runs, index) {
     var col = c_white;
     for (var i = 0; i < array_length(runs); i++) {
@@ -124,7 +139,7 @@ function dialogue_preprocess(raw)
         out = string_delete(out, string_pos("{face(", out), (p2 + 2) - string_pos("{face(", out));
     }
 
-    out = string_replace_all(out, "{nl}", "\n  ");
+    out = string_replace_all(out, "{nl}", loc("\n  ","\n　 "));
     out = string_trim(out);
 
     return {

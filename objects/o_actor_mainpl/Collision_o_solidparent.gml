@@ -1,7 +1,10 @@
 if (other.phase == 0)
 {
-    x = xprevious;
-    y = yprevious;
+	if (place_meeting(x, yprevious, o_solidparent))
+		y = yprevious;
+
+	if (place_meeting(xprevious, y, o_solidparent))
+		x = xprevious;
     
     {
         if (InputPressedCheck(INPUT.UP))

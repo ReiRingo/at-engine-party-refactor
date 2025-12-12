@@ -14,6 +14,8 @@ function InputPressed(input)
 			return keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 		case INPUT.CANCEL:
 			return keyboard_check_pressed(ord("X")) || keyboard_check_pressed(vk_shift);
+		case INPUT.SPECIAL:
+			return keyboard_check_pressed(ord("C")) || keyboard_check_pressed(vk_control);
 	}
 	return false;
 }
@@ -33,6 +35,8 @@ function InputPressedCheck(input)
 			return keyboard_check(ord("Z")) || keyboard_check(vk_enter);
 		case INPUT.CANCEL:
 			return keyboard_check(ord("X")) || keyboard_check(vk_shift);
+		case INPUT.SPECIAL:
+			return keyboard_check_pressed(ord("C")) || keyboard_check_pressed(vk_control);
 	}
 	return false;
 }

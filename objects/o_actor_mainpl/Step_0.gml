@@ -21,10 +21,16 @@ if (InputPressedCheck(INPUT.LEFT))
     {
         turned = 1;
 
-        if (xprevious == (x + 3))
-			x -= 2;
-		else
-			x -= 3;
+		var nx = x - 3;
+
+		if (!place_meeting(nx, y, o_solidparent)) {
+			x = nx;
+		} else {
+			if (!place_meeting(nx, y - 3, o_solidparent) && InputPressedCheck(INPUT.UP))
+				y -= 3;
+			else if (!place_meeting(nx, y + 3, o_solidparent) && InputPressedCheck(INPUT.DOWN))
+				y += 3;
+		}
 
         if (moving != 1)
 			image_index = 1;
@@ -50,10 +56,16 @@ if (InputPressedCheck(INPUT.RIGHT))
         {
             turned = 1;
 
-            if (xprevious == (x - 3))
-				x += 2;
-			else
-				x += 3;
+            var nx = x - 3;
+
+		if (!place_meeting(nx, y, o_solidparent)) {
+			x = nx;
+		} else {
+			if (!place_meeting(nx, y - 3, o_solidparent) && InputPressedCheck(INPUT.UP))
+				y -= 3;
+			else if (!place_meeting(nx, y + 3, o_solidparent) && InputPressedCheck(INPUT.DOWN))
+				y += 3;
+		}
 
             moving = 1;
             image_speed = spritespd;
@@ -74,10 +86,11 @@ if (InputPressedCheck(INPUT.RIGHT))
 
 if (InputPressedCheck(INPUT.UP) && InputPressedCheck(INPUT.DOWN))
 {
-    var col_up = collision_rectangle(bbox_left, bbox_top - 3, bbox_right, bbox_top - 1, o_solidparent, false, true) > 0;
-    var col_down = collision_rectangle(bbox_left, bbox_bottom, bbox_right, bbox_bottom + 3, o_solidparent, false, true) > 0;
+    var col_bottom = collision_rectangle(bbox_left,bbox_top-5,bbox_right,bbox_top-1,o_solidparent,false,true) > 0
+	
+    var col_top = collision_rectangle(bbox_left,bbox_bottom-3,bbox_right,bbox_bottom+3,o_solidparent,false,true) > 0
 
-    if (col_up || col_down)
+    if (col_bottom && !col_top)
     {
         moving = 1;
         image_speed = spritespd;
@@ -90,7 +103,6 @@ if (InputPressedCheck(INPUT.UP) && InputPressedCheck(INPUT.DOWN))
         exit;
     }
 }
-
 if (InputPressedCheck(INPUT.UP))
 {
     if (movement == 1)
@@ -144,8 +156,7 @@ if (InputPressedCheck(INPUT.DOWN))
     }
 }
 
-if (global.console == true){
+if (o_actor_mainpl.moveable == false)
 	movement = 0;
-}else{
+else
 	movement = 1;
-}

@@ -1,7 +1,7 @@
 if(!instance_exists(t))
 {
 	if(line>=array_length(text)){
-		global.console = false;
+		o_actor_mainpl.moveable = false;
 		instance_destroy()
 		exit
 	}
@@ -13,9 +13,9 @@ if(!instance_exists(t))
 	var p=parse_text(pr.text)
 	
 	if (face!=undefined)
-		t=instance_create_depth(xx+72,yy+11.5,-1,o_text_typer)
+		t=instance_create(o_text_typer,xx+72,yy+11.5)
 	else
-		t=instance_create_depth(xx+14,yy+11.5,-1,o_text_typer)
+		t=instance_create(o_text_typer,xx+14,yy+11.5)
 	
 	t.text_raw=p.text
 	t.runs=p.runs
@@ -32,13 +32,13 @@ else
 			t.pos=string_length(t.text_raw)
 			t.finished=true
 		}else{
-			global.console = false;
+			o_actor_mainpl.moveable = true;
 			instance_destroy(t)
 			line++
 			if(line>=array_length(text)){
-				global.console = false;
+				o_actor_mainpl.moveable = true;
 				instance_destroy()
-				instance_create_depth(0,0,0,o_ui_save)
+				instance_create(o_ui_save)
 				exit
 			}
 		}

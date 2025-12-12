@@ -35,7 +35,7 @@ for (var i = 0; i < draw_count; i++)
 
     draw_text(xx + ox, yy + oy, ch);
 
-    xx += string_width(ch) * 0.89;
+    xx += string_width(ch) * loc(0.89,0.94);
 }
 
 draw_set_color(c_white);

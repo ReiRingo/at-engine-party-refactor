@@ -1,4 +1,3 @@
-
 if (section==0)
 	timereg = time_to_mmss(global.time);
 
@@ -10,12 +9,18 @@ if (InputPressed(INPUT.LEFT)||InputPressed(INPUT.RIGHT)){
 }
 if (InputPressed(INPUT.CONFIRM)){
 	if (section==0){
-		if (selection==0)
+		if (selection==0){
 			section = 1 // File saved.
-		else
+			audio_play_sound(snd_save,1,false)
+		}else{
 			section = 2 // Close menu. (Return)
-	}else if ((section==1)||(section==2)){
+		}
+	}else if (section==1){
 		instance_destroy()
-		global.console=false
+		o_actor_mainpl.moveable=true
 	}
+}
+if (InputPressed(INPUT.CANCEL)||(section==2)){
+	instance_destroy()
+	o_actor_mainpl.moveable=true
 }

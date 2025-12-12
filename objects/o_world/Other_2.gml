@@ -1,3 +1,5 @@
+//instance_create(o_dev_debug)
+
 { // resolution fix
 	window_set_size(intw*windowsize,inth*windowsize);
 	window_center();
@@ -5,7 +7,7 @@
 }
 
 global.lang = "en"
-global.time = 245*60
+global.time = 0
 
 // stats
 global.name = "CHARA"

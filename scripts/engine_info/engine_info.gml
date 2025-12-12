@@ -1,2 +1,2 @@
-var ENGINE_NAME = "AT-ENGINE"
-var VERSION = "0.0.5 (Quick Fix)"
+#macro ENGINE_VERSION "v0.0.6"
+#macro ENGINE_NAME "AT-ENGINE"
