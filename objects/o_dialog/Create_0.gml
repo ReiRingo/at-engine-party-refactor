@@ -7,8 +7,8 @@ faceid = -1;
 voice = snd_text
 
 text = [
-	loc("* (Knowing the mouse might one{nl}day extract the cheese from{nl}the mystical crystal...)","＊ (いつかネズミは　あのフシギな{nl}クリスタルから　チーズを{nl}とりだすかもしれない…)"),
-	loc("* It fills you with{nl}determination.)","＊ (そうおもうと{nl}ケツイが　みなぎった)"),
+	loc("* (Knowing the mouse might one\nsday extract the cheese from\nsthe mystical crystal...)","＊ (いつかネズミは　あのフシギな\nsクリスタルから　チーズを\nsとりだすかもしれない…)"),
+	loc("* (It fills you with\nsdetermination.)","＊ (そうおもうと\nsケツイが　みなぎった)"),
 ];
 
 line = 0;

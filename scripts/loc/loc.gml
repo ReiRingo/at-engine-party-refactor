@@ -1,26 +1,26 @@
-function loc(argument0,argument1) {
+function loc(english_value,japanese_value) {
 	if (global.lang == "en")
-		return argument0
+		return english_value
 	
 	if (global.lang == "ja")
-		return argument1
+		return japanese_value
 }
 
-function loc_getfont(argument0) {
-    if (argument0 == font_main) {
+function loc_getfont(font) {
+    if (font == font_main) {
         if (global.lang == "ja")
 			return font_main_ja
         return font_main
     }
     
-    return argument0
+    return font
 }
 
-function loc_getfontmono(argument0) {
-    if (argument0 == font_main) {
+function loc_getfontmono(font) {
+    if (font == font_main) {
         if (global.lang == "ja")
 			return font_main_ja
         return font_main_mono
     }
-    return argument0
+    return font
 }

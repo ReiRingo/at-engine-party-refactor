@@ -8,16 +8,19 @@ wave_enabled = false;
 shake_enabled = false;
 face_sprite = noone;
 face_index = 0;
+spacing = loc(0.89,0.94);
 
 if instance_exists(o_dialog)
 	voice = o_dialog.voice;
 else
 	voice = snd_text
+
 text_list = [];
 line = 0;
 can_skip = true;
 comma_wait = 0;
 cur_char = 0;
+last_pos = -1;
 
 function process_line()
 {
@@ -71,7 +74,8 @@ function process_line()
         raw = string_delete(raw, string_pos("{face(", raw), (send + 2) - string_pos("{face(", raw));
     }
 
-    raw = string_replace_all(raw, "{nl}", loc("\n  ","\n　 "));
+    raw = string_replace_all(raw, "\ns", loc("\n  ","\n　 "))
+	raw = string_replace_all(raw, "\n", "\n")
 
     text_raw = raw;
     pos = 0;

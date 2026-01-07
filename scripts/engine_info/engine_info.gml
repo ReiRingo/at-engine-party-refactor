@@ -1,2 +1,2 @@
-#macro ENGINE_VERSION "v0.0.6"
+#macro ENGINE_VERSION "v0.0.7"
 #macro ENGINE_NAME "AT-ENGINE"

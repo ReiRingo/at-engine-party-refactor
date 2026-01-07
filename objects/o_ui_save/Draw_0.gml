@@ -7,7 +7,7 @@ if (section==1)
 draw_text_transformed(54+20.5-4-loc(0,6),106+74-20-80-10,string(global.name),1,1,0)
 draw_text_transformed(54+20.5-4+75.75+8-loc(0,4),106+74-20-80-10,"LV "+string(global.lv),1,1,0)
 draw_set_halign(fa_right)
-draw_text_transformed(54+20.5+75.75+62+38+loc(0,2),53+37-20,timereg,1,1,0)
+draw_text_transformed(54+20.5+75.75+62+38+loc(0,2),53+37-20,time_reg,1,1,0)
 draw_set_halign(fa_left)
 
 if (global.lang=="ja")
@@ -15,9 +15,14 @@ if (global.lang=="ja")
 	
 draw_text_transformed(54+20.5-4+loc(0,90),53+74/2,loc("Waterfall - Crystal","クリスタルのへや"),1,1,0)
 draw_set_halign(fa_left)
-if (section==1)
+if (section==1){
 	draw_text_transformed(54+35-4,53+67.5,loc("File saved.","セーブしました。"),1,1,0)
-
+	
+	//saving part
+    ini_open("config.ini");
+    ini_write_string("config", "lang", global.lang);
+    ini_close();
+}
 if (section==0){
 	draw_text_transformed(54+35-4+loc(0,7),53+67.5,loc("Save","セーブ"),1,1,0)
 	draw_text_transformed(54+70+90-39+loc(0,12),53+67.5,loc("Return","もどる"),1,1,0)

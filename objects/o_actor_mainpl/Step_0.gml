@@ -1,3 +1,10 @@
+if (o_actor_mainpl.moveable == false){
+	moving = 0;
+	movement = 0;
+}else{
+	movement = 1;
+}
+
 if (global.facing == 0)
 	sprite_index = dsprite;
 if (global.facing == 1)
@@ -56,7 +63,7 @@ if (InputPressedCheck(INPUT.RIGHT))
         {
             turned = 1;
 
-            var nx = x - 3;
+            var nx = x + 3;
 
 		if (!place_meeting(nx, y, o_solidparent)) {
 			x = nx;
@@ -86,22 +93,23 @@ if (InputPressedCheck(INPUT.RIGHT))
 
 if (InputPressedCheck(INPUT.UP) && InputPressedCheck(INPUT.DOWN))
 {
-    var col_bottom = collision_rectangle(bbox_left,bbox_top-5,bbox_right,bbox_top-1,o_solidparent,false,true) > 0
-	
-    var col_top = collision_rectangle(bbox_left,bbox_bottom-3,bbox_right,bbox_bottom+3,o_solidparent,false,true) > 0
+	if (movement == 1){
+		turned = 1;
+		var col_bottom = collision_rectangle(bbox_left,bbox_top-5,bbox_right,bbox_top-1,o_solidparent,false,true) > 0
+		var col_top = collision_rectangle(bbox_left,bbox_bottom-3,bbox_right,bbox_bottom+3,o_solidparent,false,true) > 0
 
-    if (col_bottom && !col_top)
-    {
-        moving = 1;
-        image_speed = spritespd;
+		if (col_bottom && !col_top)
+		{
+			moving = 1;
+			image_speed = spritespd;
 
-        if (global.facing == 0)
-            global.facing = 2;
-        else
-            global.facing = 0;
-
-        exit;
-    }
+			if (global.facing == 0)
+				global.facing = 2;
+			else
+				global.facing = 0;
+			exit;
+		}
+	}
 }
 if (InputPressedCheck(INPUT.UP))
 {
@@ -155,8 +163,3 @@ if (InputPressedCheck(INPUT.DOWN))
         }
     }
 }
-
-if (o_actor_mainpl.moveable == false)
-	movement = 0;
-else
-	movement = 1;

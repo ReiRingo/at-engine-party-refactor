@@ -1,14 +1,16 @@
 frames ++
 
 if keyboard_check_pressed(vk_f2)
-	room_restart()
+	game_restart()
 	
-if keyboard_check_pressed(vk_f3){
-	if global.lang="en"
-		global.lang="ja"
-	else
-		global.lang="en"
-		room_restart()
+if (keyboard_check_pressed(vk_f3)) {
+	room_restart()
+	global.time=0
+    if (global.lang == "en") {
+        global.lang = "ja";
+    } else {
+        global.lang = "en";
+    }
 }
 
 if keyboard_check_pressed(vk_f4) {

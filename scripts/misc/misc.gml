@@ -139,7 +139,8 @@ function dialogue_preprocess(raw)
         out = string_delete(out, string_pos("{face(", out), (p2 + 2) - string_pos("{face(", out));
     }
 
-    out = string_replace_all(out, "{nl}", loc("\n  ","\n　 "));
+    out = string_replace_all(out, "\ns", loc("\n  ","\n　 "));
+	out = string_replace_all(out, "\n", "\n")
     out = string_trim(out);
 
     return {

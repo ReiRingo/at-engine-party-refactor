@@ -6,8 +6,8 @@
   "name":"o_solid",
   "overriddenProperties":[],
   "parent":{
-    "name":"ow",
-    "path":"folders/@engine/objects/ow.yy",
+    "name":"solid",
+    "path":"folders/@engine/objects/ow/solid.yy",
   },
   "parentObjectId":{
     "name":"o_solidparent",
