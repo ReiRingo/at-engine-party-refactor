@@ -19,20 +19,20 @@ if (section==1){
 	draw_text_transformed(54+35-4,53+67.5,loc("File saved.","セーブしました。"),1,1,0)
 	
 	//saving part
-    ini_open("config.ini");
-    ini_write_string("config", "lang", global.lang);
-	ini_write_string("config", "time", global.time);
-	ini_write_string("config", "name", global.name);
-	ini_write_string("config", "lv", global.lv);
-	ini_write_string("config", "att", global.att);
-	ini_write_string("config", "def", global.def);
-	ini_write_string("config", "attack", global.attack);
-	ini_write_string("config", "defense", global.defense);
-	ini_write_string("config", "exp", global.exp);
-	ini_write_string("config", "gold", global.gold);
-	ini_write_string("config", "weapon", global.weapon);
-	ini_write_string("config", "armor", global.armor);
-    ini_close();
+    ini_open("config.ini")
+    ini_write_string("config","lang",global.lang)
+	ini_write_string("config","time",global.time)
+	ini_write_string("config","name",global.name)
+	ini_write_string("config","lv",global.lv)
+	ini_write_string("config","att",global.att)
+	ini_write_string("config","def",global.def)
+	ini_write_string("config","attack",global.attack)
+	ini_write_string("config","defense",global.defense)
+	ini_write_string("config","exp",global.exp)
+	ini_write_string("config","gold",global.gold)
+	ini_write_string("config","weapon",global.weapon)
+	ini_write_string("config","armor",global.armor)
+	ini_close()
 }
 if (section==0){
 	draw_text_transformed(54+35-4+loc(0,7),53+67.5,loc("Save","セーブ"),1,1,0)
