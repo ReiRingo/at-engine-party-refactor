@@ -41,17 +41,24 @@ draw_set_font(loc_getfont(font_main));
 	}
 }
 { // state 1 (ITEM)
-	if (state==1){
-		var iarr = global.items
-		
-		for (var i = 0; i < array_length(iarr); ++i) {
-				draw_sprite_ext(spr_ui_soul, 0, 116-12, 44 + i*16, 1, 1, 0, c_red, 1)
-				draw_text(116, 40 + i*16, iarr[i])
+	if (state==1) {
+		for (var i=0; i<array_length(global.items); i++){
+			if (sub_state==0&&i==item_selection)
+				draw_sprite_ext(spr_ui_soul,0,104,44+i*16,1,1,0,c_red,1)
+			draw_text(116,40+i*16,global.items[i])
 		}
-		
-		draw_text(116, 180, "USE")
-		draw_text(164, 180, "INFO")
-		draw_text(221, 180, "DROP")
+	}
+	if (state==1&&sub_state==1) {
+		for (var i=0; i<array_length(item_actions); i++) {
+			var xx=116+i*48
+			if (i==item_action_selection)
+				draw_sprite_ext(spr_ui_soul,0,xx-12,184,1,1,0,c_red,1)
+			if (!item_actions[i].selectable)
+				draw_set_color(c_gray)
+			draw_text(xx,180,item_actions[i].name)
+			
+			draw_set_color(c_white)
+		}
 	}
 }
 { // state 2 (STAT)
@@ -77,14 +84,10 @@ draw_set_font(loc_getfont(font_main));
 }
 { // state 3 (CELL)
 	if (state==3){
-		var iarr = [
-			"Toriel",
-			"Undyne and Papyrus",
-		]
-		
-		for (var i = 0; i < array_length(iarr); ++i) {
-				draw_sprite_ext(spr_ui_soul, 0, 116-12, 44 + i*16, 1, 1, 0, c_red, 1)
-				draw_text(116, 40 + i*16, iarr[i])
+		for (var i=0; i<array_length(cells); i++) {
+			if (i==cell_selection)
+				draw_sprite_ext(spr_ui_soul,0,104,44+i*16,1,1,0,c_red,1)
+			draw_text(116,40+i*16,cells[i].name)
 		}
 	}
 }

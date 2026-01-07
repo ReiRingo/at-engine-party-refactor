@@ -3,9 +3,7 @@ intw = 640
 inth = 480
 windowsize = 1
 
-ini_open("config.ini");
-global.lang = ini_read_string("config", "lang", "en");
-ini_close();
+global.lang = ""
 
 global.console = false
 

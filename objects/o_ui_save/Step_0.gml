@@ -1,5 +1,5 @@
 if (InputPressed(INPUT.LEFT)||InputPressed(INPUT.RIGHT)){
-	audio_play_sound(snd_squeak,1,false)
+	audio_play_sound(snd_menumove,1,false)
 	if (selection!=0)
 		selection = 0 // Left
 	else

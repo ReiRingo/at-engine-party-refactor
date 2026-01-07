@@ -9,30 +9,40 @@ if (global.debug)
 	application_surface_draw_enable(false);
 }
 
-global.time = 0
+ini_open("config.ini")
+
+global.lang = ini_read_string("config","lang","en")
+global.time = ini_read_real("config","time",0)
 
 // stats
-global.name = "CHARA"
-global.lv = 1
+global.name = ini_read_string("config","name","")
+global.lv = ini_read_real("config","lv",1)
 
-global.maxhp = global.lv < 20 ? 16 + 4 * global.lv : 99;
+global.maxhp = global.lv<20?16+4*global.lv:99
 global.hp = global.maxhp
 
-global.att = 0
-global.def = 0
+global.att = ini_read_real("config","att",0)
+global.def = ini_read_real("config","def",0)
 
-global.attack = 0
-global.defense = 0
+global.attack = ini_read_real("config","attack",0)
+global.defense = ini_read_real("config","defense",0)
 
-global.exp = 0
-global.nextexp = 10
+global.exp = ini_read_real("config","exp",0)
+global.nextexp = (global.lv<= 1)?10:10+(global.lv-1)*10
 
-global.gold = 0
+global.gold = ini_read_real("config","gold",0)
 
-global.items = []
-global.inventory = []
+global.weapon = ini_read_string("config","weapon","Stick")
+global.armor = ini_read_string("config","armor","Bandage")
 
-global.weapon = "Stick"
-global.armor = "Bandage"
+global.items = [
+		"item0",
+		"item1",
+		"moreitems?",
+	]
+
+global.inventory = [""]
+
+ini_close()
 
 room_goto_next()

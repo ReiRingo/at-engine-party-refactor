@@ -1,4 +1,8 @@
 state=0
+prev_state=state
+sub_state=0
+item_selection=0
+item_action_selection=0
 
 options = [
 	{
@@ -15,6 +19,34 @@ options = [
 		name: "CELL",
 		selectable: true,
 		state: 3,
+	},
+]
+
+item_actions = [
+	{
+		name: "USE",
+		selectable: true
+	},
+	{
+		name: "INFO",
+		selectable: true
+	},
+	{
+		name: "DROP",
+		selectable: true
+	},
+]
+
+cell_selection = 0;
+
+cells = [
+	{
+		name: "Toriel",
+		selectable: true
+	},
+	{
+		name: "Undyne and Papyrus",
+		selectable: true
 	},
 ]
 

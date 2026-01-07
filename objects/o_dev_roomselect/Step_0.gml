@@ -43,7 +43,7 @@ if (InputPressed(INPUT.UP)){
 selection = clamp(selection,0,array_length(filtered)-1)
 
 if (selection != oldsel){
-    audio_play_sound(snd_squeak,1,false)
+    audio_play_sound(snd_menumove,1,false)
 }
 
 if (InputPressed(INPUT.CONFIRM)){
