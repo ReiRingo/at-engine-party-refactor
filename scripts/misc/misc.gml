@@ -13,6 +13,12 @@ function instance_create(obj, xx = 0, yy = 0, dpth = 0, post_var_struct = {}) {
     return inst;
 }
 
+function ui_dialoguebox_create(xx, yy, w, h)
+{
+	draw_sprite_ext(spr_pixel, 0, xx, yy, w, h, 0, c_white, 1);
+	draw_sprite_ext(spr_pixel, 0, xx + 3, yy + 3, w - 6, h - 6, 0, c_black, 1);
+}
+
 function get_run_color(runs, index) {
     var col = c_white;
     for (var i = 0; i < array_length(runs); i++) {
@@ -157,17 +163,21 @@ function string_contains(substring, fullString) {
     return string_pos(substring, fullString) > 0;
 }
 
-function ui_dialoguebox_create(xx, yy, width, height){
-	draw_sprite_ext(spr_pixel, 0, xx, yy, width, height, 0, c_white, 1);
-	draw_sprite_ext(spr_pixel, 0, xx + 3, yy + 3, width - 6, height - 6, 0, c_black, 1);
+function time_to_mmss(seconds){
+	var mm=seconds div 60
+	var ss=seconds mod 60
+	if (ss<10){
+		return string(mm)+":0"+string(ss)
+    } else {
+		return string(mm)+":"+string(ss)
+	}
 }
 
-function time_to_mmss(seconds) {
-    var mm = seconds div 60;
-    var ss = seconds mod 60;
-    if (ss < 10) {
-        return string(mm) + ":0" + string(ss);
-    } else {
-        return string(mm) + ":" + string(ss);
+function get_roomname(room_name) {
+    switch (room_name) {
+        case "room_test0":
+            return "Waterfall - Crystal";
+        default:
+            return "undefined";
     }
 }

@@ -13,9 +13,10 @@ ini_open("config.ini")
 
 global.lang = ini_read_string("config","lang","en")
 global.time = ini_read_real("config","time",0)
+global.room_save = ini_read_string("config","room",room_get_name(room))
 
 // stats
-global.name = ini_read_string("config","name","")
+global.name = ini_read_string("config","name","CHARA")
 global.lv = ini_read_real("config","lv",1)
 
 global.maxhp = global.lv<20?16+4*global.lv:99
@@ -36,10 +37,40 @@ global.weapon = ini_read_string("config","weapon","Stick")
 global.armor = ini_read_string("config","armor","Bandage")
 
 global.items = [
-		"item0",
-		"item1",
-		"moreitems?",
-	]
+	{
+		name: "item0",
+		desc: "* item0 - Heals HP...\n* I guess that's it",
+		execute: function(){
+			var amount=irandom_range(1,20)
+			Dialogue_Create([
+				"* You recovered " + string(amount) + " HP!"
+			])
+			audio_play_sound(snd_heal,1,false)
+			global.hp=clamp(global.hp+amount,0,global.maxhp)
+		}
+	},
+	{
+		name: "poison",
+		desc: "* poison - i think it's\nsa bit obvious...",
+		execute: function(){
+			var amount=irandom_range(1,20)
+			Dialogue_Create([
+				"* You lost " + string(amount) + " HP!"
+			])
+			audio_play_sound(snd_damage,1,false)
+			global.hp=clamp(global.hp-amount,0,global.maxhp)
+		}
+	},
+	{
+		name: "item1",
+		desc: "* item1 - idk.",
+		execute: function () {
+			Dialogue_Create([
+				"* as I said, idk but\nsi want to fill the\n  other lines..."
+			])
+		}
+	}
+]
 
 global.inventory = [""]
 

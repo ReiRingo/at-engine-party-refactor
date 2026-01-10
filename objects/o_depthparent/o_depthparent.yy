@@ -8,8 +8,8 @@
   "name":"o_depthparent",
   "overriddenProperties":[],
   "parent":{
-    "name":"ow",
-    "path":"folders/@engine/objects/ow.yy",
+    "name":"parents",
+    "path":"folders/@engine/objects/ow/parents.yy",
   },
   "parentObjectId":null,
   "persistent":false,

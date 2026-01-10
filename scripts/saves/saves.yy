@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"saves",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"saves",
+  "parent":{
+    "name":"engine",
+    "path":"folders/@engine/scripts/engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,5 +1,5 @@
 draw_set_font(loc_getfont(font_main))
-
+if !screenshot{
 var debug_lines = []
 
 array_push(debug_lines, "UNDERTALE: AT ENGINE")
@@ -15,20 +15,6 @@ array_push(debug_lines, "HP: " + string(global.hp) + "/" + string(global.maxhp))
 array_push(debug_lines, "GOLD: " + string(global.gold))
 array_push(debug_lines, "")
 array_push(debug_lines, "LANG: " + string(global.lang))
-
-if (instance_exists(o_text_typer)) {
-	array_push(debug_lines, "")
-	array_push(debug_lines, "TEXTPOS: " + string(o_text_typer.pos))
-}
-
-if (instance_exists(o_dialog)) {
-	if (o_dialog.face != undefined) {
-		array_push(debug_lines, "FACE: " + string(sprite_get_name(o_dialog.face)))
-	}
-	if (o_dialog.faceid != undefined) {
-		array_push(debug_lines, "FACE ID: " + string(o_dialog.faceid))
-	}
-}
 
 if (instance_exists(o_ui_save)) {
 	array_push(debug_lines, "")
@@ -49,4 +35,8 @@ draw_set_alpha(0.5);
 draw_text_transformed(x, y, debug_text, 0.5, 0.5, 0)
 draw_set_alpha(1);
 
-draw_sprite_ext(spr_refstory1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
+draw_sprite_ext(spr_refsavel1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
+draw_set_alpha(alphascreen);
+draw_rectangle(0,0,320,240,false)
+draw_set_alpha(1);
+}

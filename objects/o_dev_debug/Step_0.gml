@@ -10,3 +10,11 @@ if instance_exists(o_dev_owcontrol)
 	
 if instance_exists(o_dev_music)
 	o_dev_music.image_alpha=1
+	
+if (keyboard_check_pressed(vk_f6)){
+	audio_play_sound(snd_save,1,false)
+	screenshot = true
+	alphascreen = 1
+}
+if alphascreen>0
+	alphascreen-=0.05

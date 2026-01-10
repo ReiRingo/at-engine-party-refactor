@@ -22,8 +22,7 @@ else
 strumpet = bbox_top;
 trumpet = bbox_left;
 
-if (InputPressedCheck(INPUT.LEFT))
-{
+if (InputPressedCheck(INPUT.LEFT)){
     if (movement == 1)
     {
         turned = 1;
@@ -55,8 +54,7 @@ if (InputPressedCheck(INPUT.LEFT))
     }
 }
 
-if (InputPressedCheck(INPUT.RIGHT))
-{
+if (InputPressedCheck(INPUT.RIGHT)){
     if (movement == 1)
     {
         if (!InputPressedCheck(INPUT.LEFT))
@@ -111,8 +109,7 @@ if (InputPressedCheck(INPUT.UP) && InputPressedCheck(INPUT.DOWN))
 		}
 	}
 }
-if (InputPressedCheck(INPUT.UP))
-{
+if (InputPressedCheck(INPUT.UP)){
     if (movement == 1)
     {
         turned = 1;
@@ -136,8 +133,7 @@ if (InputPressedCheck(INPUT.UP))
     }
 }
 
-if (InputPressedCheck(INPUT.DOWN))
-{
+if (InputPressedCheck(INPUT.DOWN)){
     if (movement == 1)
     {
         if (!InputPressedCheck(INPUT.UP))
@@ -162,4 +158,29 @@ if (InputPressedCheck(INPUT.DOWN))
 				global.facing = 0;
         }
     }
+}
+
+if (InputPressed(INPUT.CONFIRM)){
+	if (movement==1&&uncan==0){
+		var obj=noone
+		switch (global.facing){
+			case 1:
+				obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + (sprite_height / 2) - sprite_height, x + sprite_width + 15 - sprite_width+10, y + sprite_height - sprite_height,o_interactparent,false,true)
+			break
+			case 3:
+				obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + 3 + (sprite_height / 2) - sprite_height, x - 15 - sprite_width+10, y + sprite_height + 3 - sprite_height,o_interactparent,false,true)
+			break
+			case 0:
+				obj=collision_rectangle(x + 4 - sprite_width+10, y + 20 - sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + sprite_height + 15 - sprite_height,o_interactparent,false,true)
+			break
+			case 2:
+				obj=collision_rectangle(x + 4 - sprite_width+10, (y + sprite_height) - 5 -sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + 8 - sprite_height,o_interactparent,false,true)
+			break
+		}
+		if (obj!=noone){
+			with (obj){
+				interact()
+			}
+		}
+	}
 }

@@ -5,11 +5,9 @@ yy = 320/2;
 face = undefined;
 faceid = -1;
 voice = snd_text
+save = false
 
-text = [
-	loc("* (Knowing the mouse might one\nsday extract the cheese from\nsthe mystical crystal...)","＊ (いつかネズミは　あのフシギな\nsクリスタルから　チーズを\nsとりだすかもしれない…)"),
-	loc("* (It fills you with\nsdetermination.)","＊ (そうおもうと\nsケツイが　みなぎった)"),
-];
+text = "* It is known.";
 
 line = 0;
 skip_enabled = true;

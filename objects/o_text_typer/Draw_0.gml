@@ -41,7 +41,6 @@ for (var i = 0; i < draw_count; i++)
 draw_set_color(c_white);
 
 if instance_exists(o_dialog){
-	if (sprite_exists(face_sprite)){
-		draw_sprite(face_sprite, face_index, xstart - 119, ystart + 7);
-	}
+	if (o_dialog.face!=undefined)
+		draw_sprite(o_dialog.face,o_dialog.faceid,xstart - 119/2,ystart + 7);
 }

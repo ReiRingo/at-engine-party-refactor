@@ -9,10 +9,7 @@
     "name":"solid",
     "path":"folders/@engine/objects/ow/solid.yy",
   },
-  "parentObjectId":{
-    "name":"o_diagoparent",
-    "path":"objects/o_diagoparent/o_diagoparent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

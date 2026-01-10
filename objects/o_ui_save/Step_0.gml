@@ -1,5 +1,5 @@
 if (InputPressed(INPUT.LEFT)||InputPressed(INPUT.RIGHT)){
-	audio_play_sound(snd_menumove,1,false)
+	audio_play_sound(snd_ui_move,1,false)
 	if (selection!=0)
 		selection = 0 // Left
 	else
@@ -22,4 +22,12 @@ if (InputPressed(INPUT.CONFIRM)){
 if (InputPressed(INPUT.CANCEL)||(section==2)){
 	instance_destroy()
 	o_actor_mainpl.moveable=true
+}
+if (section == 1 && !saved_once) {
+    save_game();
+    saved_once = true;
+}
+
+if (section != 1) {
+    saved_once = false;
 }
