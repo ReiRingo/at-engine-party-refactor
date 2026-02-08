@@ -1,4 +1,4 @@
-if (live_call()) {return live_result}
+ 
 
 if (instance_exists(t)){
 	t.x = xx+14; t.y = yy+11
@@ -6,10 +6,6 @@ if (instance_exists(t)){
 	t.line_length = width+14
 	if (asset_get_type(face) == asset_sprite) {
 		t.line_length -= 14
-	}
-	if (t.can_skip&&InputPressed(INPUT.CANCEL)){
-		t.pos=string_length(t.text)
-		t.finished=true
 	}
 	
 	if (on_choice) {

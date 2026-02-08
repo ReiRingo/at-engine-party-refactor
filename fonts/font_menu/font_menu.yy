@@ -98,7 +98,7 @@
     "121":{"character":121,"h":7,"offset":0,"shift":5,"w":4,"x":20,"y":11,},
     "122":{"character":122,"h":7,"offset":0,"shift":5,"w":4,"x":14,"y":11,},
     "124":{"character":124,"h":7,"offset":0,"shift":3,"w":2,"x":8,"y":20,},
-    "9647":{"character":9647,"h":7,"offset":1,"shift":5,"w":3,"x":8,"y":38,},
+    "9647":{"character":9647,"h":7,"offset":1,"shift":3,"w":1,"x":8,"y":38,},
   },
   "hinting":0,
   "includeTTF":false,

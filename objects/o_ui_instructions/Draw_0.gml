@@ -28,7 +28,7 @@ draw_set_color(c_white)
 draw_set_color(8421504);
 draw_set_font(font_menu)
 draw_set_halign(fa_center)
-var version = "0.0.9"
+var version = "0.1.0"
 draw_text(160, 232, "AT ENGINE v" + version + " (C) Toby Fox 2015-2017");
 draw_set_halign(fa_left)
 draw_set_color(c_white)

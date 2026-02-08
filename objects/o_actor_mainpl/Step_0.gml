@@ -10,17 +10,27 @@ if (state == PLAYER_STATES.free) { //Checking if the player is in control
 
 	strumpet = bbox_top;
 	trumpet = bbox_left;
-
 	hsp = (InputPressedCheck(INPUT.RIGHT)-InputPressedCheck(INPUT.LEFT))*spd;
 	vsp = (InputPressedCheck(INPUT.DOWN)-InputPressedCheck(INPUT.UP))*spd;
 
-	if (InputPressedCheck(INPUT.LEFT) && InputPressedCheck(INPUT.RIGHT)) {hsp = -1*spd}
+	if (InputPressedCheck(INPUT.LEFT) && InputPressedCheck(INPUT.RIGHT)) {hsp = 0}
 	if (InputPressedCheck(INPUT.UP)  && InputPressedCheck(INPUT.DOWN))  {vsp = -1*spd}
 
-	direction_animation_fuck() //Face the direction that i go
+	direction_animation() //Face the direction that i go
+	
+	if (place_meeting(x + hsp, y, o_solidparent)) {
+		if(!place_meeting(x+hsp,y-spd,o_solidparent)) {y-=spd}
+		if(!place_meeting(x+hsp,y+spd,o_solidparent)) {y+=spd}
+	}
+	if (place_meeting(x, y+vsp, o_solidparent)) {
+		if(!place_meeting(x-spd,y+vsp,o_solidparent)) {x-=spd}
+		if(!place_meeting(x+spd,y+vsp,o_solidparent)) {x+=spd}
+	}
+
+	
 	collision(o_solidparent)
 	frisk_dance();
-	direction_animation_fuck() //Just making that look correctly again if i'm in a wall, shitty detail but, ya, and it's important for frisk dance! :DDDDDD
+	direction_animation() //Just making that look correctly again if i'm in a wall, it's important for frisk dance! :DDDDDD
 
 	x += hsp;
 	y += vsp;

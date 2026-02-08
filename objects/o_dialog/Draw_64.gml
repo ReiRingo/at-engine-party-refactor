@@ -1,4 +1,5 @@
-if (live_call()) {return live_result}
+ 
+
 ui_dialoguebox_create(xx, yy, width, height);
 
 if (asset_get_type(face) == asset_sprite) {

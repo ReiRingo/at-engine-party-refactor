@@ -1,0 +1,15 @@
+width  = o_enc.board_w;
+height = o_enc.board_h;
+xx = o_enc.txt.x
+yy = o_enc.txt.y
+face = undefined;
+faceid = 0;
+voice = snd_text2
+text = "* It is known.";
+line = 0;
+skip_enabled = true;
+t = o_text_typer
+choices = []
+ch_index = 0;
+on_choice = false;
+player_free = false;

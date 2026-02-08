@@ -1,5 +1,6 @@
 
 if (!finished){
+	var txt_len = string_length(text)
 	while (string_char_at(text,pos) == CMD_START) {
 		var end_index = string_pos_ext(CMD_END,text,pos)
 		if (string_char_at(text,pos+1) == CMD_START) {
@@ -53,14 +54,9 @@ if (!finished){
 		last_pos = current_index;
 	}
 	
-	if (pos >= string_length(text)){
+	if (pos >= txt_len){
 		finished = true
 	}
-	
-	if (can_skip && InputPressed(INPUT.CANCEL)){
-		pos = string_length(text);
-	}
-
 }
 
 if (InputPressed(INPUT.CONFIRM)){
@@ -68,3 +64,5 @@ if (InputPressed(INPUT.CONFIRM)){
 		line++
 	}
 }
+if (can_skip && InputPressed(INPUT.CANCEL))
+	pos = string_length(text)

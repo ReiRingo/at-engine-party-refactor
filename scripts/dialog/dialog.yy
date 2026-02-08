@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"dialog",
   "parent":{
-    "name":"engine",
-    "path":"folders/@engine/scripts/engine.yy",
+    "name":"ow",
+    "path":"folders/@engine/scripts/engine/system/ow.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

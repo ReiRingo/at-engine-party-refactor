@@ -1,7 +1,6 @@
 frames = 0
-intw = CAMERA_WIDTH*2
-inth = CAMERA_HEIGHT*2
-windowsize = 1
+
+global.borders = true
 
 global.lang = ""
 
@@ -24,8 +23,29 @@ global.nextexp = 0
 global.facing = 0
 
 global.items = []
+global.phonelist = []
 
 global.inventory = [""]
 
 global.weapon = ""
 global.armor = ""
+
+global.input_delay = 0;
+
+border_surface =surface_create(window_get_width(),window_get_height());	
+
+BASE_WIDTH = 320
+BASE_HEIGHT = 240
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 480
+if (global.borders){
+    WINDOW_WIDTH = 1920/2
+    WINDOW_HEIGHT = 1080/2
+}
+RESOLUTION = 2
+
+window_set_size(WINDOW_WIDTH,WINDOW_HEIGHT)
+surface_resize(application_surface,BASE_WIDTH*RESOLUTION,BASE_HEIGHT*RESOLUTION)
+application_surface_draw_enable(false)
+display_reset(0,true)
+window_center()

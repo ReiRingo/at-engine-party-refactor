@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"inputs",
   "parent":{
-    "name":"engine",
-    "path":"folders/@engine/scripts/engine.yy",
+    "name":"system",
+    "path":"folders/@engine/scripts/engine/system.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

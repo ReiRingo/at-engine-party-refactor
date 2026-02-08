@@ -41,7 +41,7 @@ collision = function(object=o_solidparent) {
 	}
 }
 
-direction_animation_fuck = function() { //Namu
+direction_animation = function() { //Namu
 	if (hsp != 0 || vsp != 0) {
 		if (vsp == 0) {
 			if (hsp < 0) {global.facing = FACES.LEFT};
@@ -53,18 +53,17 @@ direction_animation_fuck = function() { //Namu
 			if (vsp > 0) {global.facing = FACES.DOWN};
 		}
 	
-		if (global.facing = FACES.RIGHT && hsp < 0) {global.facing = FACES.LEFT}	
-		if (global.facing = FACES.LEFT && hsp > 0) {global.facing = FACES.RIGHT}
-		if (global.facing = FACES.DOWN && vsp < 0) {global.facing = FACES.UP}		
-		if (global.facing = FACES.UP && vsp > 0) {global.facing = FACES.DOWN}
+		if (global.facing == FACES.RIGHT && hsp < 0) {global.facing = FACES.LEFT}	
+		if (global.facing == FACES.LEFT && hsp > 0) {global.facing = FACES.RIGHT}
+		if (global.facing == FACES.DOWN && vsp < 0) {global.facing = FACES.UP}		
+		if (global.facing == FACES.UP && vsp > 0) {global.facing = FACES.DOWN}
 	}
 }
 	
 frisk_dance = function() { //Namu
 	if (instance_place(x,y-spd,o_solidparent)) {
 		if (InputPressedCheck(INPUT.DOWN) && InputPressedCheck(INPUT.UP)) {
-			if (global.facing == FACES.LEFT || global.facing == FACES.RIGHT) {global.facing = FACES.DOWN}
-			vsp += spd;
+            vsp += spd;
 		}
 	}
 }

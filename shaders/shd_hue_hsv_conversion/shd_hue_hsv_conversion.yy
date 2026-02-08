@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_hue_hsv_conversion",
+  "name":"shd_hue_hsv_conversion",
+  "parent":{
+    "name":"hue-shift",
+    "path":"folders/@engine/shaders/hue-shift.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

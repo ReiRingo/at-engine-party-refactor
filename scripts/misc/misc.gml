@@ -1,4 +1,4 @@
-function instance_create(obj, xx = 0, yy = 0, dpth = 0, post_var_struct = {}) {
+function instance_create(obj, xx = 0, yy = 0, dpth = depth-1, post_var_struct = {}) {
     var inst = instance_create_depth(xx, yy, dpth, obj);
 
     if (is_struct(post_var_struct)) {
@@ -47,4 +47,33 @@ function get_roomname(room_name) {
         default:
             return "undefined";
     }
+}
+
+function can_move(){
+    var box = instance_exists(o_dialog) ? o_dialog.player_free : true
+    var moveable = instance_exists(o_actor_mainpl) ? o_actor_mainpl.moveable : false
+	//If this returns true, in simple words, it means the player can move!
+    return box 
+	&& !instance_exists(o_ui_save) && 
+	!instance_exists(o_ui_menu) && 
+	moveable &&
+	!instance_exists(o_warp_manager) &&
+	!instance_exists(o_ui_image)
+
+}
+
+function is_top(){
+	if (instance_exists(o_actor_mainpl)){
+		var top=false
+		if (o_actor_mainpl.y > (o_cam.y - 240/2 + 130)){
+			top=true
+		}
+		else{
+			top=false
+		}
+		return top
+	}
+	else{
+		return false
+	}
 }

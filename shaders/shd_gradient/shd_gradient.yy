@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_gradient",
+  "name":"shd_gradient",
+  "parent":{
+    "name":"shaders",
+    "path":"folders/@engine/shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

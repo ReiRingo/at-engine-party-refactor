@@ -10,8 +10,8 @@
   "name":"o_ui_save",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/@engine/objects/ui.yy",
+    "name":"ow",
+    "path":"folders/@engine/objects/ui/ow.yy",
   },
   "parentObjectId":null,
   "persistent":false,

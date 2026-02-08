@@ -11,8 +11,8 @@
   "name":"o_dialog",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/@engine/objects/ui.yy",
+    "name":"text",
+    "path":"folders/@engine/objects/text.yy",
   },
   "parentObjectId":null,
   "persistent":false,

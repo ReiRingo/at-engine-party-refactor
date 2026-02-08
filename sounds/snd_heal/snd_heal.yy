@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_heal",
   "parent":{
-    "name":"sounds",
-    "path":"folders/@engine/sounds.yy",
+    "name":"sfx",
+    "path":"folders/@engine/sounds/sfx.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

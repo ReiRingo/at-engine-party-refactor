@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"text",
-    "path":"folders/@engine/objects/ui/text.yy",
+    "path":"folders/@engine/objects/text.yy",
   },
   "parentObjectId":null,
   "persistent":false,

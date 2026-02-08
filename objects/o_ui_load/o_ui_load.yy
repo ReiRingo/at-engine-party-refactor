@@ -11,8 +11,8 @@
   "name":"o_ui_load",
   "overriddenProperties":[],
   "parent":{
-    "name":"ui",
-    "path":"folders/@engine/objects/ui.yy",
+    "name":"menu",
+    "path":"folders/@engine/objects/ui/menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

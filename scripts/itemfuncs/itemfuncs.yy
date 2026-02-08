@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"itemfuncs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"itemfuncs",
+  "parent":{
+    "name":"ow",
+    "path":"folders/@engine/scripts/engine/system/ow.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

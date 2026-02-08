@@ -3,6 +3,8 @@ prev_state=state
 sub_state=0
 item_selection=0
 item_action_selection=0
+dialogmade=0
+top=is_top()
 
 options = [
 	{
@@ -68,5 +70,5 @@ cells = [
 	},
 ]
 
-selection = 
+selection = 0
 depth=DEPTH_UI.MENU_UI

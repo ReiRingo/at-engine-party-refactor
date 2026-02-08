@@ -10,8 +10,8 @@
   "name":"o_cam",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/@engine/objects.yy",
+    "name":"system",
+    "path":"folders/@engine/objects/system.yy",
   },
   "parentObjectId":null,
   "persistent":true,

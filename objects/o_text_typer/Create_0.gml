@@ -4,7 +4,6 @@ spd = 1;
 finished = false;
 face_sprite = noone;
 face_index = 0;
-spacing = loc(0.89,0.94);
 line_length = infinity
 voice = snd_text
 
@@ -43,25 +42,3 @@ on_gui = false
 
 depth=DEPTH_UI.DIALOGUE_UI-1
 
-function check_line_break(text,number,line_length, char_spacing=0, space, return_length=false) {
-	var j = number, length = 0;
-	var text_length = string_length(text);
-
-	while (j <= text_length) {
-		var cj = string_char_at(text, j);
-		if (cj == " " || cj == "\n") break;
-
-		if (cj == CMD_START) {
-			var e = string_pos_ext(CMD_END, text, j);
-			if (e > 0) {
-			    j = e + 1;
-			    continue;
-			}
-		}
-
-		length += (string_width(cj)*char_spacing);
-
-		j++;
-	}
-	return !return_length ? (space + length > line_length) : length 
-}

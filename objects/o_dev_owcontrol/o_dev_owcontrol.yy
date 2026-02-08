@@ -9,8 +9,8 @@
   "name":"o_dev_owcontrol",
   "overriddenProperties":[],
   "parent":{
-    "name":"dev",
-    "path":"folders/@engine/objects/dev.yy",
+    "name":"squares",
+    "path":"folders/@engine/objects/dev/squares.yy",
   },
   "parentObjectId":null,
   "persistent":false,

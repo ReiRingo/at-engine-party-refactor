@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_ow_sign",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":19,
   "bbox_left":0,
   "bbox_right":19,
@@ -59,7 +59,7 @@
     },
     "name":"spr_ow_sign",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":0.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

@@ -58,5 +58,8 @@ Temporary Items
 *.resource_order
 *.old
 
+# GMLIVE JUMPSCARE
+datafiles/GMLive/*
+
 # GMRT build directory
 Build

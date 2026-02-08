@@ -1,6 +1,6 @@
 view = view_camera[view_current]
-var w = CAMERA_WIDTH/zoom
-var h = CAMERA_HEIGHT/zoom
+var w = o_world.BASE_WIDTH/zoom
+var h = o_world.BASE_HEIGHT/zoom
 
 if (instance_exists(target)) {update_pos(target.x,target.y)} else {limit_camera()}
 

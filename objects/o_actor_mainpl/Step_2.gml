@@ -1,3 +1,4 @@
+
 moving = (x != xprevious || y != yprevious) 
 if (!moving) {
     image_speed = 0;
