@@ -1,91 +1,26 @@
 text = "";
-text_raw = "";
-runs = [];
-pos = 0;
+pos = 1;
 spd = 1;
 finished = false;
-wave_enabled = false;
-shake_enabled = false;
 face_sprite = noone;
 face_index = 0;
 spacing = loc(0.89,0.94);
+line_length = infinity
+voice = snd_text
 
-if instance_exists(o_dialog)
-	voice = o_dialog.voice;
-else
-	voice = snd_text
-
-text_list = [];
 line = 0;
 can_skip = true;
-comma_wait = 0;
 cur_char = 0;
 last_pos = -1;
 
-function process_line()
+wait = 0
+rainbow_time = 0
+text_surface = 0;
+function shaky_offset(i,intensity=1)
 {
-    if (line >= array_length(text_list)) {
-        instance_destroy();
-        exit;
-    }
-
-    var raw = text_list[line];
-
-    if (string_pos("{can_skip(false)}", raw) > 0) {
-        can_skip = false;
-        raw = string_replace(raw, "{can_skip(false)}", "");
-    }
-    if (string_pos("{can_skip(true)}", raw) > 0) {
-        can_skip = true;
-        raw = string_replace(raw, "{can_skip(true)}", "");
-    }
-
-    if (string_pos("{wavy(true)}", raw) > 0) {
-        wave_enabled = true;
-        raw = string_replace(raw, "{wavy(true)}", "");
-    }
-    if (string_pos("{wavy(false)}", raw) > 0) {
-        wave_enabled = false;
-        raw = string_replace(raw, "{wavy(false)}", "");
-    }
-
-    if (string_pos("{shaky(true)}", raw) > 0) {
-        shake_enabled = true;
-        raw = string_replace(raw, "{shaky(true)}", "");
-    }
-    if (string_pos("{shaky(false)}", raw) > 0) {
-        shake_enabled = false;
-        raw = string_replace(raw, "{shaky(false)}", "");
-    }
-
-    if (string_pos("{face(", raw) > 0)
-    {
-        var start = string_pos("{face(", raw) + string_length("{face(");
-        var send = string_pos(")}", raw);
-
-        var inside = string_copy(raw, start, send - start);
-
-        var spr = real(string_copy(inside, 1, string_pos(",", inside) - 1));
-        var idx = real(string_copy(inside, string_pos(",", inside) + 1, string_length(inside)));
-
-        face_sprite = spr;
-        face_index = idx;
-
-        raw = string_delete(raw, string_pos("{face(", raw), (send + 2) - string_pos("{face(", raw));
-    }
-
-    raw = string_replace_all(raw, "\ns", loc("\n  ","\n　 "))
-	raw = string_replace_all(raw, "\n", "\n")
-
-    text_raw = raw;
-    pos = 0;
-    finished = false;
-}
-
-function shaky_offset(i)
-{
-    var ox = random_range(-0.5, 0.5);
-    var oy = random_range(-0.5, 0.5);
+	var p = 0.5*intensity
+    var ox = random_range(-p, p);
+    var oy = random_range(-p, p);
 
     return [ox, oy];
 }
@@ -96,12 +31,37 @@ function wavy_offset(i)
     var freq = 0.25;
     var wspd = 0.15;
 
-    var t = o_world.frames * wspd;
+    var t = (current_time*.05) * wspd;
 
     var ox = 0;
-    var oy = sin((i * freq) + t) * amp;
+    var oy = cos((i * freq) - t) * amp;
 
     return [ox, oy];
 }
 
+on_gui = false
+
 depth=DEPTH_UI.DIALOGUE_UI-1
+
+function check_line_break(text,number,line_length, char_spacing=0, space, return_length=false) {
+	var j = number, length = 0;
+	var text_length = string_length(text);
+
+	while (j <= text_length) {
+		var cj = string_char_at(text, j);
+		if (cj == " " || cj == "\n") break;
+
+		if (cj == CMD_START) {
+			var e = string_pos_ext(CMD_END, text, j);
+			if (e > 0) {
+			    j = e + 1;
+			    continue;
+			}
+		}
+
+		length += (string_width(cj)*char_spacing);
+
+		j++;
+	}
+	return !return_length ? (space + length > line_length) : length 
+}

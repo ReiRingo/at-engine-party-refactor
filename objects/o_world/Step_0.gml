@@ -1,4 +1,10 @@
 frames ++
+if (keyboard_check_pressed(vk_f1)){
+	global.debug = !global.debug
+	if (global.debug) {
+		instance_create(o_dev_debug)	
+	} else {instance_destroy(o_dev_debug)}
+}
 
 if keyboard_check_pressed(vk_f2)
 	game_restart()
@@ -22,7 +28,9 @@ if keyboard_check_pressed(vk_f4) {
 }
 
 if (keyboard_check_pressed(vk_f5))
-	instance_create(o_dev_roomselect,0,0,-9999)
+	if (!instance_exists(o_dev_roomselect)) {
+		instance_create(o_dev_roomselect,0,0,-9999)
+	} else {instance_destroy(o_dev_roomselect)}
 
 if frames % 30 == 0
 	global.time ++

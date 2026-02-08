@@ -6,10 +6,10 @@ if (blink_timer>=blink_speed)
     blink_state = !blink_state
 }
 
-var typed = keyboard_string;
-if (typed != "")
+
+if (keyboard_string != "")
 {
-    search += string_lower(typed);
+    search += string_lower(keyboard_string);
     keyboard_string = "";
     update_filter();
 }

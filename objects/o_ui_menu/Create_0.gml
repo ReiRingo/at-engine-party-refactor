@@ -39,26 +39,34 @@ item_actions = [
 
 cell_selection = 0;
 
+call_dialogue = function(dial_text,text, end_text) {
+	var t = []
+	if (is_array(text)) {
+		array_copy(t,0,text,0,array_length(text))
+	} else {t = [text]}
+
+	array_insert(t,0,dial_text)
+	array_insert(t,array_length(t),end_text)
+	return t
+}
+
 cells = [
 	{
 		name: "Toriel",
-		selectable: true
+		result: ["(sound,snd_ui_deny,0,0,1,.5)* No response..."]
 	},
 	{
-		name: "Undyne and Papyrus",
-		selectable: true
+		name: "---",
+		result: [
+			"(face,spr_faces_namu,1)* (wave)Eyyyy(wave) whasup!",
+			"(face,0)* I revamped the menu system.",
+			"(face,2)* The logic?(w)(face,3)\nStill the same.",
+			"(face,4)* But i organized the code, and fixed some unsused shit.",
+			"(face,5)* There were some pretty usefull things in my opinion.",
+			"(face,1)* (wave)(rainbow)Good job Techo!"
+		]
 	},
 ]
 
-selection = -1
-
-for (var i=0; i<array_length(options); i++){
-	if (options[i].selectable)
-	{
-		selection=i
-		break
-	}
-}
-
+selection = 
 depth=DEPTH_UI.MENU_UI
-o_actor_mainpl.moveable = false

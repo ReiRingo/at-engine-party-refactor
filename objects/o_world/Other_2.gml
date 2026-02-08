@@ -1,7 +1,5 @@
 global.debug = false
 
-if (global.debug)
-	instance_create(o_dev_debug)
 
 { // resolution fix
 	window_set_size(intw*windowsize,inth*windowsize);
@@ -51,7 +49,7 @@ global.items = [
 	},
 	{
 		name: "poison",
-		desc: "* poison - i think it's\nsa bit obvious...",
+		desc: "* poison - i think it's\na bit obvious...",
 		execute: function(){
 			var amount=irandom_range(1,20)
 			Dialogue_Create([
@@ -66,7 +64,7 @@ global.items = [
 		desc: "* item1 - idk.",
 		execute: function () {
 			Dialogue_Create([
-				"* as I said, idk but\nsi want to fill the\n  other lines..."
+				"* as I said, idk but\ni want to fill the\nother lines..."
 			])
 		}
 	}

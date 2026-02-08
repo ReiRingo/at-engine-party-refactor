@@ -62,7 +62,7 @@
     },
     "name":"spr_actor_mainpl_u",
     "playback":1,
-    "playbackSpeed":16.0,
+    "playbackSpeed":6.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",

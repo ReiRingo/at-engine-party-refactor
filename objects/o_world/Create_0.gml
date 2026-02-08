@@ -1,6 +1,6 @@
 frames = 0
-intw = 640
-inth = 480
+intw = CAMERA_WIDTH*2
+inth = CAMERA_HEIGHT*2
 windowsize = 1
 
 global.lang = ""

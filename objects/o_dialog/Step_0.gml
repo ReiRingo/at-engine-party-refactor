@@ -1,37 +1,45 @@
-if (!instance_exists(t)){
+if (live_call()) {return live_result}
+
+if (instance_exists(t)){
+	t.x = xx+14; t.y = yy+11
+	on_choice = line >= array_length(text)-1 && array_length(choices) > 0 && t.finished
+	t.line_length = width+14
+	if (asset_get_type(face) == asset_sprite) {
+		t.line_length -= 14
+	}
+	if (t.can_skip&&InputPressed(INPUT.CANCEL)){
+		t.pos=string_length(t.text)
+		t.finished=true
+	}
+	
+	if (on_choice) {
+		ch_index += (InputPressed(INPUT.RIGHT)-InputPressed(INPUT.LEFT))
+		ch_index = clamp(ch_index,0,array_length(choices)-1)
+		
+		if (InputPressed(INPUT.CONFIRM)) {
+			var result = choices[ch_index].result
+			if (is_method(result)) {
+				script_execute(result)
+				instance_destroy(t)
+				instance_destroy(id,false)
+			}
+			
+		}
+	} else if (InputPressed(INPUT.CONFIRM) && t.finished){
+		line++
+		instance_destroy(t)
+	}
+	
+} else {
 	if (line>=array_length(text)){
-		o_actor_mainpl.moveable=true
+		if (instance_exists(o_actor_mainpl)) o_actor_mainpl.moveable=true
 		if (save)
 			instance_create(o_ui_save)
 		instance_destroy()
 		exit
 	}
-
-	var raw=text[line]
-	var pr=dialogue_preprocess(raw)
-	skip_enabled=pr.skip
-	var p=parse_text(pr.text)
-	if (face!=undefined)
-		t=instance_create(o_text_typer,xx+72,yy+11.5)
-	else
-		t=instance_create(o_text_typer,xx+14,yy+11.5)
-
-	t.text_raw=p.text
-	t.runs=p.runs
-}else
-{
-	if (skip_enabled&&InputPressed(INPUT.CANCEL)){
-		t.pos=string_length(t.text_raw)
-		t.finished=true
-	}
-	if (InputPressed(INPUT.CONFIRM)){
-		if (!t.finished){
-			t.pos=string_length(t.text_raw)
-			t.finished=true
-		}else
-		{
-			instance_destroy(t)
-			line++
-		}
-	}
+	
+	t=instance_create(o_text_typer,xx+14,yy+10);
+	t.on_gui = true
+	t.text = text[line];
 }

@@ -1,3 +1,4 @@
+
 rooms = []
 room_names = []
 
@@ -38,6 +39,6 @@ function update_filter()
 
 update_filter();
 depth = DEPTH_UI.MENU_UI
-
+keyboard_string = "";
 if instance_exists(o_actor_mainpl)
     o_actor_mainpl.moveable = false

@@ -1,4 +1,7 @@
-function Dialogue_Create(text_array) {
+function Dialogue_Create(text) {
     var d = instance_create(o_dialog);
-    d.text = text_array;
+	if (is_array(text)) {
+		d.text = text;
+	} else {d.text = [text]}
+	return d
 }
