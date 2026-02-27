@@ -55,17 +55,24 @@ call_dialogue = function(dial_text,text, end_text) {
 cells = [
 	{
 		name: "Toriel",
-		result: ["(sound,snd_ui_deny,0,0,1,.5)* No response..."]
+		result: [
+            "(sound,snd_ring)* (Ring... ring...)",
+            "(sound,snd_ui_deny,0,0,1,.5)* No response...",
+            "* ((Click...)",
+        ]
 	},
 	{
 		name: "---",
 		result: [
-			"(face,spr_faces_namu,1)* (wave)Eyyyy(wave) whasup!",
-			"(face,0)* I revamped the menu system.",
-			"(face,2)* The logic?(w)(face,3)\nStill the same.",
-			"(face,4)* But i organized the code, and fixed some unsused shit.",
-			"(face,5)* There were some pretty usefull things in my opinion.",
-			"(face,1)* (wave)(rainbow)Good job Techo!"
+			"(sound,snd_ring)* (Ring... ring...)",
+            "* Hello(w,1)!\n* Can I speak to G...",
+			"* ...\n* Wait a second.",
+			"* Is this the wrong number?",
+			"(sound,mus_wrongnumber,0,1)* Oh it's the wrong number(w,1)!\n* The wrong number song!",
+			"* We're very very sorry that\nwe got it wrong!",
+            "* Oh it's the wrong number(w,1)!\n* The wrong number song!",
+            "* We're very very sorry that\nwe got it wrong!",
+            "(esound,mus_wrongnumber)* ((Click...)",
 		]
 	},
 ]

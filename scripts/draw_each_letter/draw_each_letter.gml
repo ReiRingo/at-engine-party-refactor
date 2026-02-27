@@ -4,7 +4,7 @@ function check_line_break(text,number,line_length, char_spacing=0, space, return
 
 	while (j <= text_length) {
 		var cj = string_char_at(text, j);
-		if (cj == " " || cj == "\n") break;
+		if (cj == " " || cj == "　"|| cj == "\n") break;
 
 		if (cj == CMD_START) {
 			var e = string_pos_ext(CMD_END, text, j);
@@ -37,7 +37,7 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 	for (var i = 1; i < draw_count+1; i++)
 	{
 	    var ch = string_char_at(text, i);
-		if (string_char_at(text,i-1) == " ") {
+		if (string_char_at(text,i-1) == " " || string_char_at(text,i-1) == "　") {
 			if (check_line_break(text,i,line_length,spacing,xx,false)) {
 				xx = _x;
 				yy += 18;

@@ -1,4 +1,5 @@
- 
+if (live_call()) return live_result; 
+
 draw_set_font(loc_getfont(font_main))
 if !screenshot{
 var debug_lines = []
@@ -36,7 +37,7 @@ draw_set_alpha(0.5);
 draw_text_transformed(x, y, debug_text, 0.5, 0.5, 0)
 draw_set_alpha(1);
 
-draw_sprite_ext(spr_refshop1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
+draw_sprite_ext(spr_refselection1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
 draw_set_alpha(alphascreen);
 draw_rectangle(0,0,320,240,false)
 draw_set_alpha(1);

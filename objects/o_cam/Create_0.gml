@@ -8,8 +8,8 @@ view=0;
 
 
 limit_camera = function() {
-	var w = o_world.BASE_WIDTH/zoom;
-	var h = o_world.BASE_HEIGHT/zoom;
+	var w = 320/zoom;
+	var h = 240/zoom;
 	
 	x = clamp(x,0+w/2,room_width-w/2)
 	y = clamp(y,0+h/2,room_height-h/2)
@@ -22,8 +22,8 @@ update_pos = function(__x,__y) {
 }
 
 reset_camera = function() {
-	var w = o_world.BASE_WIDTH/zoom;
-	var h = o_world.BASE_HEIGHT/zoom;
+	var w = 320/zoom;
+	var h = 240/zoom;
 	if (!view_enabled) {
 		view_visible[view_current] = true;
 		view_enabled = true;

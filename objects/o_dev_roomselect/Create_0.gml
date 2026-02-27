@@ -13,32 +13,16 @@ while (current != -1)
     current = room_next(current)
 }
 
-search = ""
 filtered = []
-selection = 0
-blink_timer = 0
-blink_state = true
-blink_speed = 30
-backspace_hold = 0
-backspace_delay=15
-backspace_rate =3
-
-function update_filter()
-{
-    filtered = []
-    var count = array_length(room_names)
-    for (var i = 0; i < count; i++)
-    {
-        if (search == "" || string_pos(search, room_names[i]) == 1)
-        {
-            array_push(filtered, i);
-        }
+var count = array_length(room_names)
+for (var i = 0; i < count; i++){
+    if (string_pos("", room_names[i]) == 1){
+        array_push(filtered, i);
     }
-    selection = clamp(selection, 0, array_length(filtered) - 1)
 }
+selection = 0
 
-update_filter();
 depth = DEPTH_UI.MENU_UI
-keyboard_string = "";
+
 if instance_exists(o_actor_mainpl)
     o_actor_mainpl.moveable = false

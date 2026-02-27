@@ -63,3 +63,19 @@ datafiles/GMLive/*
 
 # GMRT build directory
 Build
+options/extensions/GMLive_fallback.json
+scripts/GMLive_notOnce/GMLive_notOnce.gml
+extensions/GMLive_fallback/pre_build_step.sh
+extensions/GMLive_fallback/GMLive_fallback.yy
+extensions/GMLive_fallback/pre_build_step.bat
+scripts/GMLive_noDeactivate/GMLive_noDeactivate.yy
+extensions/GMLive_fallback/pre_build_step_warn.vbs
+scripts/GMLive_noDeactivate/GMLive_noDeactivate.gml
+scripts/GMLive_noDeactivate/GMLive_noDeactivate.gml
+options/extensions/GMLive_fallback.json
+scripts/GMLive_notOnce/GMLive_notOnce.yy
+scripts/GMLiveAPI_js/GMLiveAPI_js.gml
+scripts/GMLiveAPI_js/GMLiveAPI_js.yy
+scripts/GMLive/GMLive.fallback.gml
+objects/obj_gmlive/obj_gmlive.yy
+objects/obj_gmlive/Other_62.gml

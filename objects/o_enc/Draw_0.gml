@@ -1,5 +1,6 @@
- 
+ if (live_call()) return live_result;
 
+board(board_x,board_y,board_w,board_h,board_a)
 { // buttons
 	for (var i=0; i<array_length(buttons); i++){
 		var _x = 16+78*i
@@ -20,7 +21,9 @@
 	draw_set_font(loc_getfontmono(font_main))
 	switch(menu.current) {
 		case BATTLE_MENU.CHOOSE_ENEMY:
-			draw_enemy_list()
+            for (var i = 0; i<array_length(enemies); i++){ 
+                draw_enemy_list(enemies[i].show_hp)
+            }
 		break;
 		
         case BATTLE_MENU.ACT:
@@ -41,6 +44,5 @@
     //draw_sprite_ext(spr_pixel2x,0,137,200,6.6,4.9,0,c_yellow,1)
 	draw_text_transformed(156+(global.lv-1)*2,200,string(global.hp)+" / "+string(global.maxhp),0.5,0.5,0)
 }
-board(board_x,board_y,board_w,board_h,board_a)
 draw_set_font(-1)
 draw_set_colour(c_white)

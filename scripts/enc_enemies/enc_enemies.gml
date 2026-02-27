@@ -15,6 +15,7 @@ function enc_enemy(){
     def = 0; // defense
     
     can_mercy = false; // can be spared?
+    show_hp = true; // show hp bar?
     
     turn_object = o_enc_turn
     
@@ -76,21 +77,21 @@ function enc_enemy_test2() : enc_enemy() constructor{
     
     name = "TEST2"
     
-    maxhp = 20;
-    hp = 20;
+    maxhp = 40;
+    hp = 30;
     
     att = 2; // attack
     def = 2; // defense
     
     can_mercy = false; // can be spared?
-    
+    show_hp = false
     turn_object = o_enc_turn
     
     acts = [
         {
             name: "Check",
             exec: function(){
-                enc_dialogue("* TEST ENEMY\n* Just a test...");
+                enc_dialogue("* TEST ENEMY2\n* Really just a test...");
             }
         },
         {

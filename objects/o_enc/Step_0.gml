@@ -1,6 +1,4 @@
- 
-
-board_a++
+ if (live_call()) return live_result;
 
 if (array_length(enemies) <= 0) {
 	turn = BATTLE_TURN.RESULT	
@@ -120,7 +118,7 @@ if (menu.current==BATTLE_MENU.MAIN)
 
 if (turn==BATTLE_TURN.ENEMY){
     if !(turncreated){
-        instance_create(enemies[irandom_range(0,array_length(enemies))].turn_object)
+        instance_create(enemies[irandom_range(0,array_length(enemies)-1)].turn_object)
         turncreated=true
     }
 }

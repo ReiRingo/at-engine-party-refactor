@@ -1,4 +1,4 @@
- 
+if (live_call()) return live_result;
 
 enum BATTLE_MENU {
 	MAIN,
@@ -54,7 +54,7 @@ act_enemy_index = 0;
 act_index = 0;
 
 board_x = 158;
-board_y = 157;
+board_y = 158;
 board_w = 285;
 board_h = 67.5;
 board_a = 0
@@ -101,8 +101,7 @@ set_controls = function(inputs,limit) {
 	if (prev_index != index.current) {audio_play_sound(snd_ui_move,0,0)} //sound if the index changed
 }
 
-set_controls_grid = function(list_length)
-{
+set_controls_grid = function(list_length){
     if (list_length<=0)
         return
 
@@ -155,21 +154,6 @@ set_soul = function(_x,_y) {
 	o_enc_soul.y = _y
 }
 
-function board_surface_check(){
-    var w = ceil(abs(board_w))
-    var h = ceil(abs(board_h))
-    var size = ceil(sqrt(w*w + h*h))
-
-    if (!surface_exists(board_surface)
-    || surface_get_width(board_surface)!=size
-    || surface_get_height(board_surface)!=size)
-    {
-        if (surface_exists(board_surface))
-            surface_free(board_surface)
-        board_surface = surface_create(size, size)
-    }
-}
-
 function board(_x, _y, _w, _h, _angle){
     var spr = spr_pixel2x
     var bg = spr_pixel
@@ -215,92 +199,86 @@ function board(_x, _y, _w, _h, _angle){
 
 function draw_list_2x2(list,get_name_func)
 {
-    draw_set_font(loc_getfontmono(font_main))
+    draw_set_font(loc_getfontmono(font_main));
 
     for (var i=0; i<array_length(list); i++){
-        var col = i mod 2
-        var row = i div 2
-        var xx = 30+col*120
-        var yy = 10+row*16
-        
-        draw_each_letter(xx,yy,"* "+string(get_name_func(list[i])))
-        if (index.current==i){
-            set_soul(xx-8,yy+4)
-        }
+
+        var col = i mod 2;
+        var row = i div 2;
+
+        var xx = board_x - board_w*0.5 + 30 + col*120;
+        var yy = board_y - board_h*0.5 + 10 + row*16;
+
+        draw_each_letter(xx, yy, "* " + string(get_name_func(list[i])));
+
+        if (index.current == i)
+            set_soul(xx - 8, yy + 4);
     }
 
-    draw_set_font(-1)
+    draw_set_font(-1);
 }
 
 draw_enemy_list = function(show_hp=false) {
-	board_surface_check()
-	surface_set_target(board_surface)
-	draw_clear_alpha(c_black, 0)
-	draw_set_font(loc_getfontmono(font_main))
-	for(var i = 0; i < array_length(enemies); i++) {
-		var my_y = (txt.y-2)+16*i
-        if (enemies[i].can_mercy){
-		  draw_each_letter(30,10+16*i,"(yellow)* "+ string(enemies[i].name))
+    draw_set_font(loc_getfontmono(font_main))
+    for (var i = 0; i<array_length(enemies); i++){
+        var xx = board_x-board_w*0.5+20
+        var yy = board_y-board_h*0.5+10+16*i
+        if (show_hp){
+            var text_w = string_width(enemies[i].name)
+            var bar_x1 = xx+15+text_w+8+40
+            var bar_x2 = bar_x1+40+20
+            draw_healthbar(bar_x1,yy+6,bar_x2,yy+14,enemies[i].hp/enemies[i].maxhp*100,c_red,c_lime,c_lime,0,true,false)
         }
-        else{
-        	draw_each_letter(30,10+16*i,"* "+ string(enemies[i].name))
-        }
-		if (index.current == i) {set_soul(32,my_y+4)};
-	}
-	draw_set_font(-1)
-	surface_reset_target()
-	draw_surface(board_surface, board_x, board_y)
+        if (enemies[i].can_mercy)
+            draw_each_letter(xx+15,yy+1,"(yellow)* "+string(enemies[i].name))
+        else
+            draw_each_letter(xx+15,yy+1,"* "+string(enemies[i].name))
+
+        if (index.current == i)
+            set_soul(xx-4,yy+5)
+    }
+    draw_set_font(-1)
 }
 
 draw_act_list = function(){
-    if (turn!=BATTLE_TURN.PLAYER)
-        return
 
-    var enemy = enemies[act_enemy_index]
-    if (enemy==undefined)
-        return
+    if (turn != BATTLE_TURN.PLAYER)
+        return;
 
-    var acts = enemy.acts
-    if (array_length(acts)<=0)
-        return
+    var enemy = enemies[act_enemy_index];
+    if (enemy == undefined)
+        return;
 
-    board_surface_check()
-    surface_set_target(board_surface)
-    draw_clear_alpha(c_black,0)
-    draw_set_font(loc_getfontmono(font_main))
+    var acts = enemy.acts;
+    if (array_length(acts) <= 0)
+        return;
 
-    for (var i=0; i<array_length(acts); i++){
+    draw_set_font(loc_getfontmono(font_main));
+
+    for (var i = 0; i < array_length(acts); i++) {
+
         var col = i mod 2
         var row = i div 2
-        var xx = 30+col*120
-        var yy = 10+row*16
 
-        draw_each_letter(xx,yy,"* "+acts[i].name)
+        var xx = board_x - board_w*0.5 + 30 + col*120
+        var yy = board_y - board_h*0.5 + 10 + row*16
 
-        if (i==act_index){
-            set_soul(xx-8,yy+4)
-        }
+        draw_each_letter(xx, yy, "* " + acts[i].name)
+
+        if (i == act_index)
+            set_soul(xx-14,yy+5)
     }
 
-    draw_set_font(-1)
-    surface_reset_target()
-    draw_surface(board_surface,board_x,board_y)
+    draw_set_font(-1);
 }
 
 draw_item_list = function(){
     if (turn!=BATTLE_TURN.PLAYER)
         return
 
-    board_surface_check()
-    surface_set_target(board_surface)
-    draw_clear_alpha(c_black,0)
-
     draw_list_2x2(global.items,function(i){
         return ItemGetName(i)
     })
-
-    surface_reset_target()
-    draw_surface(board_surface,board_x,board_y)
 }
 
 

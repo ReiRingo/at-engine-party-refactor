@@ -82,8 +82,8 @@
   ],
   "name":"rm_test0",
   "parent":{
-    "name":"rooms",
-    "path":"folders/@engine/rooms.yy",
+    "name":"testzone",
+    "path":"folders/@examples/rooms/testzone.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -49,6 +49,25 @@ function get_roomname(room_name) {
     }
 }
 
+function draw_text_outline(_x, _y, _text, _outlineSpace = 1, _outlineColour = c_black)
+{
+    var _textCol = draw_get_colour();
+    
+    draw_set_colour(_outlineColour);
+    
+    for (var i = 0; i < 360; i += 45) 
+    {
+        draw_text(
+            _x + lengthdir_x(_outlineSpace, i), 
+            _y + lengthdir_y(_outlineSpace, i), 
+            _text
+        );
+    }
+    
+    draw_set_colour(_textCol);
+    draw_text(_x, _y, _text);
+}
+
 function can_move(){
     var box = instance_exists(o_dialog) ? o_dialog.player_free : true
     var moveable = instance_exists(o_actor_mainpl) ? o_actor_mainpl.moveable : false
@@ -58,7 +77,9 @@ function can_move(){
 	!instance_exists(o_ui_menu) && 
 	moveable &&
 	!instance_exists(o_warp_manager) &&
-	!instance_exists(o_ui_image)
+	!instance_exists(o_ui_image) &&
+    !instance_exists(o_dialog) &&
+    !instance_exists(o_dev_roomselect)
 
 }
 

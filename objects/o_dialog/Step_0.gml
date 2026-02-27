@@ -1,5 +1,3 @@
- 
-
 if (instance_exists(t)){
 	t.x = xx+14; t.y = yy+11
 	on_choice = line >= array_length(text)-1 && array_length(choices) > 0 && t.finished
@@ -28,7 +26,6 @@ if (instance_exists(t)){
 	
 } else {
 	if (line>=array_length(text)){
-		if (instance_exists(o_actor_mainpl)) o_actor_mainpl.moveable=true
 		if (save)
 			instance_create(o_ui_save)
 		instance_destroy()

@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"o_ui_shop",
+  "%Name":"o_sk_default",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_ui_shop",
+  "name":"o_sk_default",
   "overriddenProperties":[],
   "parent":{
-    "name":"etc",
-    "path":"folders/@engine/objects/ui/etc.yy",
+    "name":"shopkeepers",
+    "path":"folders/@engine/objects/shop/shopkeepers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -11,6 +11,8 @@ function item() constructor { //Template struct for items
 	name.short = name.normal;
 	name.joke = name.normal
 	name.joke_short = name.short
+    sellable = true
+    sell_cost = 1 // default
 	description = {
 		check: "",
 		shop: ""

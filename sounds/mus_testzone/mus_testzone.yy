@@ -15,7 +15,7 @@
   "name":"mus_testzone",
   "parent":{
     "name":"ow",
-    "path":"folders/@engine/music/ow.yy",
+    "path":"folders/@examples/music/ow.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

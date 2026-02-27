@@ -1,4 +1,4 @@
-targetx=110
+targetx=320/2
 targety=o_enc.board_y
-targetwidth=80
+targetwidth=70
 targetheight=o_enc.board_h

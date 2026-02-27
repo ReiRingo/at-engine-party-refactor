@@ -1,4 +1,4 @@
-
+if (live_call()) return live_result;
 if (!finished){
 	var txt_len = string_length(text)
 	while (string_char_at(text,pos) == CMD_START) {
@@ -31,6 +31,15 @@ if (!finished){
 						var pitch = arg_count >= 5 ? real(arg[5]) : 1
 						if (asset_get_type(asset) == asset_sound) {
 							audio_play_sound(asset,pri,loops,gain,0,pitch)	
+						}
+					}
+				break;
+            
+                case "esnd": case "esound":
+					if (arg_count >= 1) {
+						var asset = asset_get_index(arg[1])
+						if (asset_get_type(asset) == asset_sound) {
+							audio_stop_sound(asset)	
 						}
 					}
 				break;

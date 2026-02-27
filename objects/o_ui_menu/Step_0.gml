@@ -159,9 +159,8 @@ switch(state) {
 			var target=cells[cell_selection];
 			if (target.result != undefined) {
 				if (is_method(target.result)) {script_execute(target.result)}
-				else if (is_array(target.result) || is_string(target.result)) {
-					var cd = call_dialogue("(sound,snd_ring)* Dialing...",target.result,"(face)* Click")
-					Dialogue_Create(cd)
+				else {
+					Dialogue_Create(target.result)
 				}
 				audio_play_sound(snd_ui_select,1,false)
 				state = 0;
