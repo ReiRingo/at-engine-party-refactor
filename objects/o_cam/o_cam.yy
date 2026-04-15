@@ -2,19 +2,32 @@
   "$GMObject":"",
   "%Name":"o_cam",
   "eventList":[
+<<<<<<< Updated upstream
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+=======
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+>>>>>>> Stashed changes
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"o_cam",
   "overriddenProperties":[],
   "parent":{
+<<<<<<< Updated upstream
     "name":"system",
     "path":"folders/@engine/objects/system.yy",
   },
   "parentObjectId":null,
   "persistent":true,
+=======
+    "name":"systems",
+    "path":"folders/@engine/objects/systems.yy",
+  },
+  "parentObjectId":null,
+  "persistent":false,
+>>>>>>> Stashed changes
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

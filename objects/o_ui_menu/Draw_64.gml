@@ -18,6 +18,7 @@ if (!top){
 { // top box
 	draw_text(23,30+4-5+addy,string(global.name))
 	
+<<<<<<< Updated upstream:objects/o_ui_menu/Draw_64.gml
 	draw_set_font(font_menu)
 	draw_text(23,50-3+4+4-5+addy,"lv")
 	draw_text(41,50-3+4+4-5+addy,string(global.lv))
@@ -25,6 +26,15 @@ if (!top){
 	draw_text(41,59-3+4+4-5+addy,$"{string(global.hp)}/{string(global.maxhp)}")
 	draw_text(23,68-3+4+4-5+addy,"G")
 	draw_text(41,68-3+4+4-5+addy,string(global.gold))
+=======
+	draw_set_font(font_mars)
+	draw_text(23,50-3+4+4-5,"lv")
+	draw_text(41,50-3+4+4-5,string(global.lv))
+	draw_text(23,59-3+4+4-5,"hp")
+	draw_text(41,59-3+4+4-5,$"{string(global.hp)}/{string(global.maxhp)}")
+	draw_text(23,68-3+4+4-5,"G")
+	draw_text(41,68-3+4+4-5,string(global.gold))
+>>>>>>> Stashed changes:objects/o_ui_menu/Draw_0.gml
 }
 { // options
 	draw_set_font(loc_getfont(font_main));

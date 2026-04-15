@@ -1,5 +1,11 @@
 global.debug = false
 
+<<<<<<< Updated upstream
+=======
+{ // resolution fix
+    gpu_set_tex_filter(false)
+}
+>>>>>>> Stashed changes
 
 ini_open("config.ini")
 

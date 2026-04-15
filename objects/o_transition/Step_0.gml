@@ -4,4 +4,8 @@ if (state == 0) {
 } else if (state >= 1) {
 	image_alpha -=speed;
 	if (image_alpha <= 0) {instance_destroy()}
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

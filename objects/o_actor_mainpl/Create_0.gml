@@ -25,7 +25,10 @@ if (global.facing == FACES.LEFT)
 
 inwater = 0;
 h_skip = 0;
+<<<<<<< Updated upstream
 uncan = 0;
+=======
+>>>>>>> Stashed changes
 m_override = 0;
 
 collision = function(object=o_solidparent) {
@@ -41,7 +44,11 @@ collision = function(object=o_solidparent) {
 	}
 }
 
+<<<<<<< Updated upstream
 direction_animation = function() { //Namu
+=======
+direction_animation = function() { //by namuframes
+>>>>>>> Stashed changes
 	if (hsp != 0 || vsp != 0) {
 		if (vsp == 0) {
 			if (hsp < 0) {global.facing = FACES.LEFT};
@@ -60,6 +67,7 @@ direction_animation = function() { //Namu
 	}
 }
 	
+<<<<<<< Updated upstream
 frisk_dance = function() { //Namu
 	if (instance_place(x,y-spd,o_solidparent)) {
 		if (InputPressedCheck(INPUT.DOWN) && InputPressedCheck(INPUT.UP)) {
@@ -67,3 +75,13 @@ frisk_dance = function() { //Namu
 		}
 	}
 }
+=======
+frisk_dance = function() { //by namuframes
+    if (instance_place(x,y-spd,o_solidparent)) {
+        if (InputPressedCheck(INPUT.DOWN) && InputPressedCheck(INPUT.UP)) {
+            if (global.facing == FACES.LEFT || global.facing == FACES.RIGHT) {global.facing = FACES.UP}
+            vsp += spd;
+        }
+    }
+}
+>>>>>>> Stashed changes

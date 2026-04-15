@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
  if (live_call()) return live_result;
 
+=======
+>>>>>>> Stashed changes
 board(board_x,board_y,board_w,board_h,board_a)
 { // buttons
 	for (var i=0; i<array_length(buttons); i++){
@@ -42,6 +45,10 @@ board(board_x,board_y,board_w,board_h,board_a)
 	draw_sprite_ext(spr_enc_ui_hp,0,120,200,0.5,0.5,0,c_white,1)
     draw_healthbar(137,200,137+13+(global.lv-1)*2,200+10,(global.hp/global.maxhp)*100,c_red,c_yellow,c_yellow,0,true,false)
     //draw_sprite_ext(spr_pixel2x,0,137,200,6.6,4.9,0,c_yellow,1)
+<<<<<<< Updated upstream
+=======
+    //^^ old hp bar system
+>>>>>>> Stashed changes
 	draw_text_transformed(156+(global.lv-1)*2,200,string(global.hp)+" / "+string(global.maxhp),0.5,0.5,0)
 }
 draw_set_font(-1)

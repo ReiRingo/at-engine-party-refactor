@@ -1,6 +1,10 @@
 frames = 0
 
+<<<<<<< Updated upstream
 global.borders = true
+=======
+global.borders = false
+>>>>>>> Stashed changes
 
 global.lang = ""
 

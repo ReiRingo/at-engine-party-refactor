@@ -40,4 +40,8 @@ reset_camera = function() {
 	limit_camera();
 	final_x = x;
 	final_y = y;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

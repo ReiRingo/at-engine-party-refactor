@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
   
+=======
+>>>>>>> Stashed changes
 var window_w = WINDOW_WIDTH
 var window_h = WINDOW_HEIGHT
 var game_width = BASE_WIDTH*2 

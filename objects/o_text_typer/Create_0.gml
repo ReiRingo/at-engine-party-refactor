@@ -41,5 +41,9 @@ function wavy_offset(i)
 
 on_gui = false
 
+<<<<<<< Updated upstream
 depth=DEPTH_UI.DIALOGUE_UI-1
 
+=======
+depth=DEPTH_UI.DIALOGUE_UI-1
+>>>>>>> Stashed changes

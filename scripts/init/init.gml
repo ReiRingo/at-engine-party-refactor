@@ -8,4 +8,8 @@ enum FACES {
 enum PLAYER_STATES {
 	free,
 	froozen
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

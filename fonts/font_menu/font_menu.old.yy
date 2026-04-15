@@ -107,7 +107,11 @@
     "124":{"character":124,"h":7,"offset":1,"shift":3,"w":1,"x":120,"y":2,},
     "125":{"character":125,"h":7,"offset":0,"shift":2,"w":2,"x":116,"y":2,},
     "126":{"character":126,"h":7,"offset":0,"shift":3,"w":3,"x":53,"y":29,},
+<<<<<<< Updated upstream
     "9647":{"character":9647,"h":7,"offset":1,"shift":3,"w":1,"x":58,"y":29,},
+=======
+    "9647":{"character":9647,"h":7,"offset":1,"shift":5,"w":3,"x":58,"y":29,},
+>>>>>>> Stashed changes
   },
   "hinting":0,
   "includeTTF":false,

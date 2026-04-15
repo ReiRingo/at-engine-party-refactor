@@ -97,4 +97,8 @@ function is_top(){
 	else{
 		return false
 	}
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

@@ -2,6 +2,7 @@ if (!can_move()) {
 	state = PLAYER_STATES.froozen	
 } else {state = PLAYER_STATES.free}
 
+<<<<<<< Updated upstream
 if (state == PLAYER_STATES.free) { //Checking if the player is in control
 	if (collision_point(bbox_left - 3, bbox_top - 3, o_solidparent, 0, 1) == -4)
 	    crumpet = 1;
@@ -17,6 +18,16 @@ if (state == PLAYER_STATES.free) { //Checking if the player is in control
 	if (InputPressedCheck(INPUT.UP)  && InputPressedCheck(INPUT.DOWN))  {vsp = -1*spd}
 
 	direction_animation() //Face the direction that i go
+=======
+if (state == PLAYER_STATES.free) { //checking if the player is in control
+	hsp = (InputPressedCheck(INPUT.RIGHT)-InputPressedCheck(INPUT.LEFT))*spd;
+	vsp = (InputPressedCheck(INPUT.DOWN)-InputPressedCheck(INPUT.UP))*spd;
+
+	if (InputPressedCheck(INPUT.LEFT) && InputPressedCheck(INPUT.RIGHT)) {hsp = 0}
+	if (InputPressedCheck(INPUT.UP)  && InputPressedCheck(INPUT.DOWN))  {vsp = -1*spd}
+
+	direction_animation() //face the direction that i go
+>>>>>>> Stashed changes
 	
 	if (place_meeting(x + hsp, y, o_solidparent)) {
 		if(!place_meeting(x+hsp,y-spd,o_solidparent)) {y-=spd}
@@ -30,11 +41,16 @@ if (state == PLAYER_STATES.free) { //Checking if the player is in control
 	
 	collision(o_solidparent)
 	frisk_dance();
+<<<<<<< Updated upstream
 	direction_animation() //Just making that look correctly again if i'm in a wall, it's important for frisk dance! :DDDDDD
+=======
+	direction_animation() //just making that look correctly again if i'm in a wall, it's important for frisk dance! :DDDDDD
+>>>>>>> Stashed changes
 
 	x += hsp;
 	y += vsp;
 
+<<<<<<< Updated upstream
 
 	if (global.facing == 0)
 		sprite_index = dsprite;
@@ -47,6 +63,19 @@ if (state == PLAYER_STATES.free) { //Checking if the player is in control
 
 	if (InputPressed(INPUT.CONFIRM)){
 		if (movement==1&&uncan==0){
+=======
+	if (global.facing == 0)
+		sprite_index = dsprite;
+	if (global.facing == 1)
+		sprite_index = rsprite;
+	if (global.facing == 2)
+		sprite_index = usprite;
+	if (global.facing == 3)
+		sprite_index = lsprite;
+
+	if (InputPressed(INPUT.CONFIRM)){
+		if (movement==1){
+>>>>>>> Stashed changes
 			var obj=noone
 			switch (global.facing){
 				case 1:

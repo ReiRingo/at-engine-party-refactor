@@ -4,4 +4,8 @@ function Dialogue_Create(text) {
 		d.text = text;
 	} else {d.text = [text]}
 	return d
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

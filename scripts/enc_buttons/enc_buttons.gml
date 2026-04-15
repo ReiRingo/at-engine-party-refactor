@@ -3,11 +3,19 @@ function determine_sprite(buttonname){
 }
 function enc_button(){
 	name = "undefined"
+<<<<<<< Updated upstream
 	selectable = true // pode passar por cima do botão? (e bom pra botões quebrados tipo o call of the void ou outras fangames que deixa o botão quebrado
 	press = function(){
 		// oq vai acontecer quando apertar o botão
 	}
 	determine_sprite(name) // determina o sprite baseado no "name"
+=======
+	selectable = true // is it selectable?
+	press = function(){
+		// what will happen upon pressing it?
+	}
+	determine_sprite(name) // determines the sprite lang based on the "name" variable
+>>>>>>> Stashed changes
 }
 
 function enc_button_fight() : enc_button() constructor{

@@ -12,4 +12,8 @@ t = o_text_typer
 choices = []
 ch_index = 0;
 on_choice = false;
+<<<<<<< Updated upstream
 player_free = false;
+=======
+player_free = false;
+>>>>>>> Stashed changes

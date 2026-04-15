@@ -1,11 +1,19 @@
+<<<<<<< Updated upstream
 //By namu
+=======
+//by namuframes
+>>>>>>> Stashed changes
 enum ITEMTYPES {
 	ARMOR,
 	WEAPON,
 	CONSUMEABLE,
 	SPECIAL
 }
+<<<<<<< Updated upstream
 function item() constructor { //Template struct for items
+=======
+function item() constructor { //template struct for items
+>>>>>>> Stashed changes
 	name = {}
 	name.normal = "";
 	name.short = name.normal;
@@ -20,9 +28,15 @@ function item() constructor { //Template struct for items
 	type = ITEMTYPES.SPECIAL;
 }
 
+<<<<<<< Updated upstream
 function itemWeapon() : item() constructor {type = ITEMTYPES.WEAPON; atk = 0} //Template struct for Weapons
 function itemArmor() : item() constructor {type = ITEMTYPES.ARMOR; def = 0} //Template struct for Armor
 function itemConsumeable() : item() constructor {type = ITEMTYPES.CONSUMEABLE; amount = 0;} //Template struct for Consumeables
+=======
+function itemWeapon() : item() constructor {type = ITEMTYPES.WEAPON; atk = 0} //template struct for Weapons
+function itemArmor() : item() constructor {type = ITEMTYPES.ARMOR; def = 0} //template struct for Armor
+function itemConsumeable() : item() constructor {type = ITEMTYPES.CONSUMEABLE; amount = 0;} //template struct for Consumeables
+>>>>>>> Stashed changes
 function itemSpecial() : item() constructor {
 	type = ITEMTYPES.SPECIAL;
 	removeable = true
@@ -85,4 +99,8 @@ function PUNCHCARD() : itemSpecial() constructor {
 		}
 	}
 	description.check = "* \"Punch Card\" - Use to make punching attacks stronger in\none battle."
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

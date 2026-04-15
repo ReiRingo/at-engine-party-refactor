@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
  
 
+=======
+>>>>>>> Stashed changes
 if (instance_exists(t)){
 	on_choice = line >= array_length(text)-1 && array_length(choices) > 0 && t.finished
 	t.line_length = width+14
@@ -34,4 +37,8 @@ if (instance_exists(t)){
 	t=instance_create(o_text_typer,xx,yy);
 	t.on_gui = true
 	t.text = text[line];
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

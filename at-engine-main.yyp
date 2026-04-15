@@ -13,6 +13,7 @@
     {"$GMFolder":"","%Name":"@engine","folderPath":"folders/@engine.yy","name":"@engine","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"fonts","folderPath":"folders/@engine/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"music","folderPath":"folders/@engine/music.yy","name":"music","resourceType":"GMFolder","resourceVersion":"2.0",},
+<<<<<<< Updated upstream
     {"$GMFolder":"","%Name":"battle","folderPath":"folders/@engine/music/battle.yy","name":"battle","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"menu","folderPath":"folders/@engine/music/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/@engine/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -23,18 +24,28 @@
     {"$GMFolder":"","%Name":"enemy","folderPath":"folders/@engine/objects/encounter/enemy.yy","name":"enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"soul","folderPath":"folders/@engine/objects/encounter/soul.yy","name":"soul","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"turns","folderPath":"folders/@engine/objects/encounter/turns.yy","name":"turns","resourceType":"GMFolder","resourceVersion":"2.0",},
+=======
+    {"$GMFolder":"","%Name":"menu","folderPath":"folders/@engine/music/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"objects","folderPath":"folders/@engine/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"dev","folderPath":"folders/@engine/objects/dev.yy","name":"dev","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"encounter","folderPath":"folders/@engine/objects/encounter.yy","name":"encounter","resourceType":"GMFolder","resourceVersion":"2.0",},
+>>>>>>> Stashed changes
     {"$GMFolder":"","%Name":"ow","folderPath":"folders/@engine/objects/ow.yy","name":"ow","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"actors","folderPath":"folders/@engine/objects/ow/actors.yy","name":"actors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"main","folderPath":"folders/@engine/objects/ow/actors/main.yy","name":"main","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"landmarks","folderPath":"folders/@engine/objects/ow/landmarks.yy","name":"landmarks","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"parents","folderPath":"folders/@engine/objects/ow/parents.yy","name":"parents","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"solid","folderPath":"folders/@engine/objects/ow/solid.yy","name":"solid","resourceType":"GMFolder","resourceVersion":"2.0",},
+<<<<<<< Updated upstream
     {"$GMFolder":"","%Name":"triggers","folderPath":"folders/@engine/objects/ow/triggers.yy","name":"triggers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"shop","folderPath":"folders/@engine/objects/shop.yy","name":"shop","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"bgs","folderPath":"folders/@engine/objects/shop/bgs.yy","name":"bgs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"shopkeepers","folderPath":"folders/@engine/objects/shop/shopkeepers.yy","name":"shopkeepers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"system","folderPath":"folders/@engine/objects/system.yy","name":"system","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"text","folderPath":"folders/@engine/objects/text.yy","name":"text","resourceType":"GMFolder","resourceVersion":"2.0",},
+=======
+    {"$GMFolder":"","%Name":"systems","folderPath":"folders/@engine/objects/systems.yy","name":"systems","resourceType":"GMFolder","resourceVersion":"2.0",},
+>>>>>>> Stashed changes
     {"$GMFolder":"","%Name":"ui","folderPath":"folders/@engine/objects/ui.yy","name":"ui","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"etc","folderPath":"folders/@engine/objects/ui/etc.yy","name":"etc","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"menu","folderPath":"folders/@engine/objects/ui/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -42,10 +53,16 @@
     {"$GMFolder":"","%Name":"rooms","folderPath":"folders/@engine/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"scripts","folderPath":"folders/@engine/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"engine","folderPath":"folders/@engine/scripts/engine.yy","name":"engine","resourceType":"GMFolder","resourceVersion":"2.0",},
+<<<<<<< Updated upstream
     {"$GMFolder":"","%Name":"encounter","folderPath":"folders/@engine/scripts/engine/encounter.yy","name":"encounter","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"shop","folderPath":"folders/@engine/scripts/engine/shop.yy","name":"shop","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"system","folderPath":"folders/@engine/scripts/engine/system.yy","name":"system","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ow","folderPath":"folders/@engine/scripts/engine/system/ow.yy","name":"ow","resourceType":"GMFolder","resourceVersion":"2.0",},
+=======
+    {"$GMFolder":"","%Name":"enc","folderPath":"folders/@engine/scripts/engine/enc.yy","name":"enc","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"ow","folderPath":"folders/@engine/scripts/engine/ow.yy","name":"ow","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"shops","folderPath":"folders/@engine/scripts/engine/shops.yy","name":"shops","resourceType":"GMFolder","resourceVersion":"2.0",},
+>>>>>>> Stashed changes
     {"$GMFolder":"","%Name":"macro","folderPath":"folders/@engine/scripts/macro.yy","name":"macro","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"shaders","folderPath":"folders/@engine/shaders.yy","name":"shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"blur","folderPath":"folders/@engine/shaders/blur.yy","name":"blur","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -93,7 +110,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
+<<<<<<< Updated upstream
     "IDEVersion":"2024.14.2.213",
+=======
+    "IDEVersion":"2024.14.3.217",
+>>>>>>> Stashed changes
   },
   "name":"at-engine-main",
   "resources":[
@@ -116,11 +137,14 @@
     {"id":{"name":"o_dialog","path":"objects/o_dialog/o_dialog.yy",},},
     {"id":{"name":"o_enc_bg","path":"objects/o_enc_bg/o_enc_bg.yy",},},
     {"id":{"name":"o_enc_dialog","path":"objects/o_enc_dialog/o_enc_dialog.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"o_enc_enemy","path":"objects/o_enc_enemy/o_enc_enemy.yy",},},
     {"id":{"name":"o_enc_enemy2","path":"objects/o_enc_enemy2/o_enc_enemy2.yy",},},
     {"id":{"name":"o_enc_soul","path":"objects/o_enc_soul/o_enc_soul.yy",},},
     {"id":{"name":"o_enc_testenemy","path":"objects/o_enc_testenemy/o_enc_testenemy.yy",},},
     {"id":{"name":"o_enc_turn","path":"objects/o_enc_turn/o_enc_turn.yy",},},
+=======
+>>>>>>> Stashed changes
     {"id":{"name":"o_enc","path":"objects/o_enc/o_enc.yy",},},
     {"id":{"name":"o_interactparent","path":"objects/o_interactparent/o_interactparent.yy",},},
     {"id":{"name":"o_landmarkA","path":"objects/o_landmarkA/o_landmarkA.yy",},},
@@ -144,6 +168,7 @@
     {"id":{"name":"o_ui_save","path":"objects/o_ui_save/o_ui_save.yy",},},
     {"id":{"name":"o_ui_story","path":"objects/o_ui_story/o_ui_story.yy",},},
     {"id":{"name":"o_warp_manager","path":"objects/o_warp_manager/o_warp_manager.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"o_warp","path":"objects/o_warp/o_warp.yy",},},
     {"id":{"name":"o_world","path":"objects/o_world/o_world.yy",},},
     {"id":{"name":"obj_gmlive","path":"objects/obj_gmlive/obj_gmlive.yy",},},
@@ -156,6 +181,17 @@
     {"id":{"name":"rm_story","path":"rooms/rm_story/rm_story.yy",},},
     {"id":{"name":"rm_test0","path":"rooms/rm_test0/rm_test0.yy",},},
     {"id":{"name":"rm_test1","path":"rooms/rm_test1/rm_test1.yy",},},
+=======
+    {"id":{"name":"o_world","path":"objects/o_world/o_world.yy",},},
+    {"id":{"name":"room_battle","path":"rooms/room_battle/room_battle.yy",},},
+    {"id":{"name":"room_init","path":"rooms/room_init/room_init.yy",},},
+    {"id":{"name":"room_instructions","path":"rooms/room_instructions/room_instructions.yy",},},
+    {"id":{"name":"room_load","path":"rooms/room_load/room_load.yy",},},
+    {"id":{"name":"room_settings","path":"rooms/room_settings/room_settings.yy",},},
+    {"id":{"name":"room_story","path":"rooms/room_story/room_story.yy",},},
+    {"id":{"name":"room_test0","path":"rooms/room_test0/room_test0.yy",},},
+    {"id":{"name":"room_typertest","path":"rooms/room_typertest/room_typertest.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"dialog","path":"scripts/dialog/dialog.yy",},},
     {"id":{"name":"draw_each_letter","path":"scripts/draw_each_letter/draw_each_letter.yy",},},
     {"id":{"name":"enc_buttons","path":"scripts/enc_buttons/enc_buttons.yy",},},
@@ -163,11 +199,14 @@
     {"id":{"name":"enc_functions","path":"scripts/enc_functions/enc_functions.yy",},},
     {"id":{"name":"enc_sets","path":"scripts/enc_sets/enc_sets.yy",},},
     {"id":{"name":"engine_info","path":"scripts/engine_info/engine_info.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"GMLive_noDeactivate","path":"scripts/GMLive_noDeactivate/GMLive_noDeactivate.yy",},},
     {"id":{"name":"GMLive_notOnce","path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},},
     {"id":{"name":"GMLive","path":"scripts/GMLive/GMLive.yy",},},
     {"id":{"name":"GMLiveAPI_js","path":"scripts/GMLiveAPI_js/GMLiveAPI_js.yy",},},
     {"id":{"name":"GMLiveAPI","path":"scripts/GMLiveAPI/GMLiveAPI.yy",},},
+=======
+>>>>>>> Stashed changes
     {"id":{"name":"init","path":"scripts/init/init.yy",},},
     {"id":{"name":"inputs","path":"scripts/inputs/inputs.yy",},},
     {"id":{"name":"itemfuncs","path":"scripts/itemfuncs/itemfuncs.yy",},},
@@ -193,11 +232,16 @@
     {"id":{"name":"mus_menu4","path":"sounds/mus_menu4/mus_menu4.yy",},},
     {"id":{"name":"mus_menu5","path":"sounds/mus_menu5/mus_menu5.yy",},},
     {"id":{"name":"mus_menu6","path":"sounds/mus_menu6/mus_menu6.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"mus_shop","path":"sounds/mus_shop/mus_shop.yy",},},
     {"id":{"name":"mus_story","path":"sounds/mus_story/mus_story.yy",},},
     {"id":{"name":"mus_stronger","path":"sounds/mus_stronger/mus_stronger.yy",},},
     {"id":{"name":"mus_testzone","path":"sounds/mus_testzone/mus_testzone.yy",},},
     {"id":{"name":"mus_wrongnumber","path":"sounds/mus_wrongnumber/mus_wrongnumber.yy",},},
+=======
+    {"id":{"name":"mus_story","path":"sounds/mus_story/mus_story.yy",},},
+    {"id":{"name":"mus_testzone","path":"sounds/mus_testzone/mus_testzone.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"snd_damage","path":"sounds/snd_damage/snd_damage.yy",},},
     {"id":{"name":"snd_heal","path":"sounds/snd_heal/snd_heal.yy",},},
     {"id":{"name":"snd_ring","path":"sounds/snd_ring/snd_ring.yy",},},
@@ -219,6 +263,7 @@
     {"id":{"name":"spr_dev_warp","path":"sprites/spr_dev_warp/spr_dev_warp.yy",},},
     {"id":{"name":"spr_dogshrine","path":"sprites/spr_dogshrine/spr_dogshrine.yy",},},
     {"id":{"name":"spr_enc_bg","path":"sprites/spr_enc_bg/spr_enc_bg.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"spr_enc_button_act","path":"sprites/spr_enc_button_act/spr_enc_button_act.yy",},},
     {"id":{"name":"spr_enc_button_default","path":"sprites/spr_enc_button_default/spr_enc_button_default.yy",},},
     {"id":{"name":"spr_enc_button_fight","path":"sprites/spr_enc_button_fight/spr_enc_button_fight.yy",},},
@@ -230,6 +275,11 @@
     {"id":{"name":"spr_faces_alphys_fuck","path":"sprites/spr_faces_alphys_fuck/spr_faces_alphys_fuck.yy",},},
     {"id":{"name":"spr_faces_alphys","path":"sprites/spr_faces_alphys/spr_faces_alphys.yy",},},
     {"id":{"name":"spr_faces_namu","path":"sprites/spr_faces_namu/spr_faces_namu.yy",},},
+=======
+    {"id":{"name":"spr_enc_soul_red","path":"sprites/spr_enc_soul_red/spr_enc_soul_red.yy",},},
+    {"id":{"name":"spr_enc_ui_hp","path":"sprites/spr_enc_ui_hp/spr_enc_ui_hp.yy",},},
+    {"id":{"name":"spr_faces_alphys","path":"sprites/spr_faces_alphys/spr_faces_alphys.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"spr_gradient","path":"sprites/spr_gradient/spr_gradient.yy",},},
     {"id":{"name":"spr_heart_flee","path":"sprites/spr_heart_flee/spr_heart_flee.yy",},},
     {"id":{"name":"spr_ja_refsave1x","path":"sprites/spr_ja_refsave1x/spr_ja_refsave1x.yy",},},
@@ -257,8 +307,11 @@
     {"id":{"name":"spr_ow_undyneyrm_dark","path":"sprites/spr_ow_undyneyrm_dark/spr_ow_undyneyrm_dark.yy",},},
     {"id":{"name":"spr_pixel","path":"sprites/spr_pixel/spr_pixel.yy",},},
     {"id":{"name":"spr_pixel2x","path":"sprites/spr_pixel2x/spr_pixel2x.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"spr_punch_card","path":"sprites/spr_punch_card/spr_punch_card.yy",},},
     {"id":{"name":"spr_refbattle1x","path":"sprites/spr_refbattle1x/spr_refbattle1x.yy",},},
+=======
+>>>>>>> Stashed changes
     {"id":{"name":"spr_refchoice1x","path":"sprites/spr_refchoice1x/spr_refchoice1x.yy",},},
     {"id":{"name":"spr_refdialog1x","path":"sprites/spr_refdialog1x/spr_refdialog1x.yy",},},
     {"id":{"name":"spr_refface1x","path":"sprites/spr_refface1x/spr_refface1x.yy",},},
@@ -274,6 +327,7 @@
     {"id":{"name":"spr_refshop1x","path":"sprites/spr_refshop1x/spr_refshop1x.yy",},},
     {"id":{"name":"spr_refstory1x","path":"sprites/spr_refstory1x/spr_refstory1x.yy",},},
     {"id":{"name":"spr_sdl","path":"sprites/spr_sdl/spr_sdl.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"spr_sk_gerson_bg","path":"sprites/spr_sk_gerson_bg/spr_sk_gerson_bg.yy",},},
     {"id":{"name":"spr_sk_gerson_body","path":"sprites/spr_sk_gerson_body/spr_sk_gerson_body.yy",},},
     {"id":{"name":"spr_sk_gerson_face","path":"sprites/spr_sk_gerson_face/spr_sk_gerson_face.yy",},},
@@ -282,12 +336,21 @@
     {"id":{"name":"spr_sk_gerson_mouth","path":"sprites/spr_sk_gerson_mouth/spr_sk_gerson_mouth.yy",},},
     {"id":{"name":"spr_solidsmall","path":"sprites/spr_solidsmall/spr_solidsmall.yy",},},
     {"id":{"name":"spr_storyimages","path":"sprites/spr_storyimages/spr_storyimages.yy",},},
+=======
+    {"id":{"name":"spr_sdr_1","path":"sprites/spr_sdr_1/spr_sdr_1.yy",},},
+    {"id":{"name":"spr_sdr","path":"sprites/spr_sdr/spr_sdr.yy",},},
+    {"id":{"name":"spr_solidsmall","path":"sprites/spr_solidsmall/spr_solidsmall.yy",},},
+    {"id":{"name":"spr_storyimages","path":"sprites/spr_storyimages/spr_storyimages.yy",},},
+    {"id":{"name":"spr_sul","path":"sprites/spr_sul/spr_sul.yy",},},
+    {"id":{"name":"spr_sur","path":"sprites/spr_sur/spr_sur.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"spr_ui_border","path":"sprites/spr_ui_border/spr_ui_border.yy",},},
     {"id":{"name":"spr_ui_soul","path":"sprites/spr_ui_soul/spr_ui_soul.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+<<<<<<< Updated upstream
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_shop","path":"rooms/rm_shop/rm_shop.yy",},},
     {"roomId":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
@@ -297,6 +360,16 @@
     {"roomId":{"name":"rm_story","path":"rooms/rm_story/rm_story.yy",},},
     {"roomId":{"name":"rm_instructions","path":"rooms/rm_instructions/rm_instructions.yy",},},
     {"roomId":{"name":"rm_settings","path":"rooms/rm_settings/rm_settings.yy",},},
+=======
+    {"roomId":{"name":"room_init","path":"rooms/room_init/room_init.yy",},},
+    {"roomId":{"name":"room_load","path":"rooms/room_load/room_load.yy",},},
+    {"roomId":{"name":"room_test0","path":"rooms/room_test0/room_test0.yy",},},
+    {"roomId":{"name":"room_story","path":"rooms/room_story/room_story.yy",},},
+    {"roomId":{"name":"room_instructions","path":"rooms/room_instructions/room_instructions.yy",},},
+    {"roomId":{"name":"room_settings","path":"rooms/room_settings/room_settings.yy",},},
+    {"roomId":{"name":"room_battle","path":"rooms/room_battle/room_battle.yy",},},
+    {"roomId":{"name":"room_typertest","path":"rooms/room_typertest/room_typertest.yy",},},
+>>>>>>> Stashed changes
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -22,4 +22,8 @@ if (global.debug){
     }
     draw_set_alpha(1)
     draw_set_color(c_white) 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

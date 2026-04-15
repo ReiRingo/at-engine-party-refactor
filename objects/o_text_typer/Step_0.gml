@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 if (live_call()) return live_result;
+=======
+>>>>>>> Stashed changes
 if (!finished){
 	var txt_len = string_length(text)
 	while (string_char_at(text,pos) == CMD_START) {
@@ -74,4 +77,8 @@ if (InputPressed(INPUT.CONFIRM)){
 	}
 }
 if (can_skip && InputPressed(INPUT.CANCEL))
+<<<<<<< Updated upstream
 	pos = string_length(text)
+=======
+	pos = string_length(text)
+>>>>>>> Stashed changes

@@ -35,4 +35,8 @@ if (instance_exists(t)){
 	t=instance_create(o_text_typer,xx+14,yy+10);
 	t.on_gui = true
 	t.text = text[line];
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

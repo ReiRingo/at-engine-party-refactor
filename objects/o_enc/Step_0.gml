@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
  if (live_call()) return live_result;
 
+=======
+>>>>>>> Stashed changes
 if (array_length(enemies) <= 0) {
 	turn = BATTLE_TURN.RESULT	
 }

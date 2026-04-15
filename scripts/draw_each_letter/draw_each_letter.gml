@@ -155,4 +155,8 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 	}
 	rainbow_time += 2
 	draw_set_color(c_white);
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

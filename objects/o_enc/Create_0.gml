@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
 if (live_call()) return live_result;
 
+=======
+>>>>>>> Stashed changes
 enum BATTLE_MENU {
 	MAIN,
 	FIGHT,
@@ -92,7 +95,11 @@ function init(_enc){
 
 set_controls = function(inputs,limit) {
 	var prev_index = index.current
+<<<<<<< Updated upstream
 	index.current += inputs; //Defines the input that affects the index
+=======
+	index.current += inputs; //defines the input that affects the index
+>>>>>>> Stashed changes
 	
 	//index limit
 	if (index.current > limit) {index.current = 0};
@@ -143,7 +150,11 @@ set_controls_grid = function(list_length){
     }
 
     if (new_index!=cur) {
+<<<<<<< Updated upstream
         index.current = new_index //Defines the input that affects the index
+=======
+        index.current = new_index //defines the input that affects the index
+>>>>>>> Stashed changes
         audio_play_sound(snd_ui_move,0,false) //sound if the index changed
     }
 }
