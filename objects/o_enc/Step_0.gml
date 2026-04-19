@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
- if (live_call()) return live_result;
-
-=======
->>>>>>> Stashed changes
 if (array_length(enemies) <= 0) {
 	turn = BATTLE_TURN.RESULT	
 }
@@ -63,16 +58,16 @@ switch(turn) {
 	case BATTLE_TURN.CUTSCENE:
 		switch (menu.current) {
             case BATTLE_MENU.ACT:
-                if (!instance_exists(o_enc_dialog)&&!textinst){
+                if (!instance_exists(o_dialog)&&!textinst){
                     textinst = true;
                     enemies[act_enemy_index].acts[act_index].exec()
                 }
-                else if (!instance_exists(o_enc_dialog)&&textinst){
+                else if (!instance_exists(o_dialog)&&textinst){
                     turn=BATTLE_TURN.ENEMY
                 }
             break;
 			case BATTLE_MENU.ITEM:
-				if (!instance_exists(o_enc_dialog)&&!textinst){
+				if (!instance_exists(o_dialog)&&!textinst){
                     textinst=true
                     var equip_item = function(ITEM) {
                         if (ITEM.type == ITEMTYPES.ARMOR) {global.armor = ITEM;} 
@@ -105,7 +100,7 @@ switch(turn) {
                             break; 
                     }
 				}
-                else if (!instance_exists(o_enc_dialog)&&textinst){
+                else if (!instance_exists(o_dialog)&&textinst){
                     turn=BATTLE_TURN.ENEMY
                 }
 			break;

@@ -8,8 +8,8 @@
   "name":"o_slope",
   "overriddenProperties":[],
   "parent":{
-    "name":"solid",
-    "path":"folders/@engine/objects/ow/solid.yy",
+    "name":"solids",
+    "path":"folders/@engine/objects/ow/solids.yy",
   },
   "parentObjectId":{
     "name":"o_solidparent",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sdl",
-    "path":"sprites/spr_sdl/spr_sdl.yy",
+    "name":"spr_dev_slope",
+    "path":"sprites/spr_dev_slope/spr_dev_slope.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"o_ui_save",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
@@ -10,8 +10,8 @@
   "name":"o_ui_save",
   "overriddenProperties":[],
   "parent":{
-    "name":"ow",
-    "path":"folders/@engine/objects/ui/ow.yy",
+    "name":"ui",
+    "path":"folders/@engine/objects/ui.yy",
   },
   "parentObjectId":null,
   "persistent":false,

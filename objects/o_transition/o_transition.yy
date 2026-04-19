@@ -3,31 +3,18 @@
   "%Name":"o_transition",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-<<<<<<< Updated upstream
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-=======
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
->>>>>>> Stashed changes
   ],
   "managed":true,
   "name":"o_transition",
   "overriddenProperties":[],
   "parent":{
-<<<<<<< Updated upstream
-    "name":"system",
-    "path":"folders/@engine/objects/system.yy",
-  },
-  "parentObjectId":null,
-  "persistent":true,
-=======
     "name":"systems",
     "path":"folders/@engine/objects/systems.yy",
   },
   "parentObjectId":null,
   "persistent":false,
->>>>>>> Stashed changes
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

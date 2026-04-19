@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-if (live_call()) return live_result;
-=======
->>>>>>> Stashed changes
 if (!finished){
 	var txt_len = string_length(text)
 	while (string_char_at(text,pos) == CMD_START) {
@@ -20,10 +16,64 @@ if (!finished){
 				break;
 				
 				case "w": case "wait": case ",":
-					if (arg_count >= 1) {
-						wait = real(arg[1])	
+					if (arg_count >= 1) { 
+                        wait = real(arg[1])	
 					} else {wait = 10}
 				break;
+            
+                case "choice":
+                    if (arg_count>0){
+                        if instance_exists(o_ow_dialog){
+                            o_ow_dialog.choices=arg[arg_count]
+                            o_ow_dialog.on_choice=true
+                        }
+                    }
+                break;
+                            
+                case "setvar": case "varset":
+                	if (arg_count>=3) {
+                		var inst=asset_get_index(arg[1])
+                		var var_name=string(arg[2])
+                		var value_raw=arg[3]
+                		var value
+                		if (string_char_at(value_raw,1)=="'"&&string_char_at(value_raw,string_length(value_raw))=="'"){
+                			value=string_copy(value_raw,2,string_length(value_raw)-2)
+                		}
+                		else{
+                			var is_number=true
+                			var has_dot=false
+                			
+                			for (var i=1; i<=string_length(value_raw); i++){
+                				var c=string_char_at(value_raw,i)
+                				if (c=="."){
+                					if(has_dot){
+                						is_number=false
+                						break;
+                					}
+                					has_dot = true;
+                				}
+                				else if !(c == "-" && i == 1) && (string_pos(c, "0123456789") == 0){
+                					is_number=false
+                					break;
+                				}
+                			}
+                			if (is_number){
+                				value=real(value_raw)
+                			}
+                			else{
+                				var asset=asset_get_index(value_raw)
+                				if (asset!=-1){
+                					value=asset
+                				}
+                                else{
+                					value=value_raw
+                				}
+                			}
+                		}
+                		with (inst)
+                			variable_instance_set(id, var_name, value);
+                	}
+                break;
 				
 				case "snd": case "sound":
 					if (arg_count >= 1) {
@@ -77,8 +127,4 @@ if (InputPressed(INPUT.CONFIRM)){
 	}
 }
 if (can_skip && InputPressed(INPUT.CANCEL))
-<<<<<<< Updated upstream
 	pos = string_length(text)
-=======
-	pos = string_length(text)
->>>>>>> Stashed changes

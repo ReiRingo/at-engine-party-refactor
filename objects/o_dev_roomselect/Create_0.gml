@@ -1,4 +1,3 @@
-
 rooms = []
 room_names = []
 
@@ -22,7 +21,7 @@ for (var i = 0; i < count; i++){
 }
 selection = 0
 
-depth = DEPTH_UI.MENU_UI
+depth = -9999
 
 if instance_exists(o_actor_mainpl)
     o_actor_mainpl.moveable = false

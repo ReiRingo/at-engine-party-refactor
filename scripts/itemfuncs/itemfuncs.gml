@@ -1,19 +1,14 @@
-<<<<<<< Updated upstream
-//By namu
-=======
 //by namuframes
->>>>>>> Stashed changes
+ 
 enum ITEMTYPES {
 	ARMOR,
 	WEAPON,
 	CONSUMEABLE,
 	SPECIAL
 }
-<<<<<<< Updated upstream
-function item() constructor { //Template struct for items
-=======
+ 
 function item() constructor { //template struct for items
->>>>>>> Stashed changes
+ 
 	name = {}
 	name.normal = "";
 	name.short = name.normal;
@@ -28,15 +23,10 @@ function item() constructor { //template struct for items
 	type = ITEMTYPES.SPECIAL;
 }
 
-<<<<<<< Updated upstream
-function itemWeapon() : item() constructor {type = ITEMTYPES.WEAPON; atk = 0} //Template struct for Weapons
-function itemArmor() : item() constructor {type = ITEMTYPES.ARMOR; def = 0} //Template struct for Armor
-function itemConsumeable() : item() constructor {type = ITEMTYPES.CONSUMEABLE; amount = 0;} //Template struct for Consumeables
-=======
 function itemWeapon() : item() constructor {type = ITEMTYPES.WEAPON; atk = 0} //template struct for Weapons
 function itemArmor() : item() constructor {type = ITEMTYPES.ARMOR; def = 0} //template struct for Armor
 function itemConsumeable() : item() constructor {type = ITEMTYPES.CONSUMEABLE; amount = 0;} //template struct for Consumeables
->>>>>>> Stashed changes
+ 
 function itemSpecial() : item() constructor {
 	type = ITEMTYPES.SPECIAL;
 	removeable = true
@@ -69,7 +59,7 @@ function ItemGetName(ITEM,WICH="normal") {
         return output
     }
 }
-//Example Items
+//example items
 function STICK() : itemWeapon() constructor {
 	name.normal = "Stick"
 	description.check = "* STICK - AT 2\n(rainbow)I don't know what to write down, just filling the lines lol"
@@ -94,13 +84,9 @@ function PUNCHCARD() : itemSpecial() constructor {
 	execute = function() {
 		if (!instance_exists(o_ui_image)) {
 			var i = instance_create(o_ui_image,320/2,240/2,DEPTH_UI.MENU_UI-2);
-			i.sprite_index = spr_punch_card
+			i.sprite_index = spr_ui_punchcard
 			i.image_index = loc(0,1)
 		}
 	}
 	description.check = "* \"Punch Card\" - Use to make punching attacks stronger in\none battle."
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

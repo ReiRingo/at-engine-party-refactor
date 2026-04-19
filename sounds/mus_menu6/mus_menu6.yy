@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":48695.773,
+  "duration":31.997097,
   "exportDir":"",
   "name":"mus_menu6",
   "parent":{

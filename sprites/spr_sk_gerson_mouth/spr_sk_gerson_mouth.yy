@@ -12,21 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"3fb26f9e-f083-4f4e-b0f3-28320c719692","name":"3fb26f9e-f083-4f4e-b0f3-28320c719692","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b45df1df-f826-40f3-8188-8bec1fa94cd5","name":"b45df1df-f826-40f3-8188-8bec1fa94cd5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":29,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"eb80574d-4bd3-4fe0-8ae5-6a47cfa8f73e","blendMode":0,"displayName":"default","isLocked":false,"name":"eb80574d-4bd3-4fe0-8ae5-6a47cfa8f73e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"74ab61fa-0f30-46fd-8b02-d58ce43797d3","blendMode":0,"displayName":"default","isLocked":false,"name":"74ab61fa-0f30-46fd-8b02-d58ce43797d3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_sk_gerson_mouth",
   "nineSlice":null,
   "origin":7,
   "parent":{
     "name":"gerson",
-    "path":"folders/@engine/sprites/shop/shopkeepers/gerson.yy",
+    "path":"folders/@engine/sprites/shop/shopkeeper/gerson.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3fb26f9e-f083-4f4e-b0f3-28320c719692","path":"sprites/spr_sk_gerson_mouth/spr_sk_gerson_mouth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6f777e2f-c776-40e2-8fbf-416f8878774b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b45df1df-f826-40f3-8188-8bec1fa94cd5","path":"sprites/spr_sk_gerson_mouth/spr_sk_gerson_mouth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"f26ff7a1-4a09-40f3-933d-36287486cf8a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

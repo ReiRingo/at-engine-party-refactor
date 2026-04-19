@@ -7,12 +7,9 @@
   "overriddenProperties":[],
   "parent":{
     "name":"landmarks",
-    "path":"folders/@engine/objects/ow/landmarks.yy",
+    "path":"folders/@engine/objects/systems/warp/landmarks.yy",
   },
-  "parentObjectId":{
-    "name":"o_landmarkA",
-    "path":"objects/o_landmarkA/o_landmarkA.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_landmarkB",
-    "path":"sprites/spr_landmarkB/spr_landmarkB.yy",
+    "name":"spr_dev_landmarkB",
+    "path":"sprites/spr_dev_landmarkB/spr_dev_landmarkB.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -14,3 +14,10 @@ enum DEPTH_ENCOUNTER {
 	SOUL = -6500,
 	UI = -7000,
 }
+
+enum DEPTH_SHOP {
+	BACKGROUND = -1000,
+	SHOPKEEPER = -1100,
+	UI = -2200,
+	TEXT = -3300,
+}

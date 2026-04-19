@@ -6,6 +6,6 @@ destiny = {
 }
 
 transitioner = instance_create(o_transition);
-transitioner.switched_event = function () {
+transitioner.switched_event = function(){
 	room_goto(o_warp_manager.destiny.room)
 }

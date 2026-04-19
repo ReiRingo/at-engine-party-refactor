@@ -2,8 +2,4 @@ draw_set_alpha(image_alpha)
 draw_set_colour(c_black)
 draw_rectangle(0,0,o_world.BASE_WIDTH,o_world.BASE_HEIGHT,false)
 draw_set_alpha(1)
-<<<<<<< Updated upstream
 draw_set_colour(c_white)
-=======
-draw_set_colour(c_white)
->>>>>>> Stashed changes

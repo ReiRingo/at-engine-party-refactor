@@ -6,8 +6,8 @@
   "name":"o_warp",
   "overriddenProperties":[],
   "parent":{
-    "name":"system",
-    "path":"folders/@engine/objects/system.yy",
+    "name":"warp",
+    "path":"folders/@engine/objects/systems/warp.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"landmarks",
-    "path":"folders/@engine/objects/ow/landmarks.yy",
+    "path":"folders/@engine/objects/systems/warp/landmarks.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_landmarkA",
-    "path":"sprites/spr_landmarkA/spr_landmarkA.yy",
+    "name":"spr_dev_landmarkA",
+    "path":"sprites/spr_dev_landmarkA/spr_dev_landmarkA.yy",
   },
   "spriteMaskId":null,
   "visible":true,

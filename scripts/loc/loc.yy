@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"loc",
   "parent":{
-    "name":"engine",
-    "path":"folders/@engine/scripts/engine.yy",
+    "name":"etc",
+    "path":"folders/@engine/scripts/engine/etc.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

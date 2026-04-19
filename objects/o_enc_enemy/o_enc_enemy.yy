@@ -6,8 +6,8 @@
   "name":"o_enc_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/@engine/objects/encounter/enemy.yy",
+    "name":"enemies",
+    "path":"folders/@engine/objects/encounter/enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,

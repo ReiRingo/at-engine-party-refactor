@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"macro_shop_texts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"macro_shop_texts",
+  "parent":{
+    "name":"macro",
+    "path":"folders/@engine/scripts/macro.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

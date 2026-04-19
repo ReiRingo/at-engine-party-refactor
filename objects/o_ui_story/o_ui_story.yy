@@ -8,8 +8,8 @@
   "name":"o_ui_story",
   "overriddenProperties":[],
   "parent":{
-    "name":"etc",
-    "path":"folders/@engine/objects/ui/etc.yy",
+    "name":"ui",
+    "path":"folders/@engine/objects/ui.yy",
   },
   "parentObjectId":null,
   "persistent":false,

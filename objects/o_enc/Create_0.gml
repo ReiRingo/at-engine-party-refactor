@@ -1,13 +1,8 @@
-<<<<<<< Updated upstream
-if (live_call()) return live_result;
-
-=======
->>>>>>> Stashed changes
 enum BATTLE_MENU {
 	MAIN,
 	FIGHT,
-	CHOOSE_ENEMY,
-	ITEM,
+	CHOOSE_ENEMY, 
+    ITEM,
 	MERCY,
 	ACT
 }
@@ -95,16 +90,15 @@ function init(_enc){
 
 set_controls = function(inputs,limit) {
 	var prev_index = index.current
-<<<<<<< Updated upstream
-	index.current += inputs; //Defines the input that affects the index
-=======
+ 
 	index.current += inputs; //defines the input that affects the index
->>>>>>> Stashed changes
+ 
+	index.current += inputs; //defines the input that affects the index
+ 
 	
 	//index limit
 	if (index.current > limit) {index.current = 0};
 	if (index.current < 0) {index.current = limit};
-
 	if (prev_index != index.current) {audio_play_sound(snd_ui_move,0,0)} //sound if the index changed
 }
 
@@ -150,11 +144,11 @@ set_controls_grid = function(list_length){
     }
 
     if (new_index!=cur) {
-<<<<<<< Updated upstream
-        index.current = new_index //Defines the input that affects the index
-=======
+ 
         index.current = new_index //defines the input that affects the index
->>>>>>> Stashed changes
+ 
+        index.current = new_index //defines the input that affects the index
+ 
         audio_play_sound(snd_ui_move,0,false) //sound if the index changed
     }
 }
@@ -220,7 +214,7 @@ function draw_list_2x2(list,get_name_func)
         var xx = board_x - board_w*0.5 + 30 + col*120;
         var yy = board_y - board_h*0.5 + 10 + row*16;
 
-        draw_each_letter(xx, yy, "* " + string(get_name_func(list[i])));
+        draw_each_letter(xx, yy, false,1,c_black, "* " + string(get_name_func(list[i])));
 
         if (index.current == i)
             set_soul(xx - 8, yy + 4);
@@ -241,9 +235,9 @@ draw_enemy_list = function(show_hp=false) {
             draw_healthbar(bar_x1,yy+6,bar_x2,yy+14,enemies[i].hp/enemies[i].maxhp*100,c_red,c_lime,c_lime,0,true,false)
         }
         if (enemies[i].can_mercy)
-            draw_each_letter(xx+15,yy+1,"(yellow)* "+string(enemies[i].name))
+            draw_each_letter(xx+15,yy+1, false,1,c_black, "(yellow)* "+string(enemies[i].name))
         else
-            draw_each_letter(xx+15,yy+1,"* "+string(enemies[i].name))
+            draw_each_letter(xx+15,yy+1, false,1,c_black, "* "+string(enemies[i].name))
 
         if (index.current == i)
             set_soul(xx-4,yy+5)
@@ -274,7 +268,7 @@ draw_act_list = function(){
         var xx = board_x - board_w*0.5 + 30 + col*120
         var yy = board_y - board_h*0.5 + 10 + row*16
 
-        draw_each_letter(xx, yy, "* " + acts[i].name)
+        draw_each_letter(xx, yy, false,1,c_black, "* " + acts[i].name)
 
         if (i == act_index)
             set_soul(xx-14,yy+5)

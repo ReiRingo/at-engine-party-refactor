@@ -2,20 +2,15 @@
   "$GMObject":"",
   "%Name":"o_enc_bg",
   "eventList":[
-<<<<<<< Updated upstream
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-=======
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
->>>>>>> Stashed changes
   ],
   "managed":true,
   "name":"o_enc_bg",
   "overriddenProperties":[],
   "parent":{
-    "name":"encounter",
-    "path":"folders/@engine/objects/encounter.yy",
+    "name":"ui",
+    "path":"folders/@engine/objects/encounter/ui.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -35,14 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-<<<<<<< Updated upstream
-  "spriteId":null,
-=======
   "spriteId":{
-    "name":"spr_enc_bg",
-    "path":"sprites/spr_enc_bg/spr_enc_bg.yy",
+    "name":"spr_enc_ui_bg",
+    "path":"sprites/spr_enc_ui_bg/spr_enc_ui_bg.yy",
   },
->>>>>>> Stashed changes
   "spriteMaskId":null,
   "visible":true,
 }

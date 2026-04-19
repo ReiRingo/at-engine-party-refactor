@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"saves",
   "parent":{
-    "name":"system",
-    "path":"folders/@engine/scripts/engine/system.yy",
+    "name":"etc",
+    "path":"folders/@engine/scripts/engine/etc.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

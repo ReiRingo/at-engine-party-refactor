@@ -1,21 +1,16 @@
-<<<<<<< Updated upstream
- if (live_call()) return live_result;
-
-=======
->>>>>>> Stashed changes
 board(board_x,board_y,board_w,board_h,board_a)
 { // buttons
 	for (var i=0; i<array_length(buttons); i++){
 		var _x = 16+78*i
         if (!(turn==BATTLE_TURN.CUTSCENE))&&(!(turn==BATTLE_TURN.ENEMY)){
 		if (button_selection == i) {
-			buttons[i].image_index=1
+			buttons[i].image_index=loc(1,3)
 			set_soul(_x+4,216+7)
-		} else {buttons[i].image_index=0}
+		} else {buttons[i].image_index=loc(0,2)}
         }
         else{
             set_soul(-10,-10)
-            buttons[i].image_index=0
+            buttons[i].image_index=loc(0,2)
         }
 		draw_sprite_ext(buttons[i].sprite,buttons[i].image_index,_x,216,0.5,0.5,0,c_white,1)
 	}
@@ -45,10 +40,7 @@ board(board_x,board_y,board_w,board_h,board_a)
 	draw_sprite_ext(spr_enc_ui_hp,0,120,200,0.5,0.5,0,c_white,1)
     draw_healthbar(137,200,137+13+(global.lv-1)*2,200+10,(global.hp/global.maxhp)*100,c_red,c_yellow,c_yellow,0,true,false)
     //draw_sprite_ext(spr_pixel2x,0,137,200,6.6,4.9,0,c_yellow,1)
-<<<<<<< Updated upstream
-=======
     //^^ old hp bar system
->>>>>>> Stashed changes
 	draw_text_transformed(156+(global.lv-1)*2,200,string(global.hp)+" / "+string(global.maxhp),0.5,0.5,0)
 }
 draw_set_font(-1)

@@ -57,7 +57,7 @@ draw_set_font(loc_getfont(font_main));
 	draw_set_color(8421504)
 	draw_set_font(font_menu)
 	draw_set_halign(fa_center)
-	draw_text(160,232,"UNDERTALE ENGINE v0.1.0 (C) Toby Fox 2015-2017")
+	draw_text(160,232,"UNDERTALE ENGINE v"+ENGINE_VERSION+" (C) Toby Fox 2015-2017")
 	draw_set_halign(fa_left)
 	draw_set_color(c_white)
 }

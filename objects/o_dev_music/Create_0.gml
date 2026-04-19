@@ -4,5 +4,7 @@ if (asset!=-1){
     if (!audio_is_playing(asset)){
         audio_play_sound(asset,0,loop,gain,0,pitch)
     }
-
+    else{
+        audio_stop_all()
+    }
 }

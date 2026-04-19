@@ -69,16 +69,16 @@ function draw_text_outline(_x, _y, _text, _outlineSpace = 1, _outlineColour = c_
 }
 
 function can_move(){
-    var box = instance_exists(o_dialog) ? o_dialog.player_free : true
+    var box = instance_exists(o_ow_dialog) ? o_ow_dialog.player_free : true
     var moveable = instance_exists(o_actor_mainpl) ? o_actor_mainpl.moveable : false
-	//If this returns true, in simple words, it means the player can move!
+	// if this returns true, in simple words, it means the player can move!
     return box 
 	&& !instance_exists(o_ui_save) && 
 	!instance_exists(o_ui_menu) && 
 	moveable &&
 	!instance_exists(o_warp_manager) &&
 	!instance_exists(o_ui_image) &&
-    !instance_exists(o_dialog) &&
+    !instance_exists(o_ow_dialog) &&
     !instance_exists(o_dev_roomselect)
 
 }
@@ -97,8 +97,10 @@ function is_top(){
 	else{
 		return false
 	}
-<<<<<<< Updated upstream
+ 
 }
-=======
+
+function print(_text){
+    printobj = instance_create(o_print,0,0,DEPTH_UI.MENU_UI)
+    printobj.text = _text
 }
->>>>>>> Stashed changes

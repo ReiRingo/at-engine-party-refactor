@@ -8,8 +8,8 @@
   "name":"o_sk_gerson",
   "overriddenProperties":[],
   "parent":{
-    "name":"shopkeepers",
-    "path":"folders/@engine/objects/shop/shopkeepers.yy",
+    "name":"gerson",
+    "path":"folders/@engine/objects/shop/shopkeeper/gerson.yy",
   },
   "parentObjectId":{
     "name":"o_sk_default",

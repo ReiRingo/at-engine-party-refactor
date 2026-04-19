@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"mus_battle",
   "parent":{
-    "name":"battle",
-    "path":"folders/@engine/music/battle.yy",
+    "name":"encounter",
+    "path":"folders/@engine/music/encounter.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

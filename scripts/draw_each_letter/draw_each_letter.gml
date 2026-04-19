@@ -21,7 +21,44 @@ function check_line_break(text,number,line_length, char_spacing=0, space, return
 	return !return_length ? (space + length > line_length) : length 
 }
 
-function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=string_length(text)){
+function shaky_offset(i,intensity=1)
+{
+	var p = 0.5*intensity
+    var ox = random_range(-p, p);
+    var oy = random_range(-p, p);
+
+    return [ox, oy];
+}
+
+function wave_offset(i)
+{
+    var amp = 2.5;
+    var freq = 0.25;
+    var wspd = 0.15;
+
+    var t = (current_time*.05) * wspd;
+
+    var ox = 0;
+    var oy = cos((i * freq) - t) * amp;
+
+    return [ox, oy];
+}
+
+function wavy_offset(i)
+{
+    var amp = 2.5;
+    var freq = 0.25;
+    var wspd = 0.15;
+
+    var t = (current_time*.05) * wspd;
+
+    var ox = cos((i * freq) - t) * amp;
+    var oy = cos((i * freq) - t) * amp;
+
+    return [ox, oy];
+}
+
+function draw_each_letter(_x,_y,text,_outlineEnabled = false, _outlineSpace = 1, _outlineColour = c_black,spacing=1,line_length=infinity,draw_count=string_length(text)){
 	var font = draw_get_font() != -1 ? draw_get_font() : loc_getfont(font_main)
 	if (spacing <= 1 && font = loc_getfont(font_main)) {
 		spacing = loc(0.89,0.94);	
@@ -30,6 +67,7 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 	var yy = _y;
 	var shake = false;
 	var wave = false;
+    var wavy = false;
 	var shake_intensity = 1;
 	var rainbow = false
 	static rainbow_time = 0
@@ -63,7 +101,11 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 					case "yellow": case "c_yellow":
 						draw_set_colour(c_yellow)
 					break;
-				
+                
+					case "cyan": case "c_cyan":
+						draw_set_colour(c_aqua)
+					break; 
+                
 					case "rainbow": case "c_rainbow":
 						rainbow = !rainbow
 						if (rainbow == false) {draw_set_colour(c_white)}
@@ -79,6 +121,15 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 							voice = asset_get_index(arg[1]);
 						}
 					break;
+                
+                    case "choice":
+                        if (arg_count>0){
+                            if instance_exists(o_ow_dialog){
+                                o_ow_dialog.choices=arg[arg_count]
+                                o_ow_dialog.on_choice=true
+                            }
+                        }
+                    break;
 				
 					case "instant":
 						pos = string_length(text)
@@ -94,24 +145,28 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 					case "wave":
 						wave = !wave
 					break;
+                
+					case "wavy":
+						wavy = !wavy
+					break;
 				
 				}
 
-				if instance_exists(o_dialog) {
+				if instance_exists(o_ow_dialog) {
 					switch(arg[0]) {
 						case "face":
 							if (wait <= 0 || pos >= string_length(text)-1) { //Only execute if the text isn't paused!
 								if (arg_count >= 1) {
 									var asset = asset_get_index(arg[1]);
 									if (asset_get_type(asset) == asset_sprite) {
-										o_dialog.face = asset
+										o_ow_dialog.face = asset
 										if (sprite_get_speed(asset) <= 0 && arg_count >= 2) {
-											o_dialog.faceid = real(arg[2])
+											o_ow_dialog.faceid = real(arg[2])
 										}
 									} else if (is_numeric(real(arg[1]))) {
-										o_dialog.faceid = real(arg[1])
+										o_ow_dialog.faceid = real(arg[1])
 									}
-								} else {o_dialog.face = undefined}
+								} else {o_ow_dialog.face = undefined}
 							}
 						break;
 					}
@@ -142,21 +197,40 @@ function draw_each_letter(_x,_y,text,spacing=1,line_length=infinity,draw_count=s
 
 		if (wave)
 		{
+			ox += wave_offset(i)[0];
+			oy += wave_offset(i)[1];
+		}
+        
+		if (wavy)
+		{
 			ox += wavy_offset(i)[0];
 			oy += wavy_offset(i)[1];
-		}
+        }
+        
 		if (rainbow) {
 			var s = abs(rainbow_time) % 290
 			draw_set_colour(make_colour_hsv(s-(i*.5),255,255))	
 		}
-	    draw_text(xx + ox, yy + oy, ch);
+        
+        if _outlineEnabled{
+            var _textCol = draw_get_colour();
+            
+            draw_set_colour(_outlineColour);
+            
+            for (var i2 = 0; i2 < 360; i2 += 45) 
+            {
+                draw_text(
+                    xx+ox + lengthdir_x(_outlineSpace, i2), 
+                    yy+oy + lengthdir_y(_outlineSpace, i2), 
+                    ch
+                );
+            }
+            draw_set_colour(_textCol);
+        }
+        draw_text(xx + ox, yy + oy, ch);
 
 	    xx += string_width(ch) * spacing;
 	}
-	rainbow_time += 2
+	rainbow_time += 4
 	draw_set_color(c_white);
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

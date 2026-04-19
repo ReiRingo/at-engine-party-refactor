@@ -3,7 +3,7 @@ selection = 0;
 section = 0;
 time_reg=time_to_mmss(global.time)
 
-types = 5
+types = 2
 var season = [
 	mus_menu0,
 	mus_menu1,

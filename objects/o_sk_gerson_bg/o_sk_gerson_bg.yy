@@ -6,8 +6,8 @@
   "name":"o_sk_gerson_bg",
   "overriddenProperties":[],
   "parent":{
-    "name":"bgs",
-    "path":"folders/@engine/objects/shop/bgs.yy",
+    "name":"gerson",
+    "path":"folders/@engine/objects/shop/shopkeeper/gerson.yy",
   },
   "parentObjectId":null,
   "persistent":false,

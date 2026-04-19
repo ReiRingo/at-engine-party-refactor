@@ -12,21 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"60a9f8fc-9440-4a1d-9590-d22185e098b5","name":"60a9f8fc-9440-4a1d-9590-d22185e098b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c5370426-9cee-4e0e-9c58-5c70644810d4","name":"c5370426-9cee-4e0e-9c58-5c70644810d4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":107,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"6d65986f-9fac-471c-afa6-68a16039427a","blendMode":0,"displayName":"default","isLocked":false,"name":"6d65986f-9fac-471c-afa6-68a16039427a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"455e2a6f-34ac-4aa9-afe8-88a7cb7dd399","blendMode":0,"displayName":"default","isLocked":false,"name":"455e2a6f-34ac-4aa9-afe8-88a7cb7dd399","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_enc_enemy_test",
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"enemies",
-    "path":"folders/@engine/sprites/encounter/enemies.yy",
+    "name":"test",
+    "path":"folders/@engine/sprites/battle/enemies/test.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -59,7 +59,7 @@
     },
     "name":"spr_enc_enemy_test",
     "playback":1,
-    "playbackSpeed":0.0,
+    "playbackSpeed":30.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"60a9f8fc-9440-4a1d-9590-d22185e098b5","path":"sprites/spr_enc_enemy_test/spr_enc_enemy_test.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"362c6b9f-f8d2-4378-b2a8-b0d397e33ef9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c5370426-9cee-4e0e-9c58-5c70644810d4","path":"sprites/spr_enc_enemy_test/spr_enc_enemy_test.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"56943853-c6fa-42ce-9686-7d9283da54a3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

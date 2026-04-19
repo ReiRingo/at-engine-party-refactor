@@ -1,10 +1,6 @@
 frames = 0
 
-<<<<<<< Updated upstream
-global.borders = true
-=======
 global.borders = false
->>>>>>> Stashed changes
 
 global.lang = ""
 
@@ -35,6 +31,8 @@ global.weapon = ""
 global.armor = ""
 
 global.input_delay = 0;
+
+print("(yellow)VERSION "+ENGINE_VERSION)
 
 border_surface =surface_create(window_get_width(),window_get_height());	
 

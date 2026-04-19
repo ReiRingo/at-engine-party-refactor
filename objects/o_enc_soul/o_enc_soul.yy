@@ -9,8 +9,8 @@
   "name":"o_enc_soul",
   "overriddenProperties":[],
   "parent":{
-    "name":"soul",
-    "path":"folders/@engine/objects/encounter/soul.yy",
+    "name":"encounter",
+    "path":"folders/@engine/objects/encounter.yy",
   },
   "parentObjectId":null,
   "persistent":false,

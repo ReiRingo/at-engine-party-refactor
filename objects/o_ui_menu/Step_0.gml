@@ -16,7 +16,7 @@ if (state!=prev_state) {
 
 switch(state) {
 	case 0:
-		if (!instance_exists(o_dialog) && !instance_exists(o_ui_image)) {
+		if (!instance_exists(o_ow_dialog) && !instance_exists(o_ui_image)) {
 			var old_sel = selection;
 			if (InputPressed(INPUT.UP)){selection = max(0,selection-1);}
 		
@@ -179,5 +179,5 @@ switch(state) {
 }
 
 if (dialogmade)
-	if (!instance_exists(o_dialog))
+	if (!instance_exists(o_ow_dialog))
 		instance_destroy()

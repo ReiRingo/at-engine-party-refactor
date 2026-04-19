@@ -15,7 +15,7 @@
   "name":"snd_ui_select",
   "parent":{
     "name":"ui",
-    "path":"folders/@engine/sounds/sfx/ui.yy",
+    "path":"folders/@engine/sounds/ui.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

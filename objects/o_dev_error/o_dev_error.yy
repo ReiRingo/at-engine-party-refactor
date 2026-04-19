@@ -8,8 +8,8 @@
   "name":"o_dev_error",
   "overriddenProperties":[],
   "parent":{
-    "name":"debug",
-    "path":"folders/@engine/objects/dev/debug.yy",
+    "name":"dev",
+    "path":"folders/@engine/objects/dev.yy",
   },
   "parentObjectId":null,
   "persistent":false,

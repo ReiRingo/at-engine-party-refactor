@@ -1,7 +1,7 @@
-if (live_call()) return live_result;
 event_inherited()
 talky = 0
 talk_dir = 1 // 1 up, -1 down
+emotion = 0 // idk
 s_drawer = function(sprite_index,image_index,x,y,xscale,yscale,angle,colour,alpha){
     if (is_talking) {
         if (o_world.frames%4==0){
@@ -24,5 +24,5 @@ s_drawer = function(sprite_index,image_index,x,y,xscale,yscale,angle,colour,alph
     draw_sprite(spr_sk_gerson_body, 0, x + 16, y);
     draw_sprite(spr_sk_gerson_mouth, 0, x-3, y-14);
     draw_sprite(spr_sk_gerson_head, 0, x-7, y-34+talky);
-    draw_sprite(spr_sk_gerson_face, 0, x-17, y - 47+talky);
+    draw_sprite(spr_sk_gerson_face, emotion, x-17, y - 47+talky);
 }

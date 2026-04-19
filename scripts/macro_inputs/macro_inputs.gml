@@ -1,9 +1,3 @@
-enum INPUT{
-	UP,
-	LEFT,
-	DOWN,
-	RIGHT,
-	CONFIRM,
-	CANCEL,
-	SPECIAL
+enum SHOP_TEXT_TYPE{
+	MAIN,
 }

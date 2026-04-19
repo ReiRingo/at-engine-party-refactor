@@ -4,6 +4,7 @@ sub_state=0
 item_selection=0
 item_action_selection=0
 dialogmade=0
+xxx=o_cam.x-320/2
 top=is_top()
 
 options = [
@@ -54,17 +55,9 @@ call_dialogue = function(dial_text,text, end_text) {
 
 cells = [
 	{
-		name: "Toriel",
+		name: "???",
 		result: [
-            "(sound,snd_ring)* (Ring... ring...)",
-            "(sound,snd_ui_deny,0,0,1,.5)* No response...",
-            "* ((Click...)",
-        ]
-	},
-	{
-		name: "---",
-		result: [
-			"(sound,snd_ring)* (Ring... ring...)",
+			"(sound,snd_ui_ring)* ((Ring... ring...)",
             "* Hello(w,1)!\n* Can I speak to G...",
 			"* ...\n* Wait a second.",
 			"* Is this the wrong number?",
@@ -75,6 +68,28 @@ cells = [
             "(esound,mus_wrongnumber)* ((Click...)",
 		]
 	},
+	{
+		name: "Toriel",
+		result: [
+            "(sound,snd_ui_ring)* ((Ring... ring...)",
+            "(sound,snd_ui_deny,0,0,1,.5)* No response...",
+            "* ((Click...)",
+        ]
+	},
+    {
+        name: "Techo",
+        result: [
+            "* You don't recall of knowing a \"Techo\" Person.",
+            "* It seems like it was always there somehow...?",
+            "* You are filled with (cyan)Curiosity(c), So you decide to call it.",
+            "(sound,snd_ui_ring)* ((Ring... ring...)",
+            "(sound,snd_ui_ring,0,0,1,.8)* ((Ring...... ring......)",
+            "(sound,snd_ui_ring,0,0,1,.6)* ((Ring............ ring.......)",
+            "(sound,snd_ui_select)* The ringing suddenly stops.",
+            "* You can only hear whispers.",
+            "* You get your head closer to the cellphone.(varset,o_cam,zoom,0.5)",
+        ]
+    },
 ]
 
 selection = 0

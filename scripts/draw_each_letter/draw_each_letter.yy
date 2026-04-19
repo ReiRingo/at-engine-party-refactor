@@ -5,13 +5,8 @@
   "isDnD":false,
   "name":"draw_each_letter",
   "parent":{
-<<<<<<< Updated upstream
-    "name":"system",
-    "path":"folders/@engine/scripts/engine/system.yy",
-=======
-    "name":"engine",
-    "path":"folders/@engine/scripts/engine.yy",
->>>>>>> Stashed changes
+    "name":"typer",
+    "path":"folders/@engine/scripts/engine/typer.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

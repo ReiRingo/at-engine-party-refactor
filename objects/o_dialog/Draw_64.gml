@@ -1,7 +1,3 @@
- 
-
-ui_dialoguebox_create(xx, yy, width, height);
-
 if (asset_get_type(face) == asset_sprite) {
 	draw_sprite(face,faceid,xx+13,yy+14)
 	if (instance_exists(t)) {

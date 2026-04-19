@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"mus_story",
   "parent":{
-    "name":"music",
-    "path":"folders/@engine/music.yy",
+    "name":"etc",
+    "path":"folders/@engine/music/etc.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -8,8 +8,8 @@
   "name":"o_dev_music",
   "overriddenProperties":[],
   "parent":{
-    "name":"squares",
-    "path":"folders/@engine/objects/dev/squares.yy",
+    "name":"dev",
+    "path":"folders/@engine/objects/dev.yy",
   },
   "parentObjectId":null,
   "persistent":false,

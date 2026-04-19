@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_save",
   "parent":{
-    "name":"sfx",
-    "path":"folders/@engine/sounds/sfx.yy",
+    "name":"sounds",
+    "path":"folders/@engine/sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
