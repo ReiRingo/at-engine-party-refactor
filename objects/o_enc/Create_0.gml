@@ -214,7 +214,7 @@ function draw_list_2x2(list,get_name_func)
         var xx = board_x - board_w*0.5 + 30 + col*120;
         var yy = board_y - board_h*0.5 + 10 + row*16;
 
-        draw_each_letter(xx, yy, false,1,c_black, "* " + string(get_name_func(list[i])));
+        scr_draw_each_letter(xx, yy,"* " + string(get_name_func(list[i])),false,1,c_black);
 
         if (index.current == i)
             set_soul(xx - 8, yy + 4);
@@ -235,9 +235,9 @@ draw_enemy_list = function(show_hp=false) {
             draw_healthbar(bar_x1,yy+6,bar_x2,yy+14,enemies[i].hp/enemies[i].maxhp*100,c_red,c_lime,c_lime,0,true,false)
         }
         if (enemies[i].can_mercy)
-            draw_each_letter(xx+15,yy+1, false,1,c_black, "(yellow)* "+string(enemies[i].name))
+            scr_draw_each_letter(xx+15,yy+1,"(yellow)* "+string(enemies[i].name),false,1,c_black)
         else
-            draw_each_letter(xx+15,yy+1, false,1,c_black, "* "+string(enemies[i].name))
+            scr_draw_each_letter(xx+15,yy+1,"* "+string(enemies[i].name),false,1,c_black)
 
         if (index.current == i)
             set_soul(xx-4,yy+5)
@@ -268,7 +268,7 @@ draw_act_list = function(){
         var xx = board_x - board_w*0.5 + 30 + col*120
         var yy = board_y - board_h*0.5 + 10 + row*16
 
-        draw_each_letter(xx, yy, false,1,c_black, "* " + acts[i].name)
+        scr_draw_each_letter(xx, yy,"* " + acts[i].name,false,1,c_black)
 
         if (i == act_index)
             set_soul(xx-14,yy+5)

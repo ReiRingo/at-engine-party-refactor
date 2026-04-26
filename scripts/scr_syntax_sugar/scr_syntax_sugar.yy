@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_syntax_sugar",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_syntax_sugar",
+  "parent":{
+    "name":"helpers",
+    "path":"folders/@engine/scripts/systems/helpers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

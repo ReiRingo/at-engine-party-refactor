@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ex_tween",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ex_tween",
+  "parent":{
+    "name":"examples",
+    "path":"folders/@rei-taylor-libraries/tween_system/examples.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_init",
+  "parent":{
+    "name":"engine",
+    "path":"folders/@engine/scripts/engine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

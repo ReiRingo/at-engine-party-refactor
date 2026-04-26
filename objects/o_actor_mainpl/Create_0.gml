@@ -24,7 +24,7 @@ if (global.facing == FACES.LEFT)
 	sprite_index = lsprite;
 
 inwater = 0;
-h_skip = 0;
+in_cutscene = false;
 s_override = false;
 
 collision = function(object=o_solidparent) {
@@ -40,22 +40,14 @@ collision = function(object=o_solidparent) {
 	}
 }
 
-direction_animation = function() { //by namuframes
-	if (hsp != 0 || vsp != 0) {
-		if (vsp == 0) {
-			if (hsp < 0) {global.facing = FACES.LEFT};
-			if (hsp > 0) {global.facing = FACES.RIGHT};
-		}
-
-		if (hsp == 0) {
-			if (vsp < 0) {global.facing = FACES.UP};
-			if (vsp > 0) {global.facing = FACES.DOWN};
-		}
-	
-		if (global.facing == FACES.RIGHT && hsp < 0) {global.facing = FACES.LEFT}	
-		if (global.facing == FACES.LEFT && hsp > 0) {global.facing = FACES.RIGHT}
-		if (global.facing == FACES.DOWN && vsp < 0) {global.facing = FACES.UP}		
-		if (global.facing == FACES.UP && vsp > 0) {global.facing = FACES.DOWN}
+function direction_animation(){
+	if (abs(hsp)>abs(vsp)){
+		if (hsp>0) global.facing = FACES.RIGHT
+		if (hsp<0) global.facing = FACES.LEFT
+	}
+    else{
+		if (vsp>0) global.facing = FACES.DOWN
+		if (vsp<0) global.facing = FACES.UP
 	}
 }
 	

@@ -1,0 +1,16 @@
+# Cutscene System
+Cutscene System Version: 0.0.2
+Created by Rei Taylor
+Designed for Accurate Techo's Engine ( AT Engine )
+
+# Some logs here:
+4/16/26
+> Made a very silly cutscene system for funsies test
+
+4/19/26
+> Ported from AT Engine ( Main ) to Devel
+
+4/22/26
+> Had to refactor the entire thing because it was a bit frisky... no Undertale joke here
+> The thing was... it was a timesource problem. Which is pretty buggy sometimes.
+> So I moved it to a centralised manager

@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"systems",
-    "path":"folders/@engine/objects/systems.yy",
+    "path":"folders/systems.yy",
   },
   "parentObjectId":null,
   "persistent":false,

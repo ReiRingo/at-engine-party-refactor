@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"warp",
-    "path":"folders/@engine/objects/systems/warp.yy",
+    "path":"folders/systems/warp.yy",
   },
   "parentObjectId":null,
   "persistent":false,

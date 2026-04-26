@@ -5,6 +5,7 @@ item_selection=0
 item_action_selection=0
 dialogmade=0
 xxx=o_cam.x-320/2
+yyy=o_cam.y-240/2
 top=is_top()
 
 options = [

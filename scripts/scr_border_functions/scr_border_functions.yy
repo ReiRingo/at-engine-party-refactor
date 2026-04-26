@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_border_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_border_functions",
+  "parent":{
+    "name":"border",
+    "path":"folders/@engine/scripts/engine/border.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

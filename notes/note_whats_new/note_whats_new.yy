@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"note_whats_new",
+  "name":"note_whats_new",
+  "parent":{
+    "name":"@rei-taylor-libraries",
+    "path":"folders/@rei-taylor-libraries.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

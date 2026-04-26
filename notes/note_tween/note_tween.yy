@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"note_tween",
+  "name":"note_tween",
+  "parent":{
+    "name":"tween_system",
+    "path":"folders/@rei-taylor-libraries/tween_system.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

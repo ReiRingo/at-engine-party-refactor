@@ -1,4 +1,4 @@
-if (!can_move()) {
+if (!can_move() || in_cutscene) {
 	state = PLAYER_STATES.froozen	
 } else {state = PLAYER_STATES.free}
 
@@ -28,17 +28,6 @@ if (state == PLAYER_STATES.free) { //checking if the player is in control
 	x += hsp;
 	y += vsp;
 
-    if !(s_override){
-    	if (global.facing == 0)
-    		sprite_index = dsprite;
-    	if (global.facing == 1)
-    		sprite_index = rsprite;
-    	if (global.facing == 2)
-    		sprite_index = usprite;
-    	if (global.facing == 3)
-    		sprite_index = lsprite;
-    }
-
 	if (InputPressed(INPUT.CONFIRM)){
 		if (movement==1){
 			var obj=noone
@@ -64,3 +53,13 @@ if (state == PLAYER_STATES.free) { //checking if the player is in control
 		}
 	}
 }
+    if !(s_override){
+    	if (global.facing == 0)
+    		sprite_index = dsprite;
+    	if (global.facing == 1)
+    		sprite_index = rsprite;
+    	if (global.facing == 2)
+    		sprite_index = usprite;
+    	if (global.facing == 3)
+    		sprite_index = lsprite;
+    }

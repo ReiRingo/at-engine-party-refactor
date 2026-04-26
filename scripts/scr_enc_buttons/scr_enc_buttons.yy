@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enc_buttons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enc_buttons",
+  "parent":{
+    "name":"enc",
+    "path":"folders/@engine/scripts/engine/enc.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

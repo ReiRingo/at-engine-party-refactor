@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"landmarks",
-    "path":"folders/@engine/objects/systems/warp/landmarks.yy",
+    "path":"folders/systems/warp/landmarks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

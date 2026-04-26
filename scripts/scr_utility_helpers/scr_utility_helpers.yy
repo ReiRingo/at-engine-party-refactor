@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_utility_helpers",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_utility_helpers",
+  "parent":{
+    "name":"helpers",
+    "path":"folders/@engine/scripts/systems/helpers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

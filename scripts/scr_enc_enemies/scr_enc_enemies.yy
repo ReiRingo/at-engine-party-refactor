@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enc_enemies",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enc_enemies",
+  "parent":{
+    "name":"enc",
+    "path":"folders/@engine/scripts/engine/enc.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

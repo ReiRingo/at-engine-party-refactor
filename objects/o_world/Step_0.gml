@@ -1,3 +1,4 @@
+var _old_bord = global.borders
 frames ++
 if (keyboard_check_pressed(vk_f1)) {
 	global.debug = !global.debug
@@ -24,8 +25,9 @@ if (keyboard_check_pressed(vk_f3)) {
 
 if keyboard_check_pressed(vk_f4) {
 	window_set_fullscreen(!window_get_fullscreen())
-    if !window_get_fullscreen()
-        window_center()
+    if !window_get_fullscreen() {
+        call_later(1, time_source_units_frames, window_center);
+	}
 }
 
 if (keyboard_check_pressed(vk_f5)) {
@@ -39,7 +41,33 @@ if (keyboard_check_pressed(vk_f7)){
     audio_play_sound(snd_damage,1,false)
 }
 
-if (frames % 30 == 0) {global.time++}
+if (frames % 30 == 0) { global.time++ }
 
 global.room_name=room_get_name(room)
 if (global.input_delay > 0) global.input_delay--
+
+
+//---------------------------------
+// For the border testing stuff
+//---------------------------------
+if (border_test && keyboard_check_pressed(ord("H"))) {
+	border_set_state(!border_get_state());
+}
+
+if (global.borders != _old_bord) __window_update();
+    
+if (border_alpha < 1.0) {
+    border_alpha += 0.075; // adjust this, maybe?
+    
+    if (border_alpha >= 1.0) {
+        old_border  = border_spr;
+        border_wait = false;
+    }
+}
+
+// this could be overriden mid-wait
+// but thats a rare thing to happen
+if (!border_wait && old_border != border_spr && border_alpha >= 1.0) {
+    border_alpha = 0;
+    border_wait  = true;
+}

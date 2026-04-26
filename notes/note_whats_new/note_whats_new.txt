@@ -1,0 +1,14 @@
+# 4/22/26
+
+## hey techo!
+
+i've noticed some very silly bugs on my own code?
+and hopefully, this has fixed them all?
+en masse, i've also included a bespoke tween system
+just because i love helping :3
+
+enjoy~~!
+
+- fixed the trigger blocks being buggy with can_repeat
+- added tween system
+- cleaned up a bit of file scheming thingy idk

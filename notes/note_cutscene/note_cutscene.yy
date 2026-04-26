@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"note_cutscene",
+  "name":"note_cutscene",
+  "parent":{
+    "name":"cutscene_system",
+    "path":"folders/@rei-taylor-libraries/cutscene_system.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"o_landmarkC",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"o_landmarkC",
   "overriddenProperties":[],
   "parent":{
     "name":"landmarks",
-    "path":"folders/@engine/objects/systems/warp/landmarks.yy",
+    "path":"folders/systems/warp/landmarks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

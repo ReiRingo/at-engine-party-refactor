@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_loc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_loc",
+  "parent":{
+    "name":"etc",
+    "path":"folders/@engine/scripts/engine/etc.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

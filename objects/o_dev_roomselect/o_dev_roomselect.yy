@@ -10,8 +10,8 @@
   "name":"o_dev_roomselect",
   "overriddenProperties":[],
   "parent":{
-    "name":"dev",
-    "path":"folders/@engine/objects/dev.yy",
+    "name":"console",
+    "path":"folders/@engine/objects/dev/console.yy",
   },
   "parentObjectId":null,
   "persistent":false,

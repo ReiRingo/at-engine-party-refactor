@@ -10,7 +10,7 @@ if (instance_exists(t)){
 		ch_index = clamp(ch_index,0,array_length(choices)-1)
 		
 		if (InputPressed(INPUT.CONFIRM)) {
-			if (choices[ch_index].result!=noone){
+			if (choices[ch_index].result!=undefined){
                 var result = choices[ch_index].result
                 if (is_method(result)) {
                     script_execute(result)

@@ -29,7 +29,7 @@
   "origin":7,
   "parent":{
     "name":"player",
-    "path":"folders/@engine/sprites/ow/actors/main/player.yy",
+    "path":"folders/@engine/sprites/ow/actors/player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
