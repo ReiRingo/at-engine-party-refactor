@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"o_ow_save",
+  "%Name":"o_npc_doppleganger",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_ow_save",
+  "name":"o_npc_doppleganger",
   "overriddenProperties":[],
   "parent":{
-    "name":"triggers",
-    "path":"folders/@engine/objects/ow/triggers.yy",
+    "name":"examples",
+    "path":"folders/@engine/objects/ow/NPCs/examples.yy",
   },
   "parentObjectId":{
-    "name":"o_interactparent",
-    "path":"objects/o_interactparent/o_interactparent.yy",
+    "name":"o_npc_parent",
+    "path":"objects/o_npc_parent/o_npc_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ow_savepoint",
-    "path":"sprites/spr_ow_savepoint/spr_ow_savepoint.yy",
+    "name":"spr_actor_mainpl_d",
+    "path":"sprites/spr_actor_mainpl_d/spr_actor_mainpl_d.yy",
   },
   "spriteMaskId":null,
   "visible":true,

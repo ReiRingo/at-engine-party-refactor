@@ -113,6 +113,11 @@ function cutscene_t() constructor {
 		cutscene_player_moveto(self, _target_x, _target_y, _speed, _force_lock);
 		return self;
 	}
+	
+	static move_char_dir = function(char, dir, frames, wait = true) {
+		cutscene_move_char_dir(self, char, dir, frames, wait);
+		return self;
+	}
 }
 
 //-------------------------------------------
@@ -274,6 +279,29 @@ function cutscene_player_moveable(cut, _moveable) {
 				if (!moveable) state = PLAYER_STATES.froozen;
 				else state = PLAYER_STATES.free;
 			}
+		}
+	});
+}
+
+// wait is useful for digonal movement
+// but undertale doesn't usually does diagonal movement
+function cutscene_move_char_dir(cut, char, dir, frames, wait = true) {
+	__proc_inline;
+	cutscene_raw(cut, {
+		val   : frames,
+		to    : dir,
+		targ  : char,
+		
+		init  : function() {
+			var tar = self.targ;
+			if (!instance_exists(tar)) return;
+			tar.move[$ to] = int64(abs(val)); // truncate
+		},
+		
+		event : function() {
+			var tar = targ;
+			if (!wait || !instance_exists(tar)) return 1;
+			return !tar.move[$ to];
 		}
 	});
 }

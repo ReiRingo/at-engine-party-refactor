@@ -1,0 +1,1 @@
+draw_text(20, 20, string("X{0} Y{1} DIR{2}", x, y, dir));

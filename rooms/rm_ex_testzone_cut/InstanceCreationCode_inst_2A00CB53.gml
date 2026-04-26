@@ -1,5 +1,3 @@
-// at the instance creation code of the trigger
-
 event = function()
 {
     var _c = new cutscene_t();
@@ -64,5 +62,6 @@ event = function()
     })
     _c.wait(15)
     _c.moveable(true)
+	
     _c.play();
 };

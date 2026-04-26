@@ -20,6 +20,17 @@ if (state == PLAYER_STATES.free) { //checking if the player is in control
 		if(!place_meeting(x+spd,y+vsp,o_solidparent)) {x+=spd}
 	}
 
+	var _inst_npcs;
+	
+	_inst_npcs = instance_place(x + hsp, y, o_npc_parent);
+	if (instance_exists(_inst_npcs) && !_inst_npcs.following) {
+		hsp = 0
+	}
+	
+	_inst_npcs = instance_place(x, y + vsp, o_npc_parent);
+	if (instance_exists(_inst_npcs) && !_inst_npcs.following) {
+		vsp = 0;
+	}
 	
 	collision(o_solidparent)
 	frisk_dance();
@@ -33,33 +44,41 @@ if (state == PLAYER_STATES.free) { //checking if the player is in control
 			var obj=noone
 			switch (global.facing){
 				case 1:
-					obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + (sprite_height / 2) - sprite_height, x + sprite_width + 15 - sprite_width+10, y + sprite_height - sprite_height,o_interactparent,false,true)
+					obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + (sprite_height / 2) - sprite_height, x + sprite_width + 15 - sprite_width+10, y + sprite_height - sprite_height,interactables,false,true)
 				break
 				case 3:
-					obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + 3 + (sprite_height / 2) - sprite_height, x - 15 - sprite_width+10, y + sprite_height + 3 - sprite_height,o_interactparent,false,true)
+					obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + 3 + (sprite_height / 2) - sprite_height, x - 15 - sprite_width+10, y + sprite_height + 3 - sprite_height,interactables,false,true)
 				break
 				case 0:
-					obj=collision_rectangle(x + 4 - sprite_width+10, y + 20 - sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + sprite_height + 15 - sprite_height,o_interactparent,false,true)
+					obj=collision_rectangle(x + 4 - sprite_width+10, y + 20 - sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + sprite_height + 15 - sprite_height,interactables,false,true)
 				break
 				case 2:
-					obj=collision_rectangle(x + 4 - sprite_width+10, (y + sprite_height) - 5 -sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + 8 - sprite_height,o_interactparent,false,true)
+					obj=collision_rectangle(x + 4 - sprite_width+10, (y + sprite_height) - 5 -sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + 8 - sprite_height,interactables,false,true)
 				break
 			}
 			if (obj!=noone){
-				with (obj){
-					interact()
+				if (!object_childof(obj.object_index, o_npc_parent)) {
+					with (obj){
+						interact()
+					}
+				} else {
+					if (!obj.following) with(obj) {
+						interact();
+						var d = round(point_direction(x, y, other.x, other.y) / 90) * 90;
+						dir = d;
+					}
 				}
 			}
 		}
 	}
 }
-    if !(s_override){
+if !(s_override){
     	if (global.facing == 0)
     		sprite_index = dsprite;
     	if (global.facing == 1)
     		sprite_index = rsprite;
     	if (global.facing == 2)
     		sprite_index = usprite;
-    	if (global.facing == 3)
-    		sprite_index = lsprite;
-    }
+	    if (global.facing == 3)
+	    	sprite_index = lsprite;
+}
