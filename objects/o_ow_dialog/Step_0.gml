@@ -6,6 +6,9 @@ else{
 	xx = 32/2;
 	yy = 320/2;
 }
+
+ready = true;
+
 if (instance_exists(t)){
 	t.x = xx+14+camerachangex
     t.y = yy+11+camerachangey

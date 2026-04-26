@@ -1,3 +1,5 @@
+interactables = [ o_interactparent, o_npc_parent ];
+
 state = PLAYER_STATES.free;
 image_speed = 0;
 facing = global.facing;

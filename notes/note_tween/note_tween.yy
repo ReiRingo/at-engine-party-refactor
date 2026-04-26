@@ -4,7 +4,7 @@
   "name":"note_tween",
   "parent":{
     "name":"tween_system",
-    "path":"folders/@rei-taylor-libraries/tween_system.yy",
+    "path":"folders/@engine/scripts/engine/tween_system.yy",
   },
   "resourceType":"GMNotes",
   "resourceVersion":"2.0",

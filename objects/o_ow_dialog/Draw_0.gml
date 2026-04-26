@@ -1,5 +1,5 @@
 if (xx!=0||yy!=0){
-    ui_dialoguebox_create(xx+camerachangex, yy+camerachangey, width, height);
+    if (ready) ui_dialoguebox_create(xx+camerachangex, yy+camerachangey, width, height);
     
     if (asset_get_type(face) == asset_sprite) {
     	draw_sprite(face,faceid,xx+camerachangex+13,yy+camerachangey+14)

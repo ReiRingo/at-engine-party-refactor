@@ -6,7 +6,7 @@
   "name":"ex_tween",
   "parent":{
     "name":"examples",
-    "path":"folders/@rei-taylor-libraries/tween_system/examples.yy",
+    "path":"folders/@engine/scripts/engine/tween_system/examples.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

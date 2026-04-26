@@ -25,4 +25,5 @@ else{
 	xx = 32/2;
 	yy = 320/2;
 }
-print("c")
+// print("c")
+ready = false;
