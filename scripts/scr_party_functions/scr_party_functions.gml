@@ -108,7 +108,7 @@ function party_add_member(member, leader = o_actor_mainpl, auto_make = false, xx
  * @param {Bool} [reorder] Whether to shift subsequent members up and update their follow_index.
  * @return {Bool} True if the member was successfully removed, false otherwise.
  */
-function party_remove_member(member, leader = o_actor_mainpl, reorder = false) {
+function party_remove_member(member, leader = o_actor_mainpl, reorder = true) {
 	if (!instance_exists(leader) || !instance_exists(member))
 		return false;
 		

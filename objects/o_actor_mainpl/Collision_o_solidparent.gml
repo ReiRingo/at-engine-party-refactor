@@ -1,2 +1,2 @@
-// Replaced by smooth collision inside Step_0.gml
+// Replaced by smooth collision inside Step event
 // Sorry :/

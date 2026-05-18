@@ -35,8 +35,6 @@
     {"name":"inst_7D40159F","path":"rooms/rm_ex_testzone_cut/rm_ex_testzone_cut.yy",},
     {"name":"inst_3BF1D8FC","path":"rooms/rm_ex_testzone_cut/rm_ex_testzone_cut.yy",},
     {"name":"inst_502220DF","path":"rooms/rm_ex_testzone_cut/rm_ex_testzone_cut.yy",},
-    {"name":"inst_5B62BD5C","path":"rooms/rm_ex_testzone_cut/rm_ex_testzone_cut.yy",},
-    {"name":"inst_CA8FAFD","path":"rooms/rm_ex_testzone_cut/rm_ex_testzone_cut.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -82,8 +80,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_dev_border","path":"objects/o_dev_border/o_dev_border.yy",},"propertyId":{"name":"spr","path":"objects/o_dev_border/o_dev_border.yy",},"resource":{"name":"spr_ex_border_testzone","path":"sprites/spr_ex_border_testzone/spr_ex_border_testzone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_ex_border_testzone",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":40.0,"y":-20.0,},
         {"$GMRInstance":"v4","%Name":"inst_2A00CB53","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2A00CB53","objectId":{"name":"o_dev_trigger","path":"objects/o_dev_trigger/o_dev_trigger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.5,"scaleY":1.0,"x":170.0,"y":220.0,},
-        {"$GMRInstance":"v4","%Name":"inst_5B62BD5C","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5B62BD5C","objectId":{"name":"o_npc_doppleganger","path":"objects/o_npc_doppleganger/o_npc_doppleganger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":130.0,"y":120.0,},
-        {"$GMRInstance":"v4","%Name":"inst_CA8FAFD","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_CA8FAFD","objectId":{"name":"o_npc_doppleganger","path":"objects/o_npc_doppleganger/o_npc_doppleganger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":80.0,},
       ],"layers":[],"name":"instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"assets","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_23E37450","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_23E37450","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.5,"spriteId":{"name":"spr_default","path":"sprites/spr_default/spr_default.yy",},"x":0.0,"y":20.0,},
