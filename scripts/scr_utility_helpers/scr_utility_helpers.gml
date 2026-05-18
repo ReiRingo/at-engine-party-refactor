@@ -27,3 +27,9 @@ function object_childof(obj, parent) {
 	
 	return false;
 }
+
+function object_force(obj_or_inst) {
+	var thing = obj_or_inst;
+	with(obj_or_inst) { thing = object_index; break; }
+	return thing;
+}

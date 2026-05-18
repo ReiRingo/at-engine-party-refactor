@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_party_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_party_functions",
+  "parent":{
+    "name":"ow",
+    "path":"folders/@engine/scripts/engine/ow.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

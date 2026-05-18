@@ -1,3 +1,4 @@
+//music = undefined
 image_alpha = 0
 var asset = asset_get_index(music)
 if (asset!=-1){

@@ -11,25 +11,51 @@ if (state == PLAYER_STATES.free) { //checking if the player is in control
 
 	direction_animation() //face the direction that i go
 	
-	if (place_meeting(x + hsp, y, o_solidparent)) {
-		if(!place_meeting(x+hsp,y-spd,o_solidparent)) {y-=spd}
-		if(!place_meeting(x+hsp,y+spd,o_solidparent)) {y+=spd}
-	}
-	if (place_meeting(x, y+vsp, o_solidparent)) {
-		if(!place_meeting(x-spd,y+vsp,o_solidparent)) {x-=spd}
-		if(!place_meeting(x+spd,y+vsp,o_solidparent)) {x+=spd}
+	// Smooth corner sliding for orthogonal movement
+	var _slide_amount = spd * 2; // Leniency in pixels for sliding around corners
+
+	if (hsp != 0 && vsp == 0) { // Sliding horizontally
+		if (place_meeting(x + hsp, y, o_solidparent)) {
+			for (var i = 1; i <= _slide_amount; i++) {
+				if (!place_meeting(x + hsp, y - i, o_solidparent)) {
+					y -= i;
+					break;
+				}
+				if (!place_meeting(x + hsp, y + i, o_solidparent)) {
+					y += i;
+					break;
+				}
+			}
+		}
+	} else if (vsp != 0 && hsp == 0) { // Sliding vertically
+		if (place_meeting(x, y + vsp, o_solidparent)) {
+			for (var i = 1; i <= _slide_amount; i++) {
+				if (!place_meeting(x - i, y + vsp, o_solidparent)) {
+					x -= i;
+					break;
+				}
+				if (!place_meeting(x + i, y + vsp, o_solidparent)) {
+					x += i;
+					break;
+				}
+			}
+		}
 	}
 
 	var _inst_npcs;
 	
 	_inst_npcs = instance_place(x + hsp, y, o_npc_parent);
 	if (instance_exists(_inst_npcs) && !_inst_npcs.following) {
-		hsp = 0
+		if (!place_meeting(x, y, _inst_npcs)) {
+			hsp = 0;
+		}
 	}
 	
 	_inst_npcs = instance_place(x, y + vsp, o_npc_parent);
 	if (instance_exists(_inst_npcs) && !_inst_npcs.following) {
-		vsp = 0;
+		if (!place_meeting(x, y, _inst_npcs)) {
+			vsp = 0;
+		}
 	}
 	
 	collision(o_solidparent)

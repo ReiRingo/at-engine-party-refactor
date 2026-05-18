@@ -1,2 +1,2 @@
 party_add_member(self);
-image_blend = c_red;
+image_blend = c_green;
