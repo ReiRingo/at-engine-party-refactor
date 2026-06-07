@@ -26,7 +26,7 @@ if (keyboard_check_pressed(vk_f3)) {
 if keyboard_check_pressed(vk_f4) {
 	window_set_fullscreen(!window_get_fullscreen())
     if !window_get_fullscreen() {
-        call_later(1, time_source_units_frames, window_center);
+        alarm[0] = 1;
 	}
 }
 

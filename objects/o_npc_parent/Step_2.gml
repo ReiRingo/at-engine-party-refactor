@@ -8,14 +8,10 @@ if (following && instance_exists(target_inst)) {
 	var t_inst     = target_inst;
 	var target_pos = pointer_null;
 	
-	if (!variable_instance_exists(t_inst, "__pos_list__")) {
-		with(t_inst) {
-			__pos_list__ = ds_list_create();
-			__timer__    = 0;
-		}
-	}
+	party_make_leader(t_inst);
 	
 	with(t_inst) {
+		_List[other.follow_index] = other;
 		target_pos = __pos_list__;
 		if (__timer__ == o_world.frames) break;
 		__timer__ = o_world.frames;

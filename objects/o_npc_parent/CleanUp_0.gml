@@ -1,4 +1,3 @@
-if (instance_exists(target_inst)) {
-	var target = target_inst[$ "__pos_list__"] ?? -1;
-	if (ds_exists(target, ds_type_list)) ds_list_destroy(target);
+if (instance_number(object_index) <= 1) {
+	party_remove_leader(target_inst);
 }

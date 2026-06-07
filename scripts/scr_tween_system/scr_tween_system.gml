@@ -3,13 +3,17 @@
 //-------------------------
 
 // really want to point out that velvetclover made this WHOLE system!! tysm
+// velvetclover / rei: no problem dude
 
 #macro __tween_manager global.__tween_ts
 #macro __tween_pool    global.__tpool
-__tween_pool = [];
 
 #macro TW_PURGE_ROOM   "rm_init"
 #macro TW_ROOM_REF     global.__tween_reset_room
+
+// Global initialisation
+__tween_pool = [];
+__tween_manager = -1;
 TW_ROOM_REF = asset_get_index(TW_PURGE_ROOM);
 
 //-------------------------
@@ -33,7 +37,7 @@ enum e_tween {
 //-------------------------
 function tween_init(_initial, _func) {
 	__proc_inline;
-	var _ev = {
+	return {
 		__cursor : 0,
 		__cur_f  : 0,
 		__init   : _initial,
@@ -43,8 +47,6 @@ function tween_init(_initial, _func) {
 		__type   : [],
 		__proc   : _func
 	};
-	
-	return _ev;
 }
 
 function tween_add(_t, _val, _time, _tween_type) {
@@ -68,8 +70,8 @@ function tween_start(_t) {
 
 function tween_stop(_t) {
 	__proc_inline;
-	var _idx = array_get_index(__tween_manager, _t); // whoa, this function exists??
-	if (_idx >= 0) array_delete(__tween_manager, _idx, 1);
+	var _idx = array_get_index(__tween_pool, _t);
+	if (_idx >= 0) array_delete(__tween_pool, _idx, 1);
 }
 
 //-------------------------
@@ -108,10 +110,88 @@ function im_tween_stop() {
 }
 
 //-------------------------
-// logic
+// easing formulas
+//-------------------------
+function __tween_get_ease(_type, _percent) {
+	__proc_inline;
+	switch(_type) {
+		case e_tween.LINEAR:
+			return _percent;
+			
+		case e_tween.EASE_IN:
+			return _percent * _percent * _percent;
+			
+		case e_tween.EASE_OUT: {
+			var _p = _percent - 1.0;
+			return (_p * _p * _p) + 1.0;
+		}
+			
+		case e_tween.EASE_IN_OUT: {
+			if (_percent < 0.5) {
+				return 4.0 * _percent * _percent * _percent;
+			} else {
+				var _p = (2.0 * _percent) - 2.0;
+				return 0.5 * (_p * _p * _p) + 1.0;
+			}
+		}
+			
+		case e_tween.SINE_IN:
+			return 1.0 - cos(_percent * (pi * 0.5));
+			
+		case e_tween.SINE_OUT:
+			return sin(_percent * (pi * 0.5));
+			
+		case e_tween.SINE_IN_OUT:
+			return -(cos(pi * _percent) - 1.0) * 0.5;
+			
+		case e_tween.ELASTIC_IN: {
+			if (_percent == 0.0) return 0.0;
+			if (_percent == 1.0) return 1.0;
+			
+			var _p = 0.3;
+			var _s = _p / 4.0;
+			var _perc = _percent - 1.0;
+			var _fix = power(2.0, 10.0 * _perc);
+			
+			return -(_fix * sin((_perc - _s) * (2.0 * pi) / _p));
+		}
+			
+		case e_tween.ELASTIC_OUT: {
+			if (_percent == 0.0) return 0.0;
+			if (_percent == 1.0) return 1.0;
+			
+			var _p = 0.3;
+			var _s = _p / 4.0;
+			
+			return power(2.0, -10.0 * _percent) * sin((_percent - _s) * (2.0 * pi) / _p) + 1.0;
+		}
+			
+		case e_tween.ELASTIC_IN_OUT: {
+			if (_percent == 0.0) return 0.0;
+			if (_percent == 1.0) return 1.0;
+			
+			var _perc = _percent * 2.0;
+			var _p = 0.3 * 1.5;
+			var _s = _p / 4.0;
+			
+			_perc -= 1.0;
+			if (_perc < 0.0) {
+				var _fix = power(2.0, 10.0 * _perc);
+				return -0.5 * (_fix * sin((_perc - _s) * (2.0 * pi) / _p));
+			} else {
+				var _fix = power(2.0, -10.0 * _perc);
+				return _fix * sin((_perc - _s) * (2.0 * pi) / _p) * 0.5 + 1.0;
+			}
+		}
+	}
+	
+	return _percent;
+}
+
+//-------------------------
+// system logic
 //-------------------------
 function __tween_init() {
-	
 	__tween_manager = time_source_create(time_source_game, 1, time_source_units_frames, function() {
 		var _pool_size = array_length(__tween_pool);
 		
@@ -132,106 +212,10 @@ function __tween_init() {
 					++__cur_f;
 					
 					var _percent = clamp(__cur_f / _dur, 0.0, 1.0);
-					var _final   = _percent;
+					var _final   = __tween_get_ease(_type, _percent);
 					
-					switch(_type) {
-						//---------------------------
-						// linear
-						//---------------------------
-						case e_tween.LINEAR:
-							_final = _percent;
-							break;
-						
-						//---------------------------
-						// ease
-						//---------------------------
-						case e_tween.EASE_IN:
-							_final = _percent * _percent * _percent;
-							break;
-						
-						case e_tween.EASE_OUT: {
-								var _p = _percent - 1.0;
-								_final = (_p * _p * _p) + 1.0;
-							}
-							break;
-						
-						case e_tween.EASE_IN_OUT: {
-								if (_percent < 0.5) {
-									_final = 4.0 * _percent * _percent * _percent;
-								} else {
-									var _p = (2.0 * _percent) - 2.0; // i tried to bitshift percent, im stupid, it truncated it
-									_final = 0.5 * (_p * _p * _p) + 1.0;
-								}
-							}
-							break;
-						
-						//---------------------------
-						// sine
-						//---------------------------
-						case e_tween.SINE_IN:
-							_final = 1.0 - cos(_percent * (pi * 0.5));
-							break;
-						
-						case e_tween.SINE_OUT:
-							_final = sin(_percent * (pi * 0.5));
-							break;
-						
-						case e_tween.SINE_IN_OUT:
-							_final = -(cos(pi * _percent) - 1.0) * 0.5;
-							break;
-						
-						//---------------------------
-						// elastic
-						//---------------------------
-						case e_tween.ELASTIC_IN: {
-							if (_percent == 0.0) { _final = 0.0; break; }
-							if (_percent == 1.0) { _final = 1.0; break; }
-							
-							var _p = 0.3;
-							var _s = _p / 4.0;
-							_percent -= 1.0;
-							var _fix = power(2.0, 10.0 * (_percent)); // i kept getting a (_percent -= 1.0) crash lol??
-							
-							_final = -(_fix * sin((_percent - _s) * (2.0 * pi) / _p));
-							break;
-						}
-						
-						case e_tween.ELASTIC_OUT: {
-							if (_percent == 0.0) { _final = 0.0; break; }
-							if (_percent == 1.0) { _final = 1.0; break; }
-							
-							var _p = 0.3;
-							var _s = _p / 4.0;
-							
-							_final = power(2.0, -10.0 * _percent) * sin((_percent - _s) * (2.0 * pi) / _p) + 1.0;
-							break;
-						}
-						
-						case e_tween.ELASTIC_IN_OUT: {
-							if (_percent == 0.0) { _final = 0.0; break; }
-							if (_percent == 1.0) { _final = 1.0; break; }
-							
-							_percent *= 2.0;
-							
-							var _p = 0.3 * 1.5;
-							var _s = _p / 4.0;
-							
-							if (_percent < 1.0) {
-								_percent -= 1.0;
-								var _fix = power(2.0, 10.0 * (_percent));
-								_final = -0.5 * (_fix * sin((_percent - _s) * (2.0 * pi) / _p));
-							} else {
-								_percent -= 1.0;
-								var _fix = power(2.0, -10.0 * (_percent));
-								_final = _fix * sin((_percent - _s) * (2 * pi) / _p) * 0.5 + 1.0;
-							}
-							break;
-						}
-					}
-					
-					// apply... this could also just be linear
+					// apply interpolated value
 					__val = __init + ((_target - __init) * _final);
-					
 					__proc(__val);
 					
 					if (_percent >= 1.0) {
@@ -250,5 +234,3 @@ function __tween_init() {
 	
 	return true;
 }
-
-__tween_manager = -1;

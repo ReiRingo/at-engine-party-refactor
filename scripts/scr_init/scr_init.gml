@@ -7,6 +7,5 @@ enum FACES {
 
 enum PLAYER_STATES {
 	free,
-	froozen
- 
+	froozen // rei: funny typo
 }

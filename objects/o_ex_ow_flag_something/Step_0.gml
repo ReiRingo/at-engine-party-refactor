@@ -1,0 +1,1 @@
+timer++; // overflow master

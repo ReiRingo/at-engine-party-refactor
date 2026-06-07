@@ -5,12 +5,15 @@ if (!top){
 	addy = 0;
 }
 { // box
-	ui_dialoguebox_create(16+xxx,26+4-5+addy+yyy,71,55)
-	if array_length(options)>3{ // makes so if you don't have a PHONE the ui don't resizes
-		ui_dialoguebox_create(16+xxx,84 + 4-5,71,35 + (array_length(options) - 1) * 18 + 3+yyy)
+	ui_dialoguebox_create(16+xxx, 26+4-5+addy+yyy, 71, 55)
+	
+	if array_length(options) > 3 { 
+		// FIXED: Removed +yyy from the end (height) and added it to the second argument (y)
+		ui_dialoguebox_create(16+xxx, 84 + 4-5 + yyy, 71, 35 + (array_length(options) - 1) * 18 + 3)
 	}
-	else{
-		ui_dialoguebox_create(16+xxx,84 + 4-5,71,35 + 2 * 18 + 3+yyy)
+	else {
+		// FIXED: Removed +yyy from the end (height) and added it to the second argument (y)
+		ui_dialoguebox_create(16+xxx, 84 + 4-5 + yyy, 71, 35 + 2 * 18 + 3)
 	}
 }
 { // top box
