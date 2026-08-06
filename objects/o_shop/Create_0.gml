@@ -23,6 +23,7 @@ enum STATE_TYPE {
     maintext = undefined
     leavetext = undefined
     mainmenu = undefined
+	leaveroom = rm_ex_testzone_main
 #endregion customizable
 #region instance variables
     maintextinst = noone
