@@ -4,8 +4,11 @@ if (xx!=0||yy!=0){
     if (asset_get_type(face) == asset_sprite) {
     	draw_sprite(face,faceid,xx+camerachangex+13,yy+camerachangey+14)
 		if instance_exists(t)
-			t.x = xx+14+58
-    }
+			t.x = xx + typer_x_offset + 58
+    } else {
+		if instance_exists(t)
+			t.x = xx + typer_x_offset;
+	}
     if (instance_exists(t)) {
     	if (on_choice) {
     		draw_set_font(loc_getfont(font_main))

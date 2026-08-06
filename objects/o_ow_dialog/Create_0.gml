@@ -26,3 +26,4 @@ else{
 	yy = 320/2;
 }
 ready = false;
+typer_x_offset = 14;
