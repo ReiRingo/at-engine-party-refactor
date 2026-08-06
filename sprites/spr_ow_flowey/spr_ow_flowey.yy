@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"load",
-    "path":"folders/@engine/sprites/ui/load.yy",
+    "name":"flowey",
+    "path":"folders/@engine/sprites/menu/flowey.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ja",
-    "path":"folders/@engine/sprites/ref/ja.yy",
+    "name":"jp",
+    "path":"folders/@engine/sprites/references/jp.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

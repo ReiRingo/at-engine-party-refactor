@@ -1,0 +1,2 @@
+// centre
+window_center();

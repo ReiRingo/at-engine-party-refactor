@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"load",
-    "path":"folders/@engine/sprites/ui/load.yy",
+    "name":"toriel",
+    "path":"folders/@engine/sprites/menu/toriel.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_macro_depth",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_macro_depth",
+  "parent":{
+    "name":"macros",
+    "path":"folders/@engine/scripts/macros.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

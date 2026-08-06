@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"load",
-    "path":"folders/@engine/sprites/ui/load.yy",
+    "name":"papyrus",
+    "path":"folders/@engine/sprites/menu/papyrus.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

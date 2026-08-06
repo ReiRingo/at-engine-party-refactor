@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"o_solid",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"o_solid",
   "overriddenProperties":[],
   "parent":{
-    "name":"solid",
-    "path":"folders/@engine/objects/ow/solid.yy",
+    "name":"solids",
+    "path":"folders/@engine/objects/ow/solids.yy",
   },
   "parentObjectId":{
     "name":"o_solidparent",
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_solidsmall",
-    "path":"sprites/spr_solidsmall/spr_solidsmall.yy",
+    "name":"spr_dev_solid",
+    "path":"sprites/spr_dev_solid/spr_dev_solid.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_itemfuncs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_itemfuncs",
+  "parent":{
+    "name":"item",
+    "path":"folders/@engine/scripts/etc/item.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

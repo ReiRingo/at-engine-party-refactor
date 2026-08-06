@@ -1,0 +1,5 @@
+# TWEEN SYSTEM
+
+I'm tired of writing T~T
+
+You can check ex_tween script on how they could be used

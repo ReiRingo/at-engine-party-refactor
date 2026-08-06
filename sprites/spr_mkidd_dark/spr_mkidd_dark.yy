@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"load",
-    "path":"folders/@engine/sprites/ui/load.yy",
+    "name":"monsterkid",
+    "path":"folders/@engine/sprites/menu/monsterkid.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

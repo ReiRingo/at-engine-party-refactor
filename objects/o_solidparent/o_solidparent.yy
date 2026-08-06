@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
   "%Name":"o_solidparent",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"o_solidparent",
   "overriddenProperties":[],
   "parent":{
     "name":"parents",
-    "path":"folders/@engine/objects/ow/parents.yy",
+    "path":"folders/@engine/objects/parents.yy",
   },
   "parentObjectId":{
     "name":"o_depthparent",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"engine_info",
   "parent":{
-    "name":"at-engine-main",
-    "path":"at-engine-main.yyp",
+    "name":"scripts",
+    "path":"folders/@engine/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

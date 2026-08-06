@@ -1,0 +1,1 @@
+shop_start(new ex_s_gerson())

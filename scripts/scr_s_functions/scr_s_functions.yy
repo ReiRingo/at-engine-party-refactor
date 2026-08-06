@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_s_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_s_functions",
+  "parent":{
+    "name":"shop",
+    "path":"folders/@engine/scripts/shop.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

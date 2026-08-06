@@ -1,16 +1,15 @@
-width  = 577/2;
-height = 151/2;
-xx = 32/2;
-yy = 320/2;
+width  = 100;
+height = 100;
+xx = x
+yy = y
 face = undefined;
-faceid = -1;
-voice = snd_text
-save = false
-
+faceid = 0;
+voice = snd_text2
 text = "* It is known.";
-
 line = 0;
 skip_enabled = true;
-t = noone;
-depth=DEPTH_UI.DIALOGUE_UI
-o_actor_mainpl.moveable = false;
+t = o_text_typer
+choices = []
+ch_index = 0;
+on_choice = false;
+player_free = false;

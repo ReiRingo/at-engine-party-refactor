@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"load",
-    "path":"folders/@engine/sprites/ui/load.yy",
+    "name":"undyne",
+    "path":"folders/@engine/sprites/menu/undyne.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"load",
-    "path":"folders/@engine/sprites/ui/load.yy",
+    "name":"mettaton",
+    "path":"folders/@engine/sprites/menu/mettaton.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

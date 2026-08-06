@@ -118,8 +118,8 @@
   "maintainGms1Font":false,
   "name":"font_dotumche",
   "parent":{
-    "name":"fonts",
-    "path":"folders/@engine/fonts.yy",
+    "name":"AT-Engine-clone-rebuilt",
+    "path":"AT-Engine-clone-rebuilt.yyp",
   },
   "pointRounding":0,
   "ranges":[

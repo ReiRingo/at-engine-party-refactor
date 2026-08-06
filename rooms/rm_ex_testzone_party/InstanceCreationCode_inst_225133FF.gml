@@ -1,0 +1,1 @@
+audio_play_sound(mus_ex_funnymusicimadein30sec, 1, true);

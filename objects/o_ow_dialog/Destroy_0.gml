@@ -1,0 +1,2 @@
+o_world.dialogue_destroywarn=true
+instance_destroy(t)

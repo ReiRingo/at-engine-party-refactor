@@ -1,5 +1,8 @@
 interact = function(){
 	if (text!=-1){
-		Dialogue_Create(text)
+		var i = Dialogue_Create(text)
+		if (array_length(choices) > 0) {
+			i.choices = choices	
+		}
 	}
 }

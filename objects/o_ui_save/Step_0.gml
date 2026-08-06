@@ -16,12 +16,10 @@ if (InputPressed(INPUT.CONFIRM)){
 		}
 	}else if (section==1){
 		instance_destroy()
-		o_actor_mainpl.moveable=true
 	}
 }
 if (InputPressed(INPUT.CANCEL)||(section==2)){
 	instance_destroy()
-	o_actor_mainpl.moveable=true
 }
 if (section == 1 && !saved_once) {
     save_game();

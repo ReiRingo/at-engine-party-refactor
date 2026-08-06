@@ -11,8 +11,8 @@
   "name":"o_dev_debug",
   "overriddenProperties":[],
   "parent":{
-    "name":"dev",
-    "path":"folders/@engine/objects/dev.yy",
+    "name":"debug",
+    "path":"folders/@engine/objects/dev/debug.yy",
   },
   "parentObjectId":null,
   "persistent":true,

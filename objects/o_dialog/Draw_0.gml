@@ -1,1 +1,0 @@
-ui_dialoguebox_create(xx, yy, width, height);

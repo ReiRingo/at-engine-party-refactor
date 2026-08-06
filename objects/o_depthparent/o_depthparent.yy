@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"parents",
-    "path":"folders/@engine/objects/ow/parents.yy",
+    "path":"folders/@engine/objects/parents.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_saves",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_saves",
+  "parent":{
+    "name":"save",
+    "path":"folders/@engine/scripts/etc/save.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

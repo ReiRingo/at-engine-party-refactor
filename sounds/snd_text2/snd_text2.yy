@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_text2",
   "parent":{
-    "name":"voices",
-    "path":"folders/@engine/sounds/voices.yy",
+    "name":"text",
+    "path":"folders/@engine/sounds/text.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

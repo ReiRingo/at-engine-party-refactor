@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
   "%Name":"o_interactparent",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"o_interactparent",
   "overriddenProperties":[],
   "parent":{
     "name":"parents",
-    "path":"folders/@engine/objects/ow/parents.yy",
+    "path":"folders/@engine/objects/parents.yy",
   },
   "parentObjectId":{
     "name":"o_solidparent",

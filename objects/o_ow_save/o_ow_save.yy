@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ow_savepoint",
-    "path":"sprites/spr_ow_savepoint/spr_ow_savepoint.yy",
+    "name":"spr_ow_save",
+    "path":"sprites/spr_ow_save/spr_ow_save.yy",
   },
   "spriteMaskId":null,
   "visible":true,
