@@ -42,25 +42,48 @@ function enc_enemy_test() : enc_enemy() constructor{
     
     att = 2; // attack
     def = 2; // defense
+	
+	v_att = att; // visual attack stat
+	v_def = def;
     
     can_mercy = true; // can be spared? // working
     
     turn_object = o_enc_turn
     
-    acts = [
-        {
-            name: "Check",
-            exec: function(){
-                enc_dialogue("* TEST ENEMY\n* Just a test...");
-            }
-        },
-        {
-            name: "Talk",
-            exec: function(){
-                enc_dialogue("* You talk to the enemy.");
-            }
-        },
-    ] // working
+	var owner = self
+
+	acts = [
+		{
+			name: "Check",
+			exec: method(owner,function(){
+				enc_dialogue("* TEST ENEMY ATT "+string(v_att)+" DEF "+string(v_def)+"\n* Just a test...");
+			})
+		},
+		{
+			name: "Talk",
+			exec: function(){
+				enc_dialogue("* You talk to the enemy.");
+			}
+		},
+		{
+			name: "Insult",
+			exec: method(owner,function(){
+				var _c = new cutscene_t()
+			
+				_c.dialogue(
+					[
+						"* The enemy felt very insulted.",
+						"* TESTENEMY ATK increased by 2!!"
+					]
+				,false,false)
+				_c.run(function(){
+					v_att+=2
+					o_enc_testenemy.sprite_index=spr_enc_enemy_test_hurt
+				})
+				_c.play();
+			})
+		},
+	] // working
 
     dialogue = function(){
         return "test";

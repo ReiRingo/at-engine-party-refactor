@@ -100,7 +100,17 @@ function is_top(){
  
 }
 
-function print(_text){
-    printobj = instance_create(o_print,0,0,-9999)
-    printobj.text = _text
+function afterimage(_fade_spd=0.1,_color=c_white){
+	var _inst = instance_create(o_afterimage,x,y,depth+1)
+	
+	with (_inst){
+		sprite_index = other.sprite_index
+		image_index  = other.image_index
+		image_xscale = other.image_xscale
+		image_yscale = other.image_yscale
+		image_angle  = other.image_angle
+		image_alpha  = other.image_alpha
+		image_blend  = _color
+		fade_speed   = _fade_spd
+	}
 }

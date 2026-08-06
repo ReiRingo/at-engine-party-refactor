@@ -1,6 +1,6 @@
 function enc_start(encounterset){
-	var inst = instance_create(o_enc,0,0,DEPTH_ENCOUNTER.UI)
-	inst.init(encounterset)
+	global.current_encounter = encounterset
+	room_goto(rm_battle)
 }
 
 function enc_dialogue(text){

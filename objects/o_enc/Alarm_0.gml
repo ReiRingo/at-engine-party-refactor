@@ -1,0 +1,1 @@
+init(global.current_encounter)

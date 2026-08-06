@@ -30,7 +30,7 @@ global.input_delay = 0;
 
 global.fun_value = 0;
 
-print("(yellow)VERSION "+ENGINE_VERSION)
+global.current_encounter = 0;
 
 // border_surface = surface_create(window_get_width(),window_get_height());	
 

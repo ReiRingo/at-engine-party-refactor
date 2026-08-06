@@ -5,4 +5,3 @@ t.voice=snd_text2
 t.spd=0.5
 t.spacing=1
 t.text="Long ago, two races\nruled over Earth:(w,10)\nHUMANS and MONSTERS."
-// nunca vou terminar isso loloololololol

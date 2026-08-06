@@ -35,7 +35,7 @@ for (var i = 0; i < array_length(debug_lines); i++) {
 draw_set_alpha(0.5);
 draw_text_transformed(x, y, debug_text, 0.5, 0.5, 0)
 draw_set_alpha(1)
-draw_sprite_ext(spr_refsavel1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
+draw_sprite_ext(spr_refbattle1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
 draw_set_alpha(alphascreen)
 draw_rectangle(0,0,320,240,false)
 draw_set_alpha(1)

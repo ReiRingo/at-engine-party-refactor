@@ -1,1 +1,0 @@
-enc_start(new enc_set_test())

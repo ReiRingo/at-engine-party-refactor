@@ -115,8 +115,11 @@ if (menu.current==BATTLE_MENU.MAIN)
 	button_selection=index.current
 
 if (turn==BATTLE_TURN.ENEMY){
+	turn=BATTLE_TURN.PLAYER
+	/*
     if !(turncreated){
         instance_create(enemies[irandom_range(0,array_length(enemies)-1)].turn_object)
         turncreated=true
     }
+	*/
 }

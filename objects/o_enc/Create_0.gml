@@ -1,3 +1,4 @@
+audio_stop_all()
 enum BATTLE_MENU {
 	MAIN,
 	FIGHT,
@@ -67,7 +68,7 @@ menu = {
 
 txt = {
 	x: 26,
-	y: 134,
+	y: 135,
 }
 
 turn = BATTLE_TURN.PLAYER
@@ -295,3 +296,5 @@ previous_state = function() {
 		index.current = array_pop(index.previous)
 	}
 }
+
+alarm[0]=1

@@ -14,7 +14,8 @@ function cutscene_t() constructor {
 	is_running = false;
 	index	   = -1;
 
-    o_actor_mainpl.in_cutscene=is_running
+	if (instance_exists(o_actor_mainpl))
+		o_actor_mainpl.in_cutscene=is_running
     
 	self.event = function() {
 		if (!is_running) return false;
@@ -94,10 +95,10 @@ function cutscene_t() constructor {
 		return self;
 	}
 	
-    static dialogue = function(text, force_pos = is_top()) {
-        cutscene_dialogue(self, text, force_pos);
-        return self;
-    }
+	static dialogue = function(text, force_pos = is_top(), wait = true) {
+	    cutscene_dialogue(self, text, force_pos, wait);
+	    return self;
+	}
 	
 	static moveable = function(toggle) {
 		cutscene_player_moveable(self, toggle);
@@ -176,35 +177,37 @@ function __cutscene_player_move_logic(_tx, _ty, _ms) {
 	__proc_inline;
 	var _done = false;
 	
-	with(o_actor_mainpl) {
-		state = PLAYER_STATES.froozen;
-		var _dist = point_distance(x, y, _tx, _ty);
-		cut_moved = true;
+	if (instance_exists(o_actor_mainpl)){
+		with(o_actor_mainpl) {
+			state = PLAYER_STATES.froozen;
+			var _dist = point_distance(x, y, _tx, _ty);
+			cut_moved = true;
 		
-		if (_dist <= _ms) {
-			x = _tx;
-			y = _ty;
-			xprevious = x;
-			yprevious = y;
-			hsp = 0;
-			vsp = 0;
-			_done = true;
-		} else {
-			var _dir = point_direction(x, y, _tx, _ty);
-			hsp = lengthdir_x(_ms, _dir);
-			vsp = lengthdir_y(_ms, _dir);
+			if (_dist <= _ms) {
+				x = _tx;
+				y = _ty;
+				xprevious = x;
+				yprevious = y;
+				hsp = 0;
+				vsp = 0;
+				_done = true;
+			} else {
+				var _dir = point_direction(x, y, _tx, _ty);
+				hsp = lengthdir_x(_ms, _dir);
+				vsp = lengthdir_y(_ms, _dir);
 			
-			collision(o_solidparent);
+				collision(o_solidparent);
 			
-			x += hsp;
-			y += vsp;
-			xprevious = x - hsp;
-			yprevious = y - vsp;
-			direction_animation();
-		}
+				x += hsp;
+				y += vsp;
+				xprevious = x - hsp;
+				yprevious = y - vsp;
+				direction_animation();
+			}
 		
-		if (_done) {
-			cut_moved = false;
+			if (_done) {
+				cut_moved = false;
+			}
 		}
 	}
 	return _done;
@@ -250,23 +253,32 @@ function cutscene_player_move(cut, _rel_x, _rel_y, _speed = 3, _force_lock = C_F
 	});
 }
 
-function cutscene_dialogue(cut, text, force_pos = is_top()) {
-    __proc_inline;
+function cutscene_dialogue(cut, text, force_pos = is_top(), wait = true) {
+	__proc_inline;
 
-    cutscene_raw(cut, {
-        text_arr: is_array(text) ? text : [text],
-        dia_inst: noone,
-        pos: force_pos,
+	cutscene_raw(cut, {
+		text_arr: is_array(text) ? text : [text],
+		dia_inst: noone,
+		pos: force_pos,
+		wait: wait,
 
-        init: function() {
-            dia_inst = Dialogue_Create(text_arr);
-            dia_inst.top = pos;
-        },
+		init: function() {
+			if (instance_exists(o_enc)) {
+				dia_inst = enc_dialogue(text_arr);
+			}
+			else {
+				dia_inst = Dialogue_Create(text_arr);
+				dia_inst.top = pos;
+			}
+		},
 
-        event: function() {
-            return !instance_exists(dia_inst);
-        }
-    });
+		event: function() {
+			if (!wait)
+				return true;
+				
+			return !instance_exists(dia_inst);
+		}
+	});
 }
 
 function cutscene_player_moveable(cut, _moveable) {
@@ -274,10 +286,12 @@ function cutscene_player_moveable(cut, _moveable) {
 	cutscene_raw(cut, {
 		val: _moveable,
 		init: function() {
-			with(o_actor_mainpl) {
-				moveable = other.val;
-				if (!moveable) state = PLAYER_STATES.froozen;
-				else state = PLAYER_STATES.free;
+			if (instance_exists(o_actor_mainpl)){
+				with(o_actor_mainpl) {
+					moveable = other.val;
+					if (!moveable) state = PLAYER_STATES.froozen;
+					else state = PLAYER_STATES.free;
+				}
 			}
 		}
 	});
