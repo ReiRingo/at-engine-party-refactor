@@ -1,8 +1,7 @@
 if (asset_get_type(face) == asset_sprite) {
 	draw_sprite(face,faceid,xx+13,yy+14)
-	if (instance_exists(t)) {
-		t.x += 58
-	}
+		if instance_exists(t)
+			t.x = xx+14+58
 }
 if (instance_exists(t)) {
 	if (on_choice) {
