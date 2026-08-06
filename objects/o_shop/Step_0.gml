@@ -76,7 +76,7 @@ if (menu==SHOP_STATES.TALKING&&state==STATE_TYPE.EXIT){ // main menu
             if !instance_exists(leavetextinst){ 
                 transitioner = instance_create(o_transition);
                 transitioner.switched_event = function(){
-                    room_goto(rm_test0)
+                    room_goto(leaveroom)
                 }
             }
         }
