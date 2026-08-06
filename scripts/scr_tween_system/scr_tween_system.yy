@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_tween_system",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_tween_system",
+  "parent":{
+    "name":"tween",
+    "path":"folders/@engine/scripts/tween.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

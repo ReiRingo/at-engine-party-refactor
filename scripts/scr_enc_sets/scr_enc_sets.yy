@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_enc_sets",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enc_sets",
+  "parent":{
+    "name":"encounter",
+    "path":"folders/@engine/scripts/encounter.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

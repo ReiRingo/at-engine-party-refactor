@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_cut_test_codes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_cut_test_codes",
+  "parent":{
+    "name":"cutscene",
+    "path":"folders/@engine/scripts/cutscene.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

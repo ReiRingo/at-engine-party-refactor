@@ -1,0 +1,1 @@
+border_set_sprite(spr)

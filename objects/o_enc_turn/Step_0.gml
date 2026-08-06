@@ -1,0 +1,5 @@
+o_enc.board_x=lerp(o_enc.board_x,targetx,0.1)
+o_enc.board_y=lerp(o_enc.board_y,targety,0.1)
+o_enc.board_w=lerp(o_enc.board_w,targetwidth,0.1)
+o_enc.board_h=lerp(o_enc.board_h,targetheight,0.1)
+o_enc.set_soul(targetx,targety)

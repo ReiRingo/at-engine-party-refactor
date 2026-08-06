@@ -1,0 +1,3 @@
+enum SHOP_TEXT_TYPE{
+	MAIN,
+}
