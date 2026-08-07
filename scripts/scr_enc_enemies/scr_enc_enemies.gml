@@ -1,5 +1,5 @@
 function enc_enemy(){
-    obj = o_enc_enemy;
+    obj = o_enc_e;
     
     spr = {
         normal: spr_default,
@@ -28,11 +28,11 @@ function enc_enemy(){
 }
 
 function enc_enemy_test() : enc_enemy() constructor{
-    obj = o_enc_testenemy; // working
+    obj = o_enc_e_testenemy; // working
     
     spr = {
-        normal: spr_enc_enemy_test,
-        hurt: spr_enc_enemy_test,
+        normal: spr_enc_e_test,
+        hurt: spr_enc_e_test,
     };
     
     name = "TESTENEMY" // working
@@ -91,11 +91,11 @@ function enc_enemy_test() : enc_enemy() constructor{
 }
 
 function enc_enemy_test2() : enc_enemy() constructor{
-    obj = o_enc_enemy2;
+    obj = o_enc_e_enemy2;
     
     spr = {
-        normal: spr_enc_enemy_test,
-        hurt: spr_enc_enemy_test,
+        normal: spr_enc_e_test,
+        hurt: spr_enc_e_test,
     };
     
     name = "TEST2"

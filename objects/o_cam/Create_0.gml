@@ -1,4 +1,4 @@
-target = o_actor_mainpl;
+target=noone
 zoom = 1;
 final_x = 0;
 final_y = 0;

@@ -5,20 +5,21 @@ enum BATTLE_MENU {
 	CHOOSE_ENEMY, 
     ITEM,
 	MERCY,
-	ACT
+	ACT,
 }
 
 enum BATTLE_TURN {
 	PLAYER,
 	CUTSCENE,
 	ENEMY,
-	RESULT
+	RESULT,
 }
 
 enum BG_TYPE {
 	NOONE,
 	DEFAULT,
-	BOSS
+	BOSS,
+	DEPTHS,
 }
 
 encounterid = undefined

@@ -1,6 +1,7 @@
 global.debug = false
 
 instance_create(o_cutscene_manager)
+instance_create(o_cam)
 
 { // resolution fix
     gpu_set_tex_filter(false)

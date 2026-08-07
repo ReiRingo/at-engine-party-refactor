@@ -8,5 +8,5 @@ text=[
 		"* (shake,1)Shake 1 (shake)(shake,2)Shake 2 (shake)(shake,3)Shake 3 (shake)\n(shake,4)Shake 4 (shake)(shake,5)Shake 5 (shake)(shake,6)Shake 6 (shake)\n(shake,7)Shake 7 (shake)(shake,8)Shake 8 (shake)(shake,9)Shake 9(shake)",
 		"(face,spr_faces_alphys,0)* H-Hi! I-I'm Alphys! The (yellow)Royal Scientist(c)!",
 		"(face)* Very cool right?",
-		"* This is the commit-unstable8!",
+		"* This is the commit-unstable9!",
 	]

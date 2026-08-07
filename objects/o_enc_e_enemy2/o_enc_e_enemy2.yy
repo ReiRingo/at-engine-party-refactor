@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"o_enc_testenemy",
+  "%Name":"o_enc_e_enemy2",
   "eventList":[],
   "managed":true,
-  "name":"o_enc_testenemy",
+  "name":"o_enc_e_enemy2",
   "overriddenProperties":[],
   "parent":{
     "name":"enemies",
     "path":"folders/@engine/objects/encounter/enemies.yy",
   },
   "parentObjectId":{
-    "name":"o_enc_enemy",
-    "path":"objects/o_enc_enemy/o_enc_enemy.yy",
+    "name":"o_enc_e",
+    "path":"objects/o_enc_e/o_enc_e.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enc_enemy_test",
-    "path":"sprites/spr_enc_enemy_test/spr_enc_enemy_test.yy",
+    "name":"spr_enc_e_test",
+    "path":"sprites/spr_enc_e_test/spr_enc_e_test.yy",
   },
   "spriteMaskId":null,
   "visible":true,

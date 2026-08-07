@@ -1,0 +1,1 @@
+if instance_exists(o_actor_mainpl) target = o_actor_mainpl
