@@ -1,5 +1,4 @@
 draw_set_font(loc_getfont(font_main))
-if !screenshot{
 var debug_lines = []
 
 array_push(debug_lines, "UNDERTALE: AT ENGINE")
@@ -39,4 +38,3 @@ draw_sprite_ext(spr_refbattle1x, 0, 0, 0, 1, 1, 0, c_white, alpha_dialog)
 draw_set_alpha(alphascreen)
 draw_rectangle(0,0,320,240,false)
 draw_set_alpha(1)
-}
