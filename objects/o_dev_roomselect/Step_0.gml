@@ -26,3 +26,5 @@ if (InputPressed(INPUT.CONFIRM)){
 		}
     }
 }
+if (InputPressed(INPUT.CANCEL))
+	instance_destroy()

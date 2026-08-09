@@ -1,0 +1,1 @@
+enc_start(global.current_encounter)

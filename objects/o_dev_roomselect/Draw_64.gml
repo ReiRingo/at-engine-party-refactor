@@ -52,7 +52,7 @@ for (var i=0; i<array_length(filtered); i++){
 
 var soul_target_y=(selection-scroll_current)*16
 
-if(soul_y==-999)
+if (soul_y==-999)
 	soul_y=soul_target_y
 soul_y=lerp(soul_y,soul_target_y,0.25)
 

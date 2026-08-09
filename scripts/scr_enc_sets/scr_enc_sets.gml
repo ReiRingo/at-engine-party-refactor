@@ -1,4 +1,5 @@
 function enc_set(){
+	name = "undefined"
 	flavor = "undefined"
 	
 	enemies = [
@@ -9,6 +10,7 @@ function enc_set(){
 }
 
 function enc_set_test() : enc_set() constructor{
+	name = "testenemy"
 	flavor = "* TESTENEMY Blocks the way!"
 	
 	enemies = [

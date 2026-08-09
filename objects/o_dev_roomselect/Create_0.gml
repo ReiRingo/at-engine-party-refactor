@@ -1,13 +1,16 @@
-rooms = []
+rooms      = []
 room_names = []
-cant_use = [rm_init,rm_battle,rm_shop]
+cant_use = [
+		rm_init,
+		rm_battle,
+		rm_shop
+	]
 
-selection = 0
+selection      = 0
 scroll_current = 0
-soul_y = 0
-menu_surface = -1
-
-filtered = []
+soul_y         = 0
+menu_surface   = -1
+filtered       = []
 
 var current = room_first
 while (current!=-1){

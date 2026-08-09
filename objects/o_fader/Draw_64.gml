@@ -1,0 +1,5 @@
+draw_set_alpha(alpha_current)
+draw_set_color(color)
+draw_rectangle(0,0,320,240,false)
+draw_set_alpha(1)
+draw_set_color(c_white)

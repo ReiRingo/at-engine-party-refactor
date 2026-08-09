@@ -1,4 +1,5 @@
 audio_stop_all()
+fader(1,0,30,c_black)
 enum BATTLE_MENU {
 	MAIN,
 	FIGHT,
@@ -23,8 +24,8 @@ enum BG_TYPE {
 }
 
 encounterid = undefined
-bgmid = -1
-enemies = []
+bgmid       = -1
+enemies     = []
 encounterbg = BG_TYPE.DEFAULT
 
 buttons=[
@@ -41,25 +42,24 @@ index = {
 	previous: [],
 }
 
-flavort = "";
-flavorinst= noone;
+flavort    = ""
+flavorinst = noone
 
-textinst=false;
+textinst    = false
+turncreated = false
 
-turncreated=false;
+input = 0
 
-input = 0;
+act_enemy_index = 0
+act_index       = 0
 
-act_enemy_index = 0;
-act_index = 0;
-
-board_x = 158;
-board_y = 158;
-board_w = 285;
-board_h = 67.5;
+board_x = 158
+board_y = 158
+board_w = 285
+board_h = 67.5
 board_a = 0
 
-board_surface = -1;
+board_surface = -1
 
 menu = {
     subcurrent: BATTLE_MENU.MAIN,
@@ -73,7 +73,7 @@ txt = {
 }
 
 turn = BATTLE_TURN.PLAYER
-	
+
 function init(_enc){
     encounterid = _enc;
     enemies = encounterid.enemies;

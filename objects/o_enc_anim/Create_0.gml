@@ -1,0 +1,9 @@
+alarm[2] = 30;
+alarm[4] = 1;
+heartdraw = 0;
+on = 0;
+clap = 0;
+depp = -600;
+claptimer = 2;
+depth=-9999
+tb = instance_create(o_enc_animblack,0,0,depth+1)

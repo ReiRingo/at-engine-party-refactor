@@ -64,34 +64,36 @@ if (state == PLAYER_STATES.free) { //checking if the player is in control
 
 	x += hsp;
 	y += vsp;
-
-	if (InputPressed(INPUT.CONFIRM)){
-		if (movement==1){
-			var obj=noone
-			switch (global.facing){
-				case 1:
-					obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + (sprite_height / 2) - sprite_height, x + sprite_width + 15 - sprite_width+10, y + sprite_height - sprite_height,interactables,false,true)
-				break
-				case 3:
-					obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + 3 + (sprite_height / 2) - sprite_height, x - 15 - sprite_width+10, y + sprite_height + 3 - sprite_height,interactables,false,true)
-				break
-				case 0:
-					obj=collision_rectangle(x + 4 - sprite_width+10, y + 20 - sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + sprite_height + 15 - sprite_height,interactables,false,true)
-				break
-				case 2:
-					obj=collision_rectangle(x + 4 - sprite_width+10, (y + sprite_height) - 5 -sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + 8 - sprite_height,interactables,false,true)
-				break
-			}
-			if (obj!=noone){
-				if (!object_childof(obj.object_index, o_npc_parent)) {
-					with (obj){
-						interact()
-					}
-				} else {
-					if (!obj.following) with(obj) {
-						interact();
-						var d = round(point_direction(x, y, other.x, other.y) / 90) * 90;
-						dir = d;
+	
+	if (!instance_exists(o_dev_debug)){
+		if (InputPressed(INPUT.CONFIRM)){
+			if (movement==1){
+				var obj=noone
+				switch (global.facing){
+					case 1:
+						obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + (sprite_height / 2) - sprite_height, x + sprite_width + 15 - sprite_width+10, y + sprite_height - sprite_height,interactables,false,true)
+					break
+					case 3:
+						obj=collision_rectangle(x + (sprite_width / 2) - sprite_width+10, y + 3 + (sprite_height / 2) - sprite_height, x - 15 - sprite_width+10, y + sprite_height + 3 - sprite_height,interactables,false,true)
+					break
+					case 0:
+						obj=collision_rectangle(x + 4 - sprite_width+10, y + 20 - sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + sprite_height + 15 - sprite_height,interactables,false,true)
+					break
+					case 2:
+						obj=collision_rectangle(x + 4 - sprite_width+10, (y + sprite_height) - 5 -sprite_height, (x + sprite_width) - 4 - sprite_width+10, y + 8 - sprite_height,interactables,false,true)
+					break
+				}
+				if (obj!=noone){
+					if (!object_childof(obj.object_index, o_npc_parent)) {
+						with (obj){
+							interact()
+						}
+					} else {
+						if (!obj.following) with(obj) {
+							interact();
+							var d = round(point_direction(x, y, other.x, other.y) / 90) * 90;
+							dir = d;
+						}
 					}
 				}
 			}

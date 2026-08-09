@@ -79,7 +79,8 @@ function can_move(){
 	!instance_exists(o_warp_manager) &&
 	!instance_exists(o_ui_image) &&
     !instance_exists(o_ow_dialog) &&
-    !instance_exists(o_dev_roomselect)
+    !instance_exists(o_dev_roomselect) &&
+	!instance_exists(o_dev_debug)
 
 }
 
@@ -113,4 +114,14 @@ function afterimage(_fade_spd=0.1,_color=c_white){
 		image_blend  = _color
 		fade_speed   = _fade_spd
 	}
+}
+
+function fader(_start,_end,_duration,_color){
+	var _inst           = instance_create(o_fader,0,0,-4500)
+	_inst.alpha_start   = _start
+	_inst.alpha_end     = _end
+	_inst.duration      = _duration
+	_inst.color         = _color
+	_inst.alpha_current = _start
+	_inst.timer         = 0
 }

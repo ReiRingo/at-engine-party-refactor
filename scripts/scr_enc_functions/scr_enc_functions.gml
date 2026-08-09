@@ -1,6 +1,11 @@
 function enc_start(encounterset){
-	global.current_encounter = encounterset
-	room_goto(rm_battle)
+	if instance_exists(o_enc_anim){
+		room_goto(rm_battle)
+	}
+	else{
+		global.current_encounter = encounterset
+		instance_create(o_enc_anim)
+	}
 }
 
 function enc_dialogue(text){
