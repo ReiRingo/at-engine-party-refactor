@@ -1,5 +1,6 @@
 encounters = [
 				new enc_set_test(),
+				new ex_enc_set_duo(),
 			]
 cant_use   = [] // in-case you want a encounter not to be able to be started for some reason?
 list       = array_concat(cant_use,encounters)

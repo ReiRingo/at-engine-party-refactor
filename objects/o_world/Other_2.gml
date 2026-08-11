@@ -14,7 +14,7 @@ global.time      = ini_read_real("config","time",0)
 global.room_save = ini_read_string("config","room",room_get_name(room))
 
 // stats
-global.name = ini_read_string("config","name","CHARA")
+global.name = ini_read_string("config","name","")
 global.lv   = ini_read_real("config","lv",1)
 
 global.maxhp = global.lv<20?16+4*global.lv:99
@@ -34,16 +34,18 @@ global.gold = ini_read_real("config","gold",0)
 global.fun_value = ini_read_real("config", "fun_value", irandom(99) + 1);
 
 global.items = []
-ItemAdd(new STICK())
-ItemAdd(new RIBBON())
-ItemAdd(new MONSTERCANDY())
-ItemAdd(new PUNCHCARD())
-ItemAdd(new STICK())
-ItemAdd(new MONSTERCANDY())
-ItemAdd(new MONSTERCANDY())
-ItemAdd(new MONSTERCANDY())
+if (!file_exists("config.ini")){
+	ItemAdd(new STICK())
+	ItemAdd(new RIBBON())
+	ItemAdd(new MONSTERCANDY())
+	ItemAdd(new PUNCHCARD())
+	ItemAdd(new STICK())
+	ItemAdd(new MONSTERCANDY())
+	ItemAdd(new MONSTERCANDY())
+	ItemAdd(new MONSTERCANDY())
+}
 
-global.inventory = [""]
+global.inventory = []
 
 ini_close()
 

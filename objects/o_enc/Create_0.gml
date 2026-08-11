@@ -1,5 +1,5 @@
 audio_stop_all()
-fader(1,0,30,c_black)
+fader(1,0,15,c_black)
 enum BATTLE_MENU {
 	MAIN,
 	FIGHT,
